@@ -76,15 +76,15 @@ export default {
   background: #1c2133;
   .banner {
     width: 100%;
-    height: 717px;
-    background: url("~_img/about_banner.png") no-repeat;
+    height: 830px;
+    background: url("~_img/about_banner2.png") no-repeat;
     background-size: cover;
     position: relative;
+    top: 73px;
     .big_title {
       position: absolute;
       top: 40%;
-      left: 35%;
-
+      left: 30%;
       color: #fff;
       .title {
         font-size: 50px;
@@ -100,8 +100,10 @@ export default {
     }
   }
   .en_presume {
+    margin-top: 75px;
+    height: 900px;
     background-color: #fff;
-    // text-align: center;
+
     .big_title {
       padding: 40px 0;
       font-size: 30px;
@@ -114,7 +116,6 @@ export default {
       &:nth-child(3) {
         text-align: center;
       }
-
       color: rgba(23, 26, 37, 0.6);
       font-size: 20px;
       text-align: left;
@@ -122,7 +123,6 @@ export default {
     .block {
       margin-top: 40px;
       padding-bottom: 40px;
-
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -164,7 +164,7 @@ export default {
           div {
             margin-right: 20px;
             width: 386px;
-            height: 150px;
+            height: 130px;
             background: #f6f8fb;
             font-size: 18px;
             color: #33384c;
@@ -217,6 +217,7 @@ export default {
             height: 16px;
             background: url("~_img/about_foot_phone.png") no-repeat;
             background-size: 100% 100%;
+            margin-right: 10px;
           }
           &:nth-child(3)::before {
             content: "";
@@ -225,6 +226,7 @@ export default {
             height: 16px;
             background: url("~_img/about_foot_address.png") no-repeat;
             background-size: 100% 100%;
+            margin-right: 10px;
           }
         }
       }

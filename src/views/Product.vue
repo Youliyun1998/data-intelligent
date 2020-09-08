@@ -192,7 +192,8 @@ export default {
 .product {
   .banner {
     position: relative;
-    height: 717px;
+    top: 75px;
+    height: 830px;
     background: url("~_img/product_banner1.png") no-repeat;
     background-size: 100% 100%;
 
@@ -222,6 +223,7 @@ export default {
     }
   }
   .product_show {
+    margin-top: 75px;
     background-color: #fff;
     .product_detail {
       // display: flex;
@@ -235,7 +237,7 @@ export default {
         color: #171a25;
         font-size: 30px;
         color: #171a25;
-        padding: 20px 0;
+        padding: 40px 0;
       }
       .subtitle {
         text-align: center;
@@ -592,16 +594,12 @@ export default {
     height: 900px;
     background: #eef0f5;
     .management_content {
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
       .title {
         text-align: center;
         font-weight: bold;
         font-size: 30px;
         color: #171a25;
-        padding: 20px 0;
+        padding: 40px 0;
       }
       .subtitle {
         text-align: center;

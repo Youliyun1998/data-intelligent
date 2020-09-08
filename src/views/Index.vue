@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <!-- 悬浮回到顶部按钮 -->
-
     <!-- banner -->
     <div class="banner">
       <div class="left_text wrap">
@@ -11,6 +9,7 @@
           <div class="line"></div>
         </div>
       </div>
+      <!-- 悬浮回到顶部按钮 -->
       <img
         :src="staImg6"
         @mouseover="changeImageSrc(6, 'hover')"
@@ -34,7 +33,9 @@
           以用户为中心的全流程数据服务
         </div>
         <div class="dataServe_subtitle">
-          纳指数据提供从数据采集、数据治理、数据建模、数据分析到智能应用的全流程数据服务解决方案，帮助用户探索数据价值和创新智能
+          <p>
+            纳指数据提供从数据采集、数据治理、数据建模、数据分析到智能应用的全流程数据服务解决方案，帮助用户探索数据价值和创新智能
+          </p>
           <p>应用。</p>
         </div>
         <div class="dataServe_tab">
@@ -157,13 +158,15 @@ export default {
   name: 'home',
   data () {
     return {
+      isTop: true,
       enter: false,
       leave: true,
       activeIndex: 0,
+      num: 0,
       tabData: ['首页', '服务', '产品', '案例', '关于我们'],
       value1: 1,
       tabText: ['数据管理成熟度评测', '数据治理与分析', '城市物联网与数字城市'],
-      programData: ['智慧灯杆', '智慧环保', '智慧园区', '云物管', '智慧旅游'],
+      programData: ['智慧灯杆', '智慧环保', '智慧园区', '智慧旅游', '云物管'],
       staImg1: require('../assets/img/data_set.png'),
       staImg2: require('../assets/img/data_govern.png'),
       staImg3: require('../assets/img/data_jianmo.png'),
@@ -173,38 +176,96 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('scroll', this.showbtn, true)
+    // window.onscroll = function() {
+    //   //为了保证兼容性，这里取两个值，哪个有值取哪一个
+    //   //scrollTop就是触发滚轮事件时滚轮的高度
+    //   var scrollTop =
+    //     document.documentElement.scrollTop || document.body.scrollTop;
+    //   console.log("滚动距离" + scrollTop);
+    // };
+    // var scrollFunc = function(e) {
+    //   // if (!this.isTop) return;
+    //   e = e || window.event;
+    //   if (e.wheelDelta) {
+    //       console.log(e.wheelDelta, "e.wheelDelta");
+    //     //判断浏览器IE，谷歌滑轮事件
+    //     if (e.wheelDelta > 0) {
+    //       //当滑轮向上滚动时
+    //       // alert("滑轮向上滚动");
+    //     }
+    //     if (e.wheelDelta < 0) {
+    //       //当滑轮向下滚动时
+    //       this.isTop = false;
+    //       alert("滑轮向下滚动");
+    //       //为了保证兼容性，这里取两个值，哪个有值取哪一个
+    //       //scrollTop就是触发滚轮事件时滚轮的高度
+    //       var scrollTop =
+    //         document.documentElement.scrollTop || document.body.scrollTop;
+    //       console.log("滚动距离" + scrollTop);
+    //       // 获取每一块在页面中占的位置
+    //       var banner = document.getElementsByClassName("banner");
+    //       var tab = document.getElementsByClassName("tab");
+    //       // console.log(banner.clientHeight, "banner.clientHeight");
+    //       var userCenter = document.getElementsByClassName(
+    //         "userCenter_dataServe"
+    //       );
+    //       var city = document.getElementsByClassName("city_goven");
+    //       var company = document.getElementsByClassName("company");
+    //       var sectionHeight1 =
+    //         banner[0].clientHeight + tab[0].clientHeight - 75;
+    //       var sectionHeight12 = userCenter[0].clientHeight;
+    //       var sectionHeight13 = city[0].clientHeight;
+    //       var sectionHeight14 = company[0].clientHeight;
+    //       var sectionHeight15 = 348;
+    //       console.log(sectionHeight14, "sectionHeight14");
+    //       var arr1 = [
+    //         sectionHeight1,
+    //         sectionHeight12,
+    //         sectionHeight13,
+    //         sectionHeight14,
+    //         sectionHeight15
+    //       ];
+    //       const timeid1 = setInterval(() => {
+    //         scrollTop += 10;
+    //         window.scrollTo(0, scrollTop);
+    //         if (scrollTop >= sectionHeight1) {
+    //           this.num++;
+    //           window.scrollTo(0, sectionHeight1);
+    //           this.isTop = true;
+    //           clearInterval(timeid1);
+    //         }
+    //       }, 10);
+    //       // const timeid2 = setInterval(() => {
+    //       //   scrollTop += 200;
+    //       //   // window.scrollTo(0, scrollTop);
+    //       //   if (scrollTop >= sectionHeight1 + sectionHeight12) {
+    //       //     clearInterval(timeid2);
+    //       //     // console.log(sectionHeight1, "sectionHeight1");
+    //       //     window.scrollTo(0, sectionHeight1 + sectionHeight12);
+    //       //   }
+    //       // }, 100);
+    //     }
+    //   } else if (e.detail) {
+    //     //Firefox滑轮事件
+    //     if (e.detail > 0) {
+    //       //当滑轮向上滚动时
+    //       // alert("滑轮向上滚动");
+    //     }
+    //     if (e.detail < 0) {
+    //       //当滑轮向下滚动时
+    //       // alert("滑轮向下滚动");
+    //     }
+    //   }
+    // };
+    // //给页面绑定滑轮滚动事件
+    // if (document.addEventListener) {
+    //   //firefox
+    //   document.addEventListener("DOMMouseScroll", scrollFunc, false);
+    // }
+    // //滚动滑轮触发scrollFunc方法  //ie 谷歌
+    // window.onmousewheel = document.onmousewheel = scrollFunc;
   },
   methods: {
-    // 显示回到顶部按钮
-    showbtn () {
-      const that = this
-      const scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop
-      that.scrollTop = scrollTop
-    },
-    /**
-     * 回到顶部功能实现过程：
-     * 1. 获取页面当前距离顶部的滚动距离（虽然IE不常用了，但还是需要考虑一下兼容性的）
-     * 2. 计算出每次向上移动的距离，用负的滚动距离除以5，因为滚动的距离是一个正数，想向上移动就是做一个减法
-     * 3. 用当前距离加上计算出的距离，然后赋值给当前距离，就可以达到向上移动的效果
-     * 4. 最后记得在移动到顶部时，清除定时器
-     */
-    backtop () {
-      var timer = setInterval(function () {
-        const osTop =
-          document.documentElement.scrollTop || document.body.scrollTop
-        const ispeed = Math.floor(-osTop / 5)
-        document.documentElement.scrollTop = document.body.scrollTop =
-          osTop + ispeed
-        this.isTop = true
-        if (osTop === 0) {
-          clearInterval(timer)
-        }
-      }, 30)
-    },
     // 动态切换图片路径
     changeImageSrc (key, way) {
       // console.log('鼠标移入/移出')
@@ -260,69 +321,21 @@ export default {
 
 <style lang="less" scoped>
 .home {
-  // overflow: hidden;
-  //   width: 100%;
   height: 100%;
   background: #1c2133;
   box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
-  .wrap {
-    width: 1200px;
-    // height: 100%;
-    margin: 0 auto;
-  }
-
-  .top {
-    z-index: 999999;
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    background: #1c2133;
-    box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
-    .top_content {
-      width: 1200px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .top_left {
-        img {
-          width: 204.43px;
-          height: 40.01px;
-        }
-      }
-      .top_right {
-        .top_tab {
-          color: #aaaaaa;
-          font-size: 14px;
-          ul {
-            display: flex;
-            li {
-              margin-left: 60px;
-              width: 66px;
-              height: 70px;
-              line-height: 70px;
-              text-align: center;
-              &.active {
-                color: #fff;
-                // width: 66px;
-                border-bottom: 4px solid #ffdd1f;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
 .banner {
   position: relative;
-
-  height: 717px;
+  top: 75px;
+  height: 788px;
   background: url("~_img/banner.png") no-repeat;
   background-size: contain;
   img {
-    position: absolute;
+    // position: absolute;
+    position: fixed;
+    top: 600px;
     right: 100px;
-    bottom: 0;
   }
 
   .left_text {
@@ -349,6 +362,7 @@ export default {
   }
 }
 .tab {
+  border-top: 1px solid #393e49;
   background-color: #20263d;
   .tab_content {
     display: flex;
@@ -359,9 +373,11 @@ export default {
       height: 119px;
       background: #20263d;
       border-radius: 4px 4px 0px 0px;
-      border: 1px solid #393e49;
+      border-left: 1px solid #393e49;
+      &:last-child {
+        border-right: 1px solid #393e49;
+      }
       font-size: 20px;
-      font-weight: bold;
       color: #fff;
       display: flex;
       justify-content: center;
@@ -381,6 +397,7 @@ export default {
       &:hover {
         color: #59a6ba;
         background: #191f33;
+        font-weight: bold;
         &:first-child::before {
           content: url("~_img/tab1_act.png");
           margin-right: 40px;
@@ -399,7 +416,7 @@ export default {
 }
 .userCenter_dataServe {
   background-color: #fff;
-  height: 900px;
+  // height: 900px;
   .dataServe_content {
     .dataServe_title {
       padding-top: 40px;
@@ -459,7 +476,7 @@ export default {
           color: #171a25;
           font-weight: bold;
           background: url("~_img/data_serve_left_bg.png") no-repeat;
-          background-size: 90% 100%;
+          background-size: 100% 100%;
         }
         .left_center {
           font-size: 16px;
@@ -499,6 +516,7 @@ export default {
     .city_title {
       text-align: center;
       font-size: 30px;
+      font-weight: bold;
       color: #171a25;
       padding-bottom: 20px;
     }
@@ -625,52 +643,6 @@ export default {
           margin-right: 0;
         }
       }
-    }
-  }
-}
-.footer {
-  .footer_content {
-    display: flex;
-    justify-content: space-between;
-    .left {
-      display: flex;
-      width: 700px;
-      dl {
-        width: 200px;
-        dt {
-          color: #fff;
-          padding: 40px 0;
-        }
-        dd {
-          color: #aaaaaa;
-          font-size: 14px;
-          padding-bottom: 30px;
-        }
-      }
-    }
-    .right {
-      flex: 1;
-      dl {
-        flex: 1;
-        dt {
-          color: #fff;
-          padding: 40px 0;
-        }
-        dd {
-          color: #aaaaaa;
-          font-size: 14px;
-          padding-bottom: 30px;
-        }
-      }
-    }
-  }
-  .copy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #aaaaaa;
-    p {
-      margin-right: 20px;
     }
   }
 }

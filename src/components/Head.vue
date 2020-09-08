@@ -102,7 +102,7 @@ export default {
 
 <style lang="less" scoped>
 .head {
-  height: 71x;
+  height: 75x;
   background: #1c2133;
   box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
   .wrap {
@@ -121,6 +121,7 @@ export default {
     box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
     .top_content {
       width: 1200px;
+      height: 75px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -134,6 +135,7 @@ export default {
         .top_tab {
           color: #aaaaaa;
           font-size: 14px;
+
           ul {
             display: flex;
             li {

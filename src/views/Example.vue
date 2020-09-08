@@ -233,10 +233,11 @@ export default {
   background: #1c2133;
   .banner {
     width: 100%;
-    height: 717px;
+    height: 830px;
     background: url("~_img/example_banner.png") no-repeat;
     background-size: cover;
     position: relative;
+    top: 72px;
     .big_title {
       position: absolute;
       top: 40%;
@@ -258,6 +259,7 @@ export default {
     }
   }
   .content_show {
+    margin-top: 75px;
     background-color: #fff;
   }
 }

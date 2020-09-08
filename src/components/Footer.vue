@@ -42,7 +42,7 @@
             <dd
               v-for="(item, index) in aboutData"
               :key="index"
-              @click="handleAbout"
+              @click="handleAbout(index)"
             >
               {{ item }}
             </dd>
@@ -70,8 +70,8 @@ export default {
       aboutData: [
         '企业简介',
         '联系我们',
-        '联系电话：020-85829519',
-        ' 联系地址：广东省广州市番禺区小谷围街青蓝街28号创智大厦3栋408室'
+        '电话：020-85829519',
+        '地址：广东省广州市番禺区小谷围街青蓝街28号创智大厦3栋408室'
       ]
     }
   },
@@ -85,8 +85,10 @@ export default {
     handleExample () {
       this.$router.push({ path: '/example' })
     },
-    handleAbout () {
-      this.$router.push({ path: '/about' })
+    handleAbout (e) {
+      if (e === 0 || e === 1) {
+        this.$router.push({ path: '/about' })
+      }
     }
   }
 }
@@ -113,13 +115,13 @@ export default {
           width: 200px;
           dt {
             color: #fff;
-            padding: 40px 0;
+            padding: 30px 0;
           }
           dd {
             cursor: pointer;
             color: #aaaaaa;
             font-size: 14px;
-            padding-bottom: 30px;
+            padding-bottom: 20px;
             &:hover {
               color: #fff;
             }
@@ -139,6 +141,26 @@ export default {
             color: #aaaaaa;
             font-size: 14px;
             padding-bottom: 30px;
+            &:nth-child(4) {
+              display: flex;
+              &::before {
+                content: url("~_img/foot_phone2.png");
+                display: block;
+                width: 20px;
+                height: 20px;
+                color: #aaaaaa;
+              }
+            }
+            &:nth-child(5) {
+              display: flex;
+              &::before {
+                content: url("~_img/foot_address2.png");
+                display: block;
+                width: 20px;
+                height: 20px;
+                color: #aaaaaa;
+              }
+            }
             &:hover {
               color: #fff;
             }
@@ -150,7 +172,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #aaaaaa;
+      color: #565b66;
       font-size: 14px;
       padding-bottom: 30px;
       p {

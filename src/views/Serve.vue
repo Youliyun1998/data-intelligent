@@ -153,12 +153,10 @@ export default {
   background: #1c2133;
   .banner {
     position: relative;
-    // width: 1200px;
-    // margin-top: 70px;
-    height: 717px;
+    top: 75px;
+    height: 830px;
     background: url("~_img/banner2.png") no-repeat;
     background-size: 100% 100%;
-
     .left_text {
       .left_text_l {
         position: absolute;
@@ -166,12 +164,15 @@ export default {
 
         .big_text {
           font-size: 50px;
+          font-weight: bold;
           color: #171a25;
         }
         .sub_text {
           font-size: 30px;
           color: #75777d;
-          margin: 16px 0 20px 0;
+          &:nth-child(2) {
+            margin-top: 16px;
+          }
         }
         .line {
           margin-top: 40px;
@@ -184,6 +185,7 @@ export default {
     }
   }
   .content_show {
+    margin-top: 75px;
     background-color: #fff;
   }
 }
