@@ -143,22 +143,28 @@ export default {
             padding-bottom: 30px;
             &:nth-child(4) {
               display: flex;
+              align-items: center;
               &::before {
-                content: url("~_img/foot_phone2.png");
+                content: "";
+                background: url("~_img/foot_phone2.png");
                 display: block;
-                width: 20px;
-                height: 20px;
+                width: 13px;
+                height: 16px;
                 color: #aaaaaa;
+                background-size: 100% 100%;
               }
             }
             &:nth-child(5) {
               display: flex;
+              align-items: center;
               &::before {
-                content: url("~_img/foot_address2.png");
+                content: "";
+                background: url("~_img/foot_address2.png");
                 display: block;
-                width: 20px;
-                height: 20px;
+                width: 13px;
+                height: 16px;
                 color: #aaaaaa;
+                background-size: 100% 100%;
               }
             }
             &:hover {

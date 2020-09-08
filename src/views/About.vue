@@ -232,6 +232,9 @@ export default {
       }
       .map {
         margin-top: 40px;
+        img {
+          width: 100%;
+        }
       }
     }
   }

@@ -615,6 +615,8 @@ export default {
             flex: 1;
             text-align: center;
             img {
+              width: 320px;
+              height: 330px;
             }
             .text {
               margin-top: 74px;

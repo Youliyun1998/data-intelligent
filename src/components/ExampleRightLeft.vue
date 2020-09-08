@@ -83,5 +83,11 @@ export default {
       }
     }
   }
+  .right {
+    img {
+      width: 623px;
+      height: 701px;
+    }
+  }
 }
 </style>

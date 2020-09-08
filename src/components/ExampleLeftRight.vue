@@ -45,6 +45,10 @@ export default {
   .left {
     padding-top: 50px;
     margin-right: 30px;
+    img{
+      width: 623px;
+      height: 701px;
+    }
   }
   .right {
     .title {

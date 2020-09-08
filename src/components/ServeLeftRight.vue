@@ -39,8 +39,9 @@ export default {
   .left {
     padding-top: 50px;
     margin-right: 70px;
-    img{
-
+    img {
+      width: 558px;
+      height: 649px;
     }
   }
   .right {

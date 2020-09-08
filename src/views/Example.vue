@@ -235,7 +235,7 @@ export default {
     width: 100%;
     height: 830px;
     background: url("~_img/example_banner.png") no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     position: relative;
     top: 72px;
     .big_title {

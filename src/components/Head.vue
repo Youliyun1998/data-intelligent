@@ -141,7 +141,7 @@ export default {
             li {
               cursor: pointer;
               margin-left: 60px;
-              width: 66px;
+              // width: 66px;
               height: 70px;
               line-height: 70px;
               text-align: center;

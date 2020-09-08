@@ -40,6 +40,31 @@ module.exports = {
       }
     })
   },
+  css: {
+    // 启用 CSS modules
+    modules: false,
+    // 是否使用css分离插件
+    extract: true,
+    // 开启 CSS source maps?
+    sourceMap: false,
+    // css预设器配置项
+    loaderOptions: {
+      less: {
+        javascriptEnabled: true
+      },
+      css: {},
+      postcss: {
+        plugins: [
+          require('postcss-pxtorem')({
+            // 这里是配置项，详见官方文档
+            rootValue: 16, // 换算的基数
+            selectorBlackList: ['weui', 'mu'], // 忽略转换正则匹配项
+            propList: ['*']
+          })
+        ]
+      }
+    }
+  },
 
   pluginOptions: {
     'style-resources-loader': {
@@ -47,5 +72,4 @@ module.exports = {
       patterns: [resolve('src/assets/css/valiable.less')]
     }
   }
-
 }

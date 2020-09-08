@@ -1,155 +1,157 @@
 <template>
   <div class="home">
     <!-- banner -->
-    <div class="banner">
-      <div class="left_text wrap">
-        <div class="left_text_l">
-          <p class="big_text">数据智能</p>
-          <p class="sub_text">整体解决方案提供商</p>
-          <div class="line"></div>
-        </div>
-      </div>
-      <!-- 悬浮回到顶部按钮 -->
-      <img
-        :src="staImg6"
-        @mouseover="changeImageSrc(6, 'hover')"
-        @mouseleave="changeImageSrc(6, '')"
-        title="020-38986350 "
-        alt=""
-      />
-    </div>
-    <!-- tab -->
-    <div class="tab">
-      <div class="tab_content wrap">
-        <div class="tab_text" v-for="(item, index) in tabText" :key="index">
-          {{ item }}
-        </div>
-      </div>
-    </div>
-    <!-- 以用户为中心的全流程数据服务 -->
-    <div class="userCenter_dataServe">
-      <div class="dataServe_content wrap">
-        <div class="dataServe_title">
-          以用户为中心的全流程数据服务
-        </div>
-        <div class="dataServe_subtitle">
-          <p>
-            纳指数据提供从数据采集、数据治理、数据建模、数据分析到智能应用的全流程数据服务解决方案，帮助用户探索数据价值和创新智能
-          </p>
-          <p>应用。</p>
-        </div>
-        <div class="dataServe_tab">
-          <div
-            class="tab_wrap"
-            @mouseover="changeImageSrc(1, 'hover')"
-            @mouseleave="changeImageSrc(1, '')"
-          >
-            <img :src="staImg1" alt="" />
-            <div class="text">数据采集</div>
-          </div>
-          <div
-            class="tab_wrap"
-            @mouseover="changeImageSrc(2, 'hover')"
-            @mouseleave="changeImageSrc(2, '')"
-          >
-            <img :src="staImg2" alt="" />
-            <div class="text">数据治理</div>
-          </div>
-          <div
-            class="tab_wrap"
-            @mouseover="changeImageSrc(3, 'hover')"
-            @mouseleave="changeImageSrc(3, '')"
-          >
-            <img :src="staImg3" alt="" />
-            <div class="text">数据建模</div>
-          </div>
-          <div
-            class="tab_wrap"
-            @mouseover="changeImageSrc(4, 'hover')"
-            @mouseleave="changeImageSrc(4, '')"
-          >
-            <img :src="staImg4" alt="" />
-            <div class="text">数据可视化</div>
-          </div>
-          <div
-            class="tab_wrap"
-            @mouseover="changeImageSrc(5, 'hover')"
-            @mouseleave="changeImageSrc(5, '')"
-          >
-            <img :src="staImg5" alt="" />
-            <div class="text">智能应用</div>
-          </div>
-        </div>
-        <div class="under_content">
-          <div class="left">
-            <div class="left_top">
-              <span>多源数据采集</span>
-            </div>
-            <div class="left_center">
-              <p>多种埋点方式，支持客户端、服务器日志、业务数据库、</p>
-              <p>第三方服务、历史数据导入等全端数据采集。</p>
-            </div>
-            <div class="left_bottom">查看详情</div>
-          </div>
-          <div class="right">
-            <img src="~_img/data_serve_right_bg.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 城市物联网与数字治理 -->
-    <div class="city_goven">
-      <div class="city_goven_content wrap">
-        <div class="city_title">城市物联网与数字治理</div>
-        <p class="sub_title">
-          纳指数据提供城市物联网和政府数字治理，从产品定制、硬件铺设、数据集成、智能控制、智慧运营管理等整体解决方案。
-        </p>
-        <div class="under_content">
-          <div class="left">
-            <ul>
-              <li v-for="(item, index) in programData" :key="index">
-                {{ item }}
-              </li>
-            </ul>
-          </div>
-          <div class="right">
-            <p class="title">智慧灯杆</p>
+    <full-page :options="options">
+      <div class="banner">
+        <div class="left_text wrap">
+          <div class="left_text_l">
+            <p class="big_text">数据智能</p>
+            <p class="sub_text">整体解决方案提供商</p>
             <div class="line"></div>
-            <p>智慧灯杆作为构建智慧城市的重要载体，充分应用路灯</p>
+          </div>
+        </div>
+        <!-- 悬浮回到顶部按钮 -->
+        <img
+          :src="staImg6"
+          @mouseover="changeImageSrc(6, 'hover')"
+          @mouseleave="changeImageSrc(6, '')"
+          title="020-38986350 "
+          alt=""
+        />
+      </div>
+      <!-- tab -->
+      <div class="tab">
+        <div class="tab_content wrap">
+          <div class="tab_text" v-for="(item, index) in tabText" :key="index">
+            {{ item }}
+          </div>
+        </div>
+      </div>
+      <!-- 以用户为中心的全流程数据服务 -->
+      <div class="userCenter_dataServe">
+        <div class="dataServe_content wrap">
+          <div class="dataServe_title">
+            以用户为中心的全流程数据服务
+          </div>
+          <div class="dataServe_subtitle">
             <p>
-              灯杆在城市中无处不在的优势，达到资源共享；以路灯
+              纳指数据提供从数据采集、数据治理、数据建模、数据分析到智能应用的全流程数据服务解决方案，帮助用户探索数据价值和创新智能
             </p>
-            <p>杆为载体，完成互联互通。</p>
-            <div class="check">
-              <span>查看详情</span>
+            <p>应用。</p>
+          </div>
+          <div class="dataServe_tab">
+            <div
+              class="tab_wrap"
+              @mouseover="changeImageSrc(1, 'hover')"
+              @mouseleave="changeImageSrc(1, '')"
+            >
+              <img :src="staImg1" alt="" />
+              <div class="text">数据采集</div>
+            </div>
+            <div
+              class="tab_wrap"
+              @mouseover="changeImageSrc(2, 'hover')"
+              @mouseleave="changeImageSrc(2, '')"
+            >
+              <img :src="staImg2" alt="" />
+              <div class="text">数据治理</div>
+            </div>
+            <div
+              class="tab_wrap"
+              @mouseover="changeImageSrc(3, 'hover')"
+              @mouseleave="changeImageSrc(3, '')"
+            >
+              <img :src="staImg3" alt="" />
+              <div class="text">数据建模</div>
+            </div>
+            <div
+              class="tab_wrap"
+              @mouseover="changeImageSrc(4, 'hover')"
+              @mouseleave="changeImageSrc(4, '')"
+            >
+              <img :src="staImg4" alt="" />
+              <div class="text">数据可视化</div>
+            </div>
+            <div
+              class="tab_wrap"
+              @mouseover="changeImageSrc(5, 'hover')"
+              @mouseleave="changeImageSrc(5, '')"
+            >
+              <img :src="staImg5" alt="" />
+              <div class="text">智能应用</div>
+            </div>
+          </div>
+          <div class="under_content">
+            <div class="left">
+              <div class="left_top">
+                <span>多源数据采集</span>
+              </div>
+              <div class="left_center">
+                <p>多种埋点方式，支持客户端、服务器日志、业务数据库、</p>
+                <p>第三方服务、历史数据导入等全端数据采集。</p>
+              </div>
+              <div class="left_bottom">查看详情</div>
+            </div>
+            <div class="right">
+              <img src="~_img/data_serve_right_bg.png" alt="" />
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- 合作伙伴 -->
-    <div class="company">
-      <div class="company_content wrap">
-        <div class="company_title">合作伙伴</div>
-        <div class="company_img">
-          <img src="~_img/company1.png" alt="" />
-          <img src="~_img/company2.png" alt="" />
-          <img src="~_img/company3.png" alt="" />
-          <img src="~_img/company4.png" alt="" />
-          <img src="~_img/company5.png" alt="" />
-          <img src="~_img/company6.png" alt="" />
-          <img src="~_img/company7.png" alt="" />
-          <img src="~_img/company8.png" alt="" />
-          <img src="~_img/company9.png" alt="" />
-          <img src="~_img/company10.png" alt="" />
-          <img src="~_img/company11.png" alt="" />
-          <img src="~_img/company12.png" alt="" />
-          <img src="~_img/company13.png" alt="" />
-          <img src="~_img/company14.png" alt="" />
-          <img src="~_img/company15.png" alt="" />
+      <!-- 城市物联网与数字治理 -->
+      <div class="city_goven">
+        <div class="city_goven_content wrap">
+          <div class="city_title">城市物联网与数字治理</div>
+          <p class="sub_title">
+            纳指数据提供城市物联网和政府数字治理，从产品定制、硬件铺设、数据集成、智能控制、智慧运营管理等整体解决方案。
+          </p>
+          <div class="under_content">
+            <div class="left">
+              <ul>
+                <li v-for="(item, index) in programData" :key="index">
+                  {{ item }}
+                </li>
+              </ul>
+            </div>
+            <div class="right">
+              <p class="title">智慧灯杆</p>
+              <div class="line"></div>
+              <p>智慧灯杆作为构建智慧城市的重要载体，充分应用路灯</p>
+              <p>
+                灯杆在城市中无处不在的优势，达到资源共享；以路灯
+              </p>
+              <p>杆为载体，完成互联互通。</p>
+              <div class="check">
+                <span>查看详情</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <!-- 合作伙伴 -->
+      <div class="company">
+        <div class="company_content wrap">
+          <div class="company_title">合作伙伴</div>
+          <div class="company_img">
+            <img src="~_img/company1.png" alt="" />
+            <img src="~_img/company2.png" alt="" />
+            <img src="~_img/company3.png" alt="" />
+            <img src="~_img/company4.png" alt="" />
+            <img src="~_img/company5.png" alt="" />
+            <img src="~_img/company6.png" alt="" />
+            <img src="~_img/company7.png" alt="" />
+            <img src="~_img/company8.png" alt="" />
+            <img src="~_img/company9.png" alt="" />
+            <img src="~_img/company10.png" alt="" />
+            <img src="~_img/company11.png" alt="" />
+            <img src="~_img/company12.png" alt="" />
+            <img src="~_img/company13.png" alt="" />
+            <img src="~_img/company14.png" alt="" />
+            <img src="~_img/company15.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </full-page>
   </div>
 </template>
 
@@ -158,6 +160,13 @@ export default {
   name: 'home',
   data () {
     return {
+      options: {
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        afterLoad: this.afterLoad,
+        scrollOverflow: true,
+        scrollBar: false,
+        menu: '#menu'
+      },
       isTop: true,
       enter: false,
       leave: true,
@@ -449,6 +458,7 @@ export default {
         flex: 1;
         text-align: center;
         padding-bottom: 15px;
+        border-bottom: 5px solid transparent;
         img {
           width: 42px;
           height: 41px;
@@ -503,6 +513,10 @@ export default {
         }
       }
       .right {
+        img {
+          width: 558px;
+          height: 492px;
+        }
       }
     }
   }
@@ -510,6 +524,7 @@ export default {
 .city_goven {
   height: 900px;
   background: url("~_img/data_program_bg.png");
+  background-size: 100% 100%;
   .city_goven_content {
     padding-top: 40px;
 
