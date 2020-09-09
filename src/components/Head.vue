@@ -33,45 +33,27 @@ export default {
     }
   },
   mounted () {
-    // 浏览器刷新路由重定向为首页
+    // 浏览器刷新,判断当前路由
     window.addEventListener('load', () => {
-      // 滚动事件变为 scroll
-      // console.log("路由跳转");
-      // if (this.$route.path !== "/home") {
-      //   // /home 表示首页
-      //   this.$router.replace("/home"); // 切换到首页
-      // }
+      window.scrollTo(0, 0)
+
+      if (this.$route.path === '/serve') {
+        this.activeIndex = 1
+      } else if (this.$route.path === '/product') {
+        this.activeIndex = 2
+      } else if (this.$route.path === '/example') {
+        this.activeIndex = 3
+      } else if (this.$route.path === '/home') {
+        this.activeIndex = 0
+      } else if (this.$route.path === '/about') {
+        this.activeIndex = 4
+      }
     })
   },
   watch: {
-    // $route(to, from) {
-    //   console.log(val, "新路由");
-    //   if (to.path === "/serve") {
-    //     this.activeIndex = 1;
-    //   } else if (to.path === "/product") {
-    //     this.activeIndex = 2;
-    //   } else if (to.path === "/example") {
-    //     this.activeIndex = 3;
-    //   } else if (to.path === "/home") {
-    //     this.activeIndex = 0;
-    //   } else {
-    //     this.activeIndex = 4;
-    //   }
-    // }
-    $route (val, oldVal) {
-      // 让页面回滚到顶部
+    $route (to, from) {
+      // 监听路由变化，让页面回滚到顶部
       window.scrollTo(0, 0)
-      if (val.path === '/serve') {
-        this.activeIndex = 1
-      } else if (val.path === '/product') {
-        this.activeIndex = 2
-      } else if (val.path === '/example') {
-        this.activeIndex = 3
-      } else if (val.path === '/home') {
-        this.activeIndex = 0
-      } else {
-        this.activeIndex = 4
-      }
     }
   },
   methods: {
@@ -93,7 +75,8 @@ export default {
         case 4:
           this.$router.push({ path: '/about' })
           break // 你可以有任意数量的case语句
-        default: // 可选
+        default:
+        // 可选
         // 语句
       }
     }
