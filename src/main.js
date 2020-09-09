@@ -5,11 +5,11 @@ import router from './router'
 import '_a/css/reset.css'
 import '_a/css/valiable.less'
 import iView from 'iview'
+// 引用fullpage 插件
+import 'fullpage.js/vendors/scrolloverflow'
+import VueFullPage from 'vue-fullpage.js'
+Vue.use(VueFullPage)
 
-import 'animate.css'
-import 'vue-fullpage/vue-fullpage.css'
-import VueFullpage from 'vue-fullpage'
-Vue.use(VueFullpage)
 Vue.use(iView)
 
 Vue.config.productionTip = false

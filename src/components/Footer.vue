@@ -102,9 +102,12 @@ export default {
 }
 
 .foot {
+  height: 430px;
   background: #1c2133;
   box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
+
   .footer {
+    height: 430px;
     .footer_content {
       display: flex;
       justify-content: space-between;
@@ -134,7 +137,7 @@ export default {
           flex: 1;
           dt {
             color: #fff;
-            padding: 40px 0;
+            padding: 30px 0;
           }
           dd {
             cursor: pointer;

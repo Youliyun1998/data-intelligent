@@ -40,17 +40,17 @@ export default {
 
 <style lang="less" scoped>
 .content2 {
-  padding-top: 207px;
+  padding-top: 80px;
   display: flex;
   .left {
     .title {
-      width: 654px;
-      height: 36px;
+      width: 400px;
+      height: 42px;
       background: url("~_img/serve-title.png") no-repeat;
       background-size: 100% 100%;
       display: flex;
       // justify-content: center;
-      padding-left: 80px;
+      padding-left: 45px;
       align-items: center;
       font-size: 30px;
       color: #171a25;
@@ -60,16 +60,16 @@ export default {
       margin-top: 15px;
       color: #75777d;
       font-size: 16px;
-      padding-left: 80px;
+      padding-left: 40px;
       dd {
       }
     }
     .content {
-      padding-top: 78px;
-      padding-left: 80px;
+      padding-top: 40px;
+      padding-left: 45px;
 
       dl {
-        margin-bottom: 48px;
+        margin-bottom: 30px;
         dt {
           color: #33384c;
           font-size: 24px;
@@ -85,8 +85,8 @@ export default {
   }
   .right {
     img {
-      width: 623px;
-      height: 701px;
+      width: 600px;
+      height: 692px;
     }
   }
 }

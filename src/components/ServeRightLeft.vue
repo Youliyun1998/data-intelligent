@@ -34,12 +34,12 @@ export default {
 
 <style lang="less" scoped>
 .content2 {
-  padding-top: 207px;
+  padding-top: 100px;
   display: flex;
   .left {
     .title {
       width: 654px;
-      height: 36px;
+      height: 42px;
       background: url("~_img/serve-title.png") no-repeat;
       background-size: 100% 100%;
       display: flex;
@@ -70,8 +70,9 @@ export default {
   }
   .right {
     img {
-      width: 558px;
-      height: 649px;
+      width: 623px;
+      height: 692px;
+      background-size: 100% 100%;
     }
   }
 }

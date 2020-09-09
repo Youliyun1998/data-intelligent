@@ -1,55 +1,126 @@
 <template>
   <div class="example">
-    <div class="banner">
-      <div class="big_title wrap">
-        <div class="title">深耕海关、环保、电力、旅游等行业的大数据服务，</div>
-        <div class="title">
-          精通行业知识、高粘性横向拓展业务
+    <full-page :options="options" ref="page">
+      <!--      第一屏-->
+      <div class="section">
+        <div class="box1">
+          <div class="slide">
+            <div class="banner">
+              <div class="big_title wrap">
+                <div class="title">
+                  深耕海关、环保、电力、旅游等行业的大数据服务，
+                </div>
+                <div class="title">
+                  精通行业知识、高粘性横向拓展业务
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- 内容展示区 -->
-    <div class="content_show">
-      <ExampleLeftRight
-        :title="title1"
-        :url="url1"
-        :contentData="contentData"
-        :subTitle="subTitle1"
-      />
-      <ExampleRightLeft
-        :title="title2"
-        :url="url2"
-        :contentData="contentData2"
-        :subTitle="subTitle2"
-      />
-      <ExampleLeftRight
-        :title="title3"
-        :url="url3"
-        :contentData="contentData3"
-        :subTitle="subTitle3"
-      />
-      <ExampleRightLeft
-        :title="title4"
-        :url="url4"
-        :contentData="contentData4"
-        :subTitle="subTitle4"
-      />
-      <ExampleLeftRight
-        :title="title5"
-        :url="url5"
-        :contentData="contentData5"
-        :subTitle="subTitle5"
-      />
-    </div>
+      <!--      第二屏-->
+      <!-- 内容展示区 -->
+      <div class="section">
+        <div class="box2">
+          <div class="content_show">
+            <ExampleLeftRight
+              :title="title1"
+              :url="url1"
+              :contentData="contentData"
+              :subTitle="subTitle1"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!--      第四屏-->
+      <div class="section">
+        <div class="box1">
+          <div class="content_show">
+            <ExampleRightLeft
+              :title="title2"
+              :url="url2"
+              :contentData="contentData2"
+              :subTitle="subTitle2"
+            />
+          </div>
+        </div>
+      </div>
+      <!--      第二屏-->
+      <div class="section">
+        <div class="box2">
+          <div class="content_show">
+            <ExampleLeftRight
+              :title="title3"
+              :url="url3"
+              :contentData="contentData3"
+              :subTitle="subTitle3"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="box3">
+          <div class="content_show">
+            <ExampleRightLeft
+              :title="title4"
+              :url="url4"
+              :contentData="contentData4"
+              :subTitle="subTitle4"
+            />
+          </div>
+        </div>
+      </div>
+      <!--      第一屏-->
+      <div class="section">
+        <div class="box1">
+          <div class="content_show">
+            <ExampleLeftRight
+              :title="title5"
+              :url="url5"
+              :contentData="contentData5"
+              :subTitle="subTitle5"
+            />
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </full-page>
   </div>
 </template>
 
 <script>
+import Footer from '_c/Footer'
 import ExampleLeftRight from '_c/ExampleLeftRight'
 import ExampleRightLeft from '_c/ExampleRightLeft'
 export default {
   data () {
     return {
+      options: {
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        afterLoad: this.afterLoad,
+        scrollOverflow: true,
+        navigation: true, // 是否显示导航，默认为false
+        navigationPosition: 'right', // 导航小圆点的位置
+        scrollBar: false,
+        keyboardScrolling: false, // 是否可以使用键盘方向键导航，默认为true
+        continuousVertical: false, /// 是否循环滚动，默认为false。如果设置为true，则页面会循环滚动，而不像loopTop或loopBottom那样出现跳动，注意这个属性和loopTop、loopBottom不兼容和，不要同时设置
+        menu: '#menu'
+        // navigation: true,
+        // anchors: ['page1', 'page2', 'page3'],
+        // sectionsColor: [
+        //   "#41b883",
+        //   "#ff5f45",
+        //   "#0798ec",
+        //   "#fec401",
+        //   "#1bcee6",
+        //   "#ee1a59",
+        //   "#2c3e4f",
+        //   "#ba5be9",
+        //   "#b4b8ab"
+        // ]
+      },
+
       subTitle1: [
         '从0-1构建海关大数据风险防控体系，与海关合作建立海关机器学习',
         '应用创新实验室'
@@ -222,22 +293,29 @@ export default {
   },
   components: {
     ExampleLeftRight,
-    ExampleRightLeft
+    ExampleRightLeft,
+    Footer
   }
 }
 </script>
 
 <style lang="less" scoped>
 .example {
-  height: 100%;
-  background: #1c2133;
+  // height: 100%;
+  background: #fff;
+  .section {
+    /deep/.iScrollVerticalScrollbar {
+      width: 0;
+      display: none;
+    }
+  }
   .banner {
     width: 100%;
-    height: 830px;
+    height: 900px;
     background: url("~_img/example_banner.png") no-repeat;
     background-size: 100% 100%;
     position: relative;
-    top: 72px;
+    // top: 72px;
     .big_title {
       position: absolute;
       top: 40%;
@@ -259,7 +337,7 @@ export default {
     }
   }
   .content_show {
-    margin-top: 75px;
+    // margin-top: 75px;
     background-color: #fff;
   }
 }

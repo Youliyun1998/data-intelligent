@@ -113,7 +113,7 @@ export default {
 
   .top {
     z-index: 999999;
-    position: fixed;
+    position: sticky;
     width: 100%;
     height: 75px;
 

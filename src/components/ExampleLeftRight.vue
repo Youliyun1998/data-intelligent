@@ -43,21 +43,22 @@ export default {
   padding-top: 100px;
   display: flex;
   .left {
-    padding-top: 50px;
-    margin-right: 30px;
-    img{
-      width: 623px;
-      height: 701px;
+    // padding-top: 50px;
+    // margin-right: -5px;
+    img {
+      width: 600px;
+      height: 692px;
     }
   }
   .right {
     .title {
-      height: 36px;
+      width: 350px;
+      height: 42px;
       background: url("~_img/serve-title.png") no-repeat;
       background-size: 100% 100%;
       display: flex;
       // justify-content: center;
-      padding-left: 60px;
+      padding-left: 50px;
       align-items: center;
       font-size: 30px;
       color: #171a25;
@@ -72,11 +73,11 @@ export default {
       }
     }
     .content {
-      padding-top: 78px;
+      padding-top: 60px;
       padding-left: 50px;
 
       dl {
-        margin-bottom: 48px;
+        margin-bottom: 38px;
         dt {
           color: #33384c;
           font-size: 24px;
