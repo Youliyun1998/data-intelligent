@@ -1,5 +1,6 @@
 <template>
   <div class="example">
+    <!-- <Head /> -->
     <full-page :options="options" ref="page">
       <!--      第一屏-->
       <div class="section">
@@ -90,6 +91,7 @@
 </template>
 
 <script>
+// import Head from '_c/Head.vue'
 import Footer from '_c/Footer'
 import ExampleLeftRight from '_c/ExampleLeftRight'
 import ExampleRightLeft from '_c/ExampleRightLeft'
@@ -295,6 +297,7 @@ export default {
     ExampleLeftRight,
     ExampleRightLeft,
     Footer
+    // Head
   }
 }
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div class="serve">
+    <!-- <Head /> -->
     <full-page :options="options" ref="page">
       <!--      第一屏-->
       <div class="section">
@@ -90,6 +91,7 @@
 </template>
 
 <script>
+// import Head from '_c/Head.vue'
 import Footer from '_c/Footer'
 import ServeRightLeft from '_c/ServeRightLeft'
 import ServeLeftRight from '_c/ServeLeftRight'
@@ -99,6 +101,7 @@ export default {
     ServeLeftRight,
     ServeRightLeft,
     Footer
+    // Head
   },
   data () {
     return {
@@ -242,7 +245,7 @@ export default {
 .serve {
   height: 100%;
   background: #fff;
-   .section {
+  .section {
     /deep/.iScrollVerticalScrollbar {
       width: 0;
       display: none;

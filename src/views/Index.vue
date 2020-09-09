@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <!-- ================== -->
+    <!-- <Head /> -->
     <full-page :options="options" ref="page">
       <!--      第一屏-->
       <div class="section">
@@ -176,11 +177,13 @@
 </template>
 
 <script>
+// import Head from '_c/Head.vue'
 import Footer from '_c/Footer'
 export default {
   name: 'home',
   components: {
     Footer
+    // Head
   },
   data () {
     return {

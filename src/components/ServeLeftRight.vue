@@ -23,7 +23,7 @@ export default {
       type: String
     },
     contentData: {
-      type: Object
+      type: Array
     }
   },
   data () {

@@ -36,10 +36,11 @@ export default {
     // 浏览器刷新路由重定向为首页
     window.addEventListener('load', () => {
       // 滚动事件变为 scroll
-      if (this.$route.path !== '/home') {
-        // /home 表示首页
-        this.$router.replace('/home') // 切换到首页
-      }
+      // console.log("路由跳转");
+      // if (this.$route.path !== "/home") {
+      //   // /home 表示首页
+      //   this.$router.replace("/home"); // 切换到首页
+      // }
     })
   },
   watch: {

@@ -1,20 +1,38 @@
 <template>
   <div id="app">
-    <Head />
+    <Head v-if="isShow" />
     <router-view />
-    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from '_c/Footer.vue'
 import Head from '_c/Head.vue'
-
 export default {
   name: 'App',
   components: {
-    Footer,
     Head
+  },
+  data () {
+    return {
+      isShow: false
+    }
+  },
+
+  watch: {
+    $route (to, from) {
+      // console.log(this.$route.path, "999");
+      if (
+        this.$route.path === '/home' ||
+        this.$route.path === '/serve' ||
+        this.$route.path === '/product' ||
+        this.$route.path === '/about' ||
+        this.$route.path === '/example'
+      ) {
+        this.isShow = true
+      } else {
+        this.isShow = false
+      }
+    }
   }
 }
 </script>
