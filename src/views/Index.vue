@@ -16,6 +16,13 @@
                   <div class="line"></div>
                 </div>
               </div>
+              <img src="~_img/phone.png" alt="" class="ee" />
+              <img
+                src="~_img/phone_act.png"
+                alt=""
+                class="rr"
+                title="020-85829519"
+              />
             </div>
             <!-- tab -->
             <div class="tab">
@@ -307,12 +314,24 @@ export default {
   // top: 75px;
   height: 717px;
   background: url("~_img/banner.png") no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
+  .rr {
+    display: none;
+  }
+
   img {
     // position: absolute;
     position: fixed;
     top: 600px;
     right: 100px;
+    &:hover {
+      .ee {
+        display: none;
+      }
+      .rr {
+        display: block;
+      }
+    }
   }
 
   .left_text {
