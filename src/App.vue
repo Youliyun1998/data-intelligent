@@ -2,15 +2,18 @@
   <div id="app">
     <Head v-if="isShow" />
     <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from '_c/Footer.vue'
 import Head from '_c/Head.vue'
 export default {
   name: 'App',
   components: {
-    Head
+    Head,
+    Footer
   },
   data () {
     return {
@@ -40,6 +43,10 @@ export default {
 <style lang="less">
 #app {
   background: #1c2133;
+  html,
+  body {
+    height: 100vh;
+  }
   .wrap {
     width: 1200px;
     // height: 100%;

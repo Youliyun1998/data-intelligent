@@ -1,98 +1,98 @@
 <template>
   <div class="example">
     <!-- <Head /> -->
-    <full-page :options="options" ref="page">
-      <!--      第一屏-->
-      <div class="section">
-        <div class="box1">
-          <div class="slide">
-            <div class="banner">
-              <div class="big_title wrap">
-                <div class="title">
-                  深耕海关、环保、电力、旅游等行业的大数据服务，
-                </div>
-                <div class="title">
-                  精通行业知识、高粘性横向拓展业务
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- <full-page :options="options" ref="page"> -->
+    <!--      第一屏-->
+    <!-- <div class="section"> -->
+    <!-- <div class="box1"> -->
+    <!-- <div class="slide"> -->
+    <div class="banner">
+      <div class="big_title wrap">
+        <div class="title">
+          深耕海关、环保、电力、旅游等行业的大数据服务，
+        </div>
+        <div class="title">
+          精通行业知识、高粘性横向拓展业务
         </div>
       </div>
-      <!--      第二屏-->
-      <!-- 内容展示区 -->
-      <div class="section">
-        <div class="box2">
-          <div class="content_show">
-            <ExampleLeftRight
-              :title="title1"
-              :url="url1"
-              :contentData="contentData"
-              :subTitle="subTitle1"
-            />
-          </div>
-        </div>
-      </div>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!--      第二屏-->
+    <!-- 内容展示区 -->
+    <!-- <div class="section"> -->
+    <!-- <div class="box2"> -->
+    <div class="content_show">
+      <ExampleLeftRight
+        :title="title1"
+        :url="url1"
+        :contentData="contentData"
+        :subTitle="subTitle1"
+      />
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
 
-      <!--      第四屏-->
-      <div class="section">
-        <div class="box1">
-          <div class="content_show">
-            <ExampleRightLeft
-              :title="title2"
-              :url="url2"
-              :contentData="contentData2"
-              :subTitle="subTitle2"
-            />
-          </div>
-        </div>
-      </div>
-      <!--      第二屏-->
-      <div class="section">
-        <div class="box2">
-          <div class="content_show">
-            <ExampleLeftRight
-              :title="title3"
-              :url="url3"
-              :contentData="contentData3"
-              :subTitle="subTitle3"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="box3">
-          <div class="content_show">
-            <ExampleRightLeft
-              :title="title4"
-              :url="url4"
-              :contentData="contentData4"
-              :subTitle="subTitle4"
-            />
-          </div>
-        </div>
-      </div>
-      <!--      第一屏-->
-      <div class="section">
-        <div class="box1">
-          <div class="content_show">
-            <ExampleLeftRight
-              :title="title5"
-              :url="url5"
-              :contentData="contentData5"
-              :subTitle="subTitle5"
-            />
-          </div>
-        </div>
-        <Footer />
-      </div>
-    </full-page>
+    <!--      第四屏-->
+    <!-- <div class="section"> -->
+    <!-- <div class="box1"> -->
+    <div class="content_show">
+      <ExampleRightLeft
+        :title="title2"
+        :url="url2"
+        :contentData="contentData2"
+        :subTitle="subTitle2"
+      />
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!--      第二屏-->
+    <!-- <div class="section"> -->
+    <!-- <div class="box2"> -->
+    <div class="content_show">
+      <ExampleLeftRight
+        :title="title3"
+        :url="url3"
+        :contentData="contentData3"
+        :subTitle="subTitle3"
+      />
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="section"> -->
+    <!-- <div class="box3"> -->
+    <div class="content_show">
+      <ExampleRightLeft
+        :title="title4"
+        :url="url4"
+        :contentData="contentData4"
+        :subTitle="subTitle4"
+      />
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!--      第一屏-->
+    <!-- <div class="section"> -->
+    <!-- <div class="box1"> -->
+    <div class="content_show">
+      <ExampleLeftRight
+        :title="title5"
+        :url="url5"
+        :contentData="contentData5"
+        :subTitle="subTitle5"
+      />
+      <!-- </div> -->
+    </div>
+    <!-- <Footer /> -->
+    <!-- </div> -->
+    <!-- </full-page> -->
   </div>
 </template>
 
 <script>
 // import Head from '_c/Head.vue'
-import Footer from '_c/Footer'
+// import Footer from '_c/Footer'
 import ExampleLeftRight from '_c/ExampleLeftRight'
 import ExampleRightLeft from '_c/ExampleRightLeft'
 export default {
@@ -295,8 +295,8 @@ export default {
   },
   components: {
     ExampleLeftRight,
-    ExampleRightLeft,
-    Footer
+    ExampleRightLeft
+    // Footer
     // Head
   }
 }

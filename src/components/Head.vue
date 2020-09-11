@@ -86,9 +86,10 @@ export default {
 
 <style lang="less" scoped>
 .head {
-  height: 75x;
+  height: 79x;
   background: #1c2133;
   box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
+  margin-bottom: 73px;
   .wrap {
     width: 1200px;
     // height: 100%;
@@ -97,10 +98,10 @@ export default {
 
   .top {
     z-index: 999999;
-    position: sticky;
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 75px;
-
     background: #1c2133;
     box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
     .top_content {

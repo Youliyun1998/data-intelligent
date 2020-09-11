@@ -1,11 +1,11 @@
 <template>
   <div class="serve">
     <!-- <Head /> -->
-    <full-page :options="options" ref="page">
+    <!-- <full-page :options="options" ref="page"> -->
       <!--      第一屏-->
-      <div class="section">
-        <div class="box1">
-          <div class="slide">
+      <!-- <div class="section"> -->
+        <!-- <div class="box1"> -->
+          <!-- <div class="slide"> -->
             <!-- banner -->
             <div class="banner">
               <div class="left_text wrap">
@@ -19,12 +19,12 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
       <!--      第二屏-->
-      <div class="section">
-        <div class="box2">
+      <!-- <div class="section"> -->
+        <!-- <div class="box2"> -->
           <!-- 内容呈现区 -->
           <div class="content_show">
             <ServeLeftRight
@@ -33,12 +33,12 @@
               :url="url1"
             />
           </div>
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
       <!--      第三屏-->
-      <div class="section">
-        <div class="box1">
-          <div class="slide">
+      <!-- <div class="section"> -->
+        <!-- <div class="box1"> -->
+          <!-- <div class="slide"> -->
             <div class="content_show">
               <ServeRightLeft
                 :contentData="contentData2"
@@ -46,12 +46,12 @@
                 :url="url2"
               />
             </div>
-          </div>
-        </div>
-      </div>
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
       <!--      第四屏-->
-      <div class="section">
-        <div class="box2">
+      <!-- <div class="section"> -->
+        <!-- <div class="box2"> -->
           <div class="content_show">
             <ServeLeftRight
               :contentData="contentData3"
@@ -59,11 +59,11 @@
               :url="url3"
             />
           </div>
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
       <!-- 第五屏 -->
-      <div class="section">
-        <div class="box3">
+      <!-- <div class="section"> -->
+        <!-- <div class="box3"> -->
           <div class="content_show">
             <ServeRightLeft
               :contentData="contentData2"
@@ -71,11 +71,11 @@
               :url="url2"
             />
           </div>
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
       <!-- 第六屏 -->
-      <div class="section">
-        <div class="box3">
+      <!-- <div class="section"> -->
+        <!-- <div class="box3"> -->
           <div class="content_show">
             <ServeLeftRight
               :contentData="contentData3"
@@ -83,24 +83,24 @@
               :url="url3"
             />
           </div>
-          <Footer />
-        </div>
-      </div>
-    </full-page>
+          <!-- <Footer /> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </full-page> -->
   </div>
 </template>
 
 <script>
 // import Head from '_c/Head.vue'
-import Footer from '_c/Footer'
+// import Footer from '_c/Footer'
 import ServeRightLeft from '_c/ServeRightLeft'
 import ServeLeftRight from '_c/ServeLeftRight'
 export default {
   name: 'serve',
   components: {
     ServeLeftRight,
-    ServeRightLeft,
-    Footer
+    ServeRightLeft
+    // Footer
     // Head
   },
   data () {

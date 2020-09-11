@@ -34,7 +34,7 @@ export default {
 
 <style lang="less" scoped>
 .content2 {
-  padding-top: 100px;
+  padding-top: 150px;
   display: flex;
   .left {
     .title {

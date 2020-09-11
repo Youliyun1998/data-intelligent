@@ -35,6 +35,7 @@ export default {
 <style lang="less" scoped>
 .content1 {
   padding-top: 100px;
+
   display: flex;
   .left {
     padding-top: 50px;

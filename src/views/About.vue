@@ -1,83 +1,83 @@
 <template>
   <div class="about">
     <!-- <Head /> -->
-    <full-page :options="options" ref="page">
-      <!--      第一屏-->
-      <div class="section">
-        <div class="box1">
-          <div class="slide">
-            <div class="banner">
-              <div class="big_title wrap">
-                <div class="title">大数据智能应用服务提供商</div>
-                <div class="sub_title">
-                  把数据资产变成生产资料，产生价值是我们的服务宗旨
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- <full-page :options="options" ref="page"> -->
+    <!--      第一屏-->
+    <!-- <div class="section"> -->
+    <!-- <div class="box1"> -->
+    <!-- <div class="slide"> -->
+    <div class="banner">
+      <div class="big_title wrap">
+        <div class="title">大数据智能应用服务提供商</div>
+        <div class="sub_title">
+          把数据资产变成生产资料，产生价值是我们的服务宗旨
         </div>
       </div>
-      <!--      第二屏-->
-      <div class="section">
-        <div class="box2">
-          <!-- 企业简介 -->
-          <div class="en_presume ">
-            <div class="en_presume_contnent wrap">
-              <div class="big_title">
-                企业简介
-              </div>
-              <p>
-                广州纳指数据智能科技有限公司成立于2016年，是大数据端到端服务提供商，致力于数据服务和智能应用的高科技创新型企业。
-              </p>
-              <p>
-                纳指数据拥有大数据专业分析团队和系列数据智能产品，为科研单位、政府机构和大型企业用户提供咨询规划、数据采集、数据清
-              </p>
-              <p>
-                洗、数据地图、数据质量管控、数据安全、数据共享等数据服务，数据智能产品推出智慧灯杆、智慧环保、智慧园区、智慧旅游、云物管等产品。
-              </p>
-              <div class="block">
-                <ul>
-                  <li v-for="(item, index) in enData" :key="index">
-                    <p>{{ item }}</p>
-                    <div class="line"></div>
-                  </li>
-                  <div class="block_footer">
-                    <div v-for="(item, index) in enDataDetail" :key="index">
-                      <span>{{ item }} </span>
-                    </div>
-                  </div>
-                </ul>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!--      第二屏-->
+    <!-- <div class="section"> -->
+    <!-- <div class="box2"> -->
+    <!-- 企业简介 -->
+    <div class="en_presume ">
+      <div class="en_presume_contnent wrap">
+        <div class="big_title">
+          企业简介
+        </div>
+        <p>
+          广州纳指数据智能科技有限公司成立于2016年，是大数据端到端服务提供商，致力于数据服务和智能应用的高科技创新型企业。
+        </p>
+        <p>
+          纳指数据拥有大数据专业分析团队和系列数据智能产品，为科研单位、政府机构和大型企业用户提供咨询规划、数据采集、数据清
+        </p>
+        <p>
+          洗、数据地图、数据质量管控、数据安全、数据共享等数据服务，数据智能产品推出智慧灯杆、智慧环保、智慧园区、智慧旅游、云物管等产品。
+        </p>
+        <div class="block">
+          <ul>
+            <li v-for="(item, index) in enData" :key="index">
+              <p>{{ item }}</p>
+              <div class="line"></div>
+            </li>
+            <div class="block_footer">
+              <div v-for="(item, index) in enDataDetail" :key="index">
+                <span>{{ item }} </span>
               </div>
             </div>
-          </div>
+          </ul>
         </div>
       </div>
-      <div class="section">
-        <div class="box3">
-          <!-- 联系方式 -->
-          <div class="contact">
-            <div class="contact_content wrap">
-              <div class="title">联系方式</div>
-              <div class="title_detail">
-                <p>广州纳指数据智能科技有限公司</p>
-                <p>020-38986350</p>
-                <p>广东省广州市番禺区小谷围街青蓝街28号创智大厦3栋408室</p>
-              </div>
-              <div class="map">
-                <img src="~_img/about_map.png" alt="" />
-              </div>
-            </div>
-          </div>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="section"> -->
+    <!-- <div class="box3"> -->
+    <!-- 联系方式 -->
+    <div class="contact">
+      <div class="contact_content wrap">
+        <div class="title">联系方式</div>
+        <div class="title_detail">
+          <p>广州纳指数据智能科技有限公司</p>
+          <p>020-38986350</p>
+          <p>广东省广州市番禺区小谷围街青蓝街28号创智大厦3栋408室</p>
         </div>
-        <Footer />
+        <div class="map">
+          <img src="~_img/about_map.png" alt="" />
+        </div>
       </div>
-    </full-page>
+    </div>
+    <!-- </div> -->
+    <!-- <Footer /> -->
+    <!-- </div> -->
+    <!-- </full-page> -->
   </div>
 </template>
 
 <script>
 // import Head from '_c/Head.vue'
-import Footer from '_c/Footer'
+// import Footer from '_c/Footer'
 export default {
   data () {
     return {
@@ -114,7 +114,7 @@ export default {
     }
   },
   components: {
-    Footer
+    // Footer
     // Head
   }
 }
