@@ -1,13 +1,5 @@
 <template>
   <div class="home">
-    <!-- ================== -->
-    <!-- <Head /> -->
-    <!-- <full-page :options="options" ref="page"> -->
-    <!--      第一屏-->
-    <!-- <div class="section"> -->
-    <!-- <div class="box1"> -->
-    <!-- <div class="slide"> -->
-    <!-- banner -->
     <div class="banner">
       <div class="left_text wrap">
         <div class="left_text_l">
@@ -16,10 +8,26 @@
           <div class="line"></div>
         </div>
       </div>
-      <!-- <img src="~_img/phone.png" alt="" class="ee" />
-      <img src="~_img/phone_act.png" alt="" class="rr" title="020-85829519" /> -->
+      <!-- 悬浮电话，回到顶部 -->
+      <!-- <div class="img">
+        <img
+          :src="suspensionUrl1"
+          alt=""
+          title="020-85829519"
+          @mouseover="MouseOver1"
+          @mouseleave="MouseLeave1"
+        />
+        <img
+          :src="suspensionUrl2"
+          alt=""
+          title="020-85829519"
+          @mouseover="MouseOver2"
+          @mouseleave="MouseLeave2"
+          @click="handleTop"
+        />
+      </div> -->
     </div>
-    <!-- tab -->
+
     <div class="tab">
       <div class="tab_content wrap">
         <div class="tab_text" v-for="(item, index) in tabText" :key="index">
@@ -27,13 +35,7 @@
         </div>
       </div>
     </div>
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!--      第二屏-->
-    <!-- <div class="section"> -->
-    <!-- <div class="box2"> -->
-    <!-- 以用户为中心的全流程数据服务 -->
+
     <div class="userCenter_dataServe">
       <div class="dataServe_content wrap">
         <div class="dataServe_title">
@@ -48,69 +50,35 @@
         <div class="dataServe_tab">
           <div
             class="tab_wrap"
-            @mouseover="changeImageSrc(1, 'hover')"
-            @mouseleave="changeImageSrc(1, '')"
+            v-for="(item, index) in dataServeTab"
+            :key="index"
+            :class="[activeTab === index ? 'active' : '']"
+            @click="handleImgChange(index, '')"
           >
-            <img :src="staImg1" alt="" />
-            <div class="text">数据采集</div>
-          </div>
-          <div
-            class="tab_wrap"
-            @mouseover="changeImageSrc(2, 'hover')"
-            @mouseleave="changeImageSrc(2, '')"
-          >
-            <img :src="staImg2" alt="" />
-            <div class="text">数据治理</div>
-          </div>
-          <div
-            class="tab_wrap"
-            @mouseover="changeImageSrc(3, 'hover')"
-            @mouseleave="changeImageSrc(3, '')"
-          >
-            <img :src="staImg3" alt="" />
-            <div class="text">数据建模</div>
-          </div>
-          <div
-            class="tab_wrap"
-            @mouseover="changeImageSrc(4, 'hover')"
-            @mouseleave="changeImageSrc(4, '')"
-          >
-            <img :src="staImg4" alt="" />
-            <div class="text">数据可视化</div>
-          </div>
-          <div
-            class="tab_wrap"
-            @mouseover="changeImageSrc(5, 'hover')"
-            @mouseleave="changeImageSrc(5, '')"
-          >
-            <img :src="staImg5" alt="" />
-            <div class="text">智能应用</div>
+            <img :src="item.img" alt="" />
+            <div class="text">{{ item.text }}</div>
+            <div class="line"></div>
           </div>
         </div>
-        <div class="under_content">
-          <div class="left">
-            <div class="left_top">
-              <span>多源数据采集</span>
-            </div>
-            <div class="left_center">
-              <p>多种埋点方式，支持客户端、服务器日志、业务数据库、</p>
-              <p>第三方服务、历史数据导入等全端数据采集。</p>
-            </div>
-            <div class="left_bottom">查看详情</div>
-          </div>
-          <div class="right">
-            <img src="~_img/data_serve_right_bg.png" alt="" />
-          </div>
-        </div>
+
+        <IndexUserCenter :detailData="detailData1" v-show="activeTab === 0" />
+        <IndexUserCenter :detailData="detailData2" v-show="activeTab === 1" />
+        <IndexUserCenter :detailData="detailData3" v-show="activeTab === 2" />
+        <IndexUserCenter :detailData="detailData4" v-show="activeTab === 3" />
+        <IndexUserCenter :detailData="detailData5" v-show="activeTab === 4" />
       </div>
     </div>
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- 第三屏 -->
-    <!-- <div class="section"> -->
-    <!-- <div class="box3"> -->
+
     <!-- 城市物联网与数字治理 -->
-    <div class="city_goven">
+    <div
+      class="city_goven"
+      :style="{
+        backgroundImage: 'url(' + bgUrl[0].baseImg + ')',
+        backgroundSize: '100% 100%',
+        backgroundRepeat: 'no-repeat'
+      }"
+    >
+      <!-- -->
       <div class="city_goven_content wrap">
         <div class="city_title">城市物联网与数字治理</div>
         <p class="sub_title">
@@ -119,31 +87,26 @@
         <div class="under_content">
           <div class="left">
             <ul>
-              <li v-for="(item, index) in programData" :key="index">
+              <li
+                v-for="(item, index) in programData"
+                :key="index"
+                :class="[currentIndex === index ? 'active_tab' : '']"
+                @click="handleCityChange(index)"
+              >
+                <div class="line"></div>
                 {{ item }}
               </li>
             </ul>
           </div>
-          <div class="right">
-            <p class="title">智慧灯杆</p>
-            <div class="line"></div>
-            <p>智慧灯杆作为构建智慧城市的重要载体，充分应用路灯</p>
-            <p>
-              灯杆在城市中无处不在的优势，达到资源共享；以路灯
-            </p>
-            <p>杆为载体，完成互联互通。</p>
-            <div class="check">
-              <span>查看详情</span>
-            </div>
-          </div>
+          <IndexCityGoven :CityGoven="CityGoven1" v-show="currentIndex === 0" />
+          <IndexCityGoven :CityGoven="CityGoven2" v-show="currentIndex === 1" />
+          <IndexCityGoven :CityGoven="CityGoven3" v-show="currentIndex === 2" />
+          <IndexCityGoven :CityGoven="CityGoven4" v-show="currentIndex === 4" />
+          <IndexCityGoven :CityGoven="CityGoven5" v-show="currentIndex === 3" />
         </div>
       </div>
     </div>
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- 第四屏 -->
-    <!-- <div class="section"> -->
-    <!-- <div class="box3"> -->
+
     <!-- 合作伙伴 -->
     <div class="company">
       <div class="company_content wrap">
@@ -170,11 +133,12 @@
       <!-- </div> -->
       <!-- <Footer /> -->
     </div>
-    <!-- </full-page> -->
   </div>
 </template>
 
 <script>
+import IndexCityGoven from '_c/IndexCityGoven'
+import IndexUserCenter from '_c/IndexUserCenter'
 // import Head from '_c/Head.vue'
 // import Footer from '_c/Footer'
 export default {
@@ -182,9 +146,146 @@ export default {
   components: {
     // Footer
     // Head
+    IndexUserCenter,
+    IndexCityGoven
   },
   data () {
     return {
+      suspensionUrl1: require('../assets/img/phone.png'),
+      suspensionUrl2: '',
+
+      bgUrl: [
+        {
+          baseImg: require('../assets/img/data_program_bg1.png')
+        },
+        {
+          baseImg: require('../assets/img/data_program_bg2.png')
+        },
+        {
+          baseImg: require('../assets/img/data_program_bg3.png')
+        },
+        {
+          baseImg: require('../assets/img/data_program_bg4.png')
+        },
+        {
+          baseImg: require('../assets/img/data_program_bg5.png')
+        }
+      ],
+      CityGoven1: {
+        title: '智慧灯杆',
+        content: [
+          '智慧灯杆作为构建智慧城市的重要载体，充分应用路灯',
+          ' 灯杆在城市中无处不在的优势，达到资源共享；以路灯',
+          '杆为载体，完成互联互通。'
+        ],
+        detail: '查看详情'
+      },
+      CityGoven2: {
+        title: '智慧环保',
+        content: [
+          '基于物联网技术、云计算技术、3S技术、多网融合等多',
+          '种技术方案，通过实时采集污染源、环境质量、生态、',
+          '环境风险等信息，构建全方位、多层次、全覆盖的生态',
+          '环境监测网络，实现环保数据智能分析及趋势预警，提',
+          '升生态环境质量监管及综合决策能力。'
+        ],
+        detail: '查看详情'
+      },
+      CityGoven3: {
+        title: '智慧园区',
+        content: [
+          '通过智慧园区云平台，为各要素建立相应的业务平台，',
+          '统一容纳各要素的信息资源，统一为各业务提供应用工',
+          '具平台，统一用户接触面。'
+        ],
+        detail: '查看详情'
+      },
+      CityGoven4: {
+        title: '云物管',
+        content: [
+          '基于人脸识别、物联网、大数据技术，实现门禁、安',
+          '防、停车、消费等软硬件一体化管理。'
+        ],
+        detail: '查看详情'
+      },
+      CityGoven5: {
+        title: '智慧旅游',
+        content: [
+          '推动旅游景观全域优化、旅游服务全域配套、旅游治理',
+          '全域覆盖、旅游质量全面提升、旅游产业全域联动和旅',
+          '旅游成果全民共享。'
+        ],
+        detail: '查看详情'
+      },
+      currentIndex: 0,
+      detailData1: {
+        title: '多源数据采集',
+        content: [
+          '多种埋点方式，支持客户端、服务器日志、业务数据库、',
+          '第三方服务、历史数据导入等全端数据采集。'
+        ],
+        detail: '查看详情',
+        imgUrl: require('../assets/img/data_serve_right_bg1.png')
+      },
+      detailData2: {
+        title: '数据治理',
+        content: [
+          '数据治理，提供数据采集、数据地图、数据清洗、数据质',
+          '量管控、数据安全、数据服务等。'
+        ],
+        detail: '查看详情',
+        imgUrl: require('../assets/img/data_serve_right_bg2.png')
+      },
+      detailData3: {
+        title: '数据建模',
+        content: [
+          '数据建模自带模型库，支持高级建模方式，提供模型全生',
+          '命周期管理、调度管理、监控分析、模型上下架等。'
+        ],
+        detail: '查看详情',
+        imgUrl: require('../assets/img/data_serve_right_bg3.png')
+      },
+      detailData4: {
+        title: '数据可视化',
+        content: [
+          '数据可视化平台提供所见即所得的配置方式，帮助用户快',
+          '速建立专业的数据大屏。'
+        ],
+        detail: '查看详情',
+        imgUrl: require('../assets/img/data_serve_right_bg4.png')
+      },
+      detailData5: {
+        title: '智能应用',
+        content: [
+          '提供专家团队与用户业务骨干组成创新小组，共同探讨突',
+          '破方向，从任务开始到成果交付全流程跟踪效果。'
+        ],
+        detail: '查看详情',
+        imgUrl: require('../assets/img/data_serve_right_bg5.png')
+      },
+      activeTab: 0,
+      dataServeTab: [
+        {
+          img: require('../assets/img/data_set_act.png'),
+          text: '数据采集'
+        },
+        {
+          img: require('../assets/img/data_govern.png'),
+          text: '数据治理'
+        },
+        {
+          img: require('../assets/img/data_jianmo.png'),
+          text: '数据建模'
+        },
+        {
+          img: require('../assets/img/data_see.png'),
+          text: '数据可视化'
+        },
+        {
+          img: require('../assets/img/smart_app.png'),
+          text: '智能应用'
+        }
+      ],
       options: {
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         afterLoad: this.afterLoad,
@@ -226,8 +327,95 @@ export default {
       staImg6: require('../assets/img/phone.png')
     }
   },
-  mounted () {},
+  mounted () {
+    window.addEventListener('scroll', e => {
+      var scrollTop =
+        document.documentElement.scrollTop ||
+        window.pageYOffset ||
+        document.body.scrollTop
+      if (scrollTop > 1099) {
+        this.suspensionUrl2 = require('../assets/img/top.png')
+      } else {
+        this.suspensionUrl2 = ''
+      }
+    })
+  },
   methods: {
+    handleTop () {
+      window.scrollTo(0, 0)
+      this.suspensionUrl2 = ''
+    },
+    MouseOver1 () {
+      this.suspensionUrl1 = require('../assets/img/phone_act.png')
+    },
+    MouseLeave1 () {
+      this.suspensionUrl1 = require('../assets/img/phone.png')
+    },
+    MouseOver2 () {
+      this.suspensionUrl2 = require('../assets/img/top_act.png')
+    },
+    MouseLeave2 () {
+      this.suspensionUrl2 = require('../assets/img/top.png')
+    },
+    handleCityChange (index) {
+      this.currentIndex = index
+      // 解决切换背景图片出现闪动问题
+      const img = new Image()
+      img.src = this.bgUrl[this.currentIndex].baseImg
+      // console.log(img.src, " img.src");
+      img.onload = () => {
+        // console.log(document.getElementsByClassName("city_goven"), "a");
+        document.getElementsByClassName('city_goven')[0].style.backgroundImage =
+          'url(' + img.src + ')'
+        document.getElementsByClassName('city_goven')[0].style.backgroundSize =
+          '100% 100%'
+        document.getElementsByClassName(
+          'city_goven'
+        )[0].style.backgroundRepeat = 'no-repeat'
+      }
+    },
+    handleImgChange (index, way) {
+      // console.log(index, "index");
+      this.activeTab = index
+      // let tempStr = way === "hover" ? "_act" : "";
+      let tempStr = ''
+      // console.log(this.dataServeTab[0], "this.dataServeTab[0]");
+      // console.log(this.dataServeTab, " this.dataServeTab[0].img");
+      this.dataServeTab[0].img = this.staImg1
+      this.dataServeTab[1].img = this.staImg2
+      this.dataServeTab[2].img = this.staImg3
+      this.dataServeTab[3].img = this.staImg4
+
+      this.dataServeTab[4].img = this.staImg5
+      // this.dataServeTab[5].img = require(`../assets/img/phone.png`);
+      switch (this.activeTab) {
+        case 0:
+          tempStr = '_act'
+          this.dataServeTab[0].img = require(`../assets/img/data_set${tempStr}.png`)
+          break
+        case 1:
+          tempStr = '_act'
+          this.dataServeTab[1].img = require(`../assets/img/data_govern${tempStr}.png`)
+          break
+        case 2:
+          tempStr = '_act'
+          this.dataServeTab[2].img = require(`../assets/img/data_jianmo${tempStr}.png`)
+          break
+        case 3:
+          tempStr = '_act'
+          this.dataServeTab[3].img = require(`../assets/img/data_see${tempStr}.png`)
+          break
+        case 4:
+          tempStr = '_act'
+          this.dataServeTab[4].img = require(`../assets/img/smart_app${tempStr}.png`)
+          break
+        // case 5:
+        //   tempStr = "_act";
+        //   this.dataServeTab[5].img = require(`../assets/img/phone${tempStr}.png`);
+        //   break;
+        // 可以继续添加
+      }
+    },
     afterLoad (e) {
       // console.log(e.index, "oooo");
       if (e.index === 3) {
@@ -235,29 +423,29 @@ export default {
       }
     },
     // 动态切换图片路径
-    changeImageSrc (key, way) {
+    changeImageSrc (index, way) {
+      const tempStr = way === 'hover' ? '_act' : ''
+
       // console.log('鼠标移入/移出')
       // 移入或移出时图标src 名后缀变化('_h'表示移入状态;默认状态后缀为空'')
-      const tempStr = way === 'hover' ? '_act' : ''
-      switch (key) {
+      // const tempStr = way === "hover" ? "_act" : "";
+      switch (index) {
+        case 0:
+          this.dataServeTab[0].img = require(`../assets/img/data_set${tempStr}.png`)
+          break
         case 1:
-          this.staImg1 = require(`../assets/img/data_set${tempStr}.png`)
+          this.dataServeTab[1].img = require(`../assets/img/data_govern${tempStr}.png`)
           break
         case 2:
-          this.staImg2 = require(`../assets/img/data_govern${tempStr}.png`)
+          this.dataServeTab[2].img = require(`../assets/img/data_jianmo${tempStr}.png`)
           break
         case 3:
-          this.staImg3 = require(`../assets/img/data_jianmo${tempStr}.png`)
+          this.dataServeTab[3].img = require(`../assets/img/data_see${tempStr}.png`)
           break
         case 4:
-          this.staImg4 = require(`../assets/img/data_see${tempStr}.png`)
+          this.dataServeTab[4].img = require(`../assets/img/smart_app${tempStr}.png`)
           break
-        case 5:
-          this.staImg5 = require(`../assets/img/smart_app${tempStr}.png`)
-          break
-        case 6:
-          this.staImg6 = require(`../assets/img/phone${tempStr}.png`)
-          break
+
         // 可以继续添加
       }
     },
@@ -290,7 +478,7 @@ export default {
 <style lang="less" scoped>
 .home {
   height: 100%;
-  background: #1c2133;
+  // background: #1c2133;
   box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
   .section {
     /deep/.iScrollVerticalScrollbar {
@@ -306,23 +494,12 @@ export default {
   height: 717px;
   background: url("~_img/banner.png") no-repeat;
   background-size: 100% 100%;
-  .rr {
-    display: none;
-  }
-
-  img {
-    // position: absolute;
+  .img {
     position: fixed;
-    top: 600px;
+    top: 700px;
     right: 100px;
-    &:hover {
-      .ee {
-        display: none;
-      }
-      .rr {
-        display: block;
-      }
-    }
+    display: flex;
+    flex-direction: column;
   }
 
   .left_text {
@@ -451,26 +628,48 @@ export default {
     .dataServe_tab {
       color: #171a25;
       font-size: 16px;
-      // text-align: center;
+
       display: flex;
       padding-top: 37px;
-      // padding-bottom: 20px;
+
       border-bottom: 1px solid #ebebec;
 
       .tab_wrap {
         flex: 1;
-        text-align: center;
-        padding-bottom: 15px;
-        border-bottom: 5px solid transparent;
+        // text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // padding-bottom: 5px;
+        // border-bottom: 5px solid transparent;
         img {
           width: 42px;
           height: 41px;
         }
         .text {
+          padding: 15px 0;
         }
-        &:hover {
+        // &:hover {
+        //   color: #59a6ba;
+        //   .line {
+        //     width: 30px;
+        //     height: 5px;
+        //     background: #ffdd1f;
+        //     border-radius: 3px;
+        //     text-align: center;
+        //   }
+        // }
+        &.active {
           color: #59a6ba;
-          border-bottom: 5px solid #ffdd1f;
+
+          .line {
+            width: 30px;
+            height: 5px;
+            background: #ffdd1f;
+            border-radius: 3px;
+            text-align: center;
+          }
         }
       }
     }
@@ -526,7 +725,7 @@ export default {
 }
 .city_goven {
   height: 920px;
-  background: url("~_img/data_program_bg.png");
+  // background: url("~_img/data_program_bg.png");
   background-size: 100% 100%;
   .city_goven_content {
     padding-top: 40px;
@@ -550,6 +749,7 @@ export default {
         width: 200px;
         // height: 590px;
         background: rgba(255, 255, 255, 0.36);
+        background-color: #fff;
         box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.09);
         border-radius: 4px;
         border: 1px solid #e3ecef;
@@ -559,12 +759,39 @@ export default {
             width: 200px;
             height: 100px;
             display: flex;
-            justify-content: center;
+            // justify-content: center;
             align-items: center;
             color: #75777d;
             font-size: 16px;
+            .line {
+              width: 4px;
+              height: 50px;
+              background: transparent;
+              border-radius: 0px 2px 2px 0px;
+              margin-right: 60px;
+            }
+            // padding-left: 60px;
 
-            &:hover {
+            // &:hover {
+            //   color: #59a6ba;
+            //   font-size: 18px;
+            //   font-weight: bold;
+            //   background: linear-gradient(
+            //     270deg,
+            //     rgba(238, 240, 245, 0.5) 1%,
+            //     rgba(175, 209, 220, 0.35) 69%,
+            //     rgba(89, 166, 186, 0.14) 100%
+            //   );
+            //   border-radius: 4px 4px 0px 0px;
+            //   // &::before {
+            //   //   content: "";
+            //   //   width: 4px;
+            //   //   height: 50px;
+            //   //   background: #59a6ba;
+            //   //   border-radius: 0px 2px 2px 0px;
+            //   // }
+            // }
+            &.active_tab {
               color: #59a6ba;
               font-size: 18px;
               font-weight: bold;
@@ -575,13 +802,13 @@ export default {
                 rgba(89, 166, 186, 0.14) 100%
               );
               border-radius: 4px 4px 0px 0px;
-              // &::before {
-              //   content: "";
-              //   width: 4px;
-              //   height: 50px;
-              //   background: #59a6ba;
-              //   border-radius: 0px 2px 2px 0px;
-              // }
+              .line {
+                width: 4px;
+                height: 50px;
+                background: #59a6ba;
+                border-radius: 0px 2px 2px 0px;
+                margin-right: 60px;
+              }
             }
           }
         }

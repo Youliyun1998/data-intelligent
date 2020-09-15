@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <Head v-if="isShow" />
     <router-view />
-    <Footer />
+    <Footer v-if="isShow" />
   </div>
 </template>
 
@@ -41,8 +41,13 @@ export default {
 </script>
 
 <style lang="less">
+[v-cloak] {
+  display: none !important;
+}
 #app {
-  background: #1c2133;
+  // background: #1c2133;
+  background-color: #fff;
+
   html,
   body {
     height: 100vh;
