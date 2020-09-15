@@ -165,10 +165,10 @@ export default {
           baseImg: require('../assets/img/data_program_bg3.png')
         },
         {
-          baseImg: require('../assets/img/data_program_bg4.png')
+          baseImg: require('../assets/img/data_program_bg5.png')
         },
         {
-          baseImg: require('../assets/img/data_program_bg5.png')
+          baseImg: require('../assets/img/data_program_bg4.png')
         }
       ],
       CityGoven1: {
