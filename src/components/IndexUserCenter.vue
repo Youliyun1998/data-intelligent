@@ -11,7 +11,7 @@
       >
         <p>{{ item }}</p>
       </div>
-      <div class="left_bottom">{{ detailData.detail }}</div>
+      <div class="left_bottom" @click="handleJump">{{ detailData.detail }}</div>
     </div>
     <div class="right">
       <img :src="detailData.imgUrl" alt="" />
@@ -23,6 +23,11 @@
 export default {
   data () {
     return {}
+  },
+  methods: {
+    handleJump () {
+      this.$emit('changeRouter')
+    }
   },
   props: {
     detailData: {
@@ -55,6 +60,7 @@ export default {
       color: #75777d;
     }
     .left_bottom {
+      cursor: pointer;
       width: 180px;
       height: 44px;
       border-radius: 25px;
@@ -76,8 +82,12 @@ export default {
   }
   .right {
     img {
+      // width: 558px;
+      // height: 649px;
       width: 558px;
-      height: 492px;
+      height: 542px;
+      // width: intrinsic;
+      // height: intrinsic;
     }
   }
 }

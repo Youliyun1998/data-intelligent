@@ -61,11 +61,31 @@
           </div>
         </div>
 
-        <IndexUserCenter :detailData="detailData1" v-show="activeTab === 0" />
-        <IndexUserCenter :detailData="detailData2" v-show="activeTab === 1" />
-        <IndexUserCenter :detailData="detailData3" v-show="activeTab === 2" />
-        <IndexUserCenter :detailData="detailData4" v-show="activeTab === 3" />
-        <IndexUserCenter :detailData="detailData5" v-show="activeTab === 4" />
+        <IndexUserCenter
+          :detailData="detailData1"
+          @changeRouter="changeRouter"
+          v-show="activeTab === 0"
+        />
+        <IndexUserCenter
+          :detailData="detailData2"
+          @changeRouter="changeRouter"
+          v-show="activeTab === 1"
+        />
+        <IndexUserCenter
+          :detailData="detailData3"
+          @changeRouter="changeRouter"
+          v-show="activeTab === 2"
+        />
+        <IndexUserCenter
+          :detailData="detailData4"
+          @changeRouter="changeRouter"
+          v-show="activeTab === 3"
+        />
+        <IndexUserCenter
+          :detailData="detailData5"
+          @changeRouter="changeRouter"
+          v-show="activeTab === 4"
+        />
       </div>
     </div>
 
@@ -98,11 +118,31 @@
               </li>
             </ul>
           </div>
-          <IndexCityGoven :CityGoven="CityGoven1" v-show="currentIndex === 0" />
-          <IndexCityGoven :CityGoven="CityGoven2" v-show="currentIndex === 1" />
-          <IndexCityGoven :CityGoven="CityGoven3" v-show="currentIndex === 2" />
-          <IndexCityGoven :CityGoven="CityGoven4" v-show="currentIndex === 4" />
-          <IndexCityGoven :CityGoven="CityGoven5" v-show="currentIndex === 3" />
+          <IndexCityGoven
+            :CityGoven="CityGoven1"
+            @changeJump="changeJump"
+            v-show="currentIndex === 0"
+          />
+          <IndexCityGoven
+            :CityGoven="CityGoven2"
+            @changeJump="changeJump"
+            v-show="currentIndex === 1"
+          />
+          <IndexCityGoven
+            :CityGoven="CityGoven3"
+            @changeJump="changeJump"
+            v-show="currentIndex === 2"
+          />
+          <IndexCityGoven
+            :CityGoven="CityGoven4"
+            @changeJump="changeJump"
+            v-show="currentIndex === 4"
+          />
+          <IndexCityGoven
+            :CityGoven="CityGoven5"
+            @changeJump="changeJump"
+            v-show="currentIndex === 3"
+          />
         </div>
       </div>
     </div>
@@ -341,6 +381,14 @@ export default {
     })
   },
   methods: {
+    changeJump () {
+      window.scrollTo(0, 0)
+      this.$router.push({ path: '/product' })
+    },
+    changeRouter () {
+      window.scrollTo(0, 0)
+      this.$router.push({ path: '/serve' })
+    },
     handleTop () {
       window.scrollTo(0, 0)
       this.suspensionUrl2 = ''
@@ -509,6 +557,7 @@ export default {
 
       .big_text {
         font-size: 50px;
+        font-weight: bold;
         color: #fff;
       }
       .sub_text {
@@ -620,6 +669,7 @@ export default {
     .dataServe_subtitle {
       font-size: 20px;
       color: #75777d;
+
       p {
         display: flex;
         justify-content: center;
@@ -635,6 +685,7 @@ export default {
       border-bottom: 1px solid #ebebec;
 
       .tab_wrap {
+        cursor: pointer;
         flex: 1;
         // text-align: center;
         display: flex;
@@ -756,6 +807,7 @@ export default {
         padding: 5px 0;
         ul {
           li {
+            cursor: pointer;
             width: 200px;
             height: 100px;
             display: flex;

@@ -3,7 +3,7 @@
     <p class="title">{{ CityGoven.title }}</p>
     <div class="line"></div>
     <p v-for="(i, v) in CityGoven.content" :key="v">{{ i }}</p>
-    <div class="check">
+    <div class="check" @click="handleChange">
       <span>{{ CityGoven.detail }}</span>
     </div>
   </div>
@@ -14,6 +14,11 @@ export default {
   props: {
     CityGoven: {
       type: Object
+    }
+  },
+  methods: {
+    handleChange () {
+      this.$emit('changeJump')
     }
   }
 }
@@ -40,6 +45,7 @@ export default {
     color: #75777d;
   }
   .check {
+    cursor: pointer;
     margin-top: 100px;
     width: 180px;
     height: 44px;

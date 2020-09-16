@@ -54,6 +54,17 @@ export default {
     $route (to, from) {
       // 监听路由变化，让页面回滚到顶部
       window.scrollTo(0, 0)
+      if (this.$route.path === '/serve') {
+        this.activeIndex = 1
+      } else if (this.$route.path === '/product') {
+        this.activeIndex = 2
+      } else if (this.$route.path === '/example') {
+        this.activeIndex = 3
+      } else if (this.$route.path === '/home') {
+        this.activeIndex = 0
+      } else if (this.$route.path === '/about') {
+        this.activeIndex = 4
+      }
     }
   },
   methods: {
@@ -134,7 +145,7 @@ export default {
                 color: #fff;
                 // width: 66px;
 
-                border-bottom: 4px solid #ffdd1f;
+                border-bottom: 4px solid #3e6eff;
               }
             }
           }

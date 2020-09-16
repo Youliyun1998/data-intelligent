@@ -7,10 +7,12 @@
     <!-- <div class="box1"> -->
     <!-- <div class="slide"> -->
     <div class="banner">
-      <div class="big_title wrap">
-        <div class="title">大数据智能应用服务提供商</div>
-        <div class="sub_title">
-          把数据资产变成生产资料，产生价值是我们的服务宗旨
+      <div class="big_title1 wrap">
+        <div class="big_title2">
+          <div class="title">大数据智能应用服务提供商</div>
+          <div class="sub_title">
+            把数据资产变成生产资料，产生价值是我们的服务宗旨
+          </div>
         </div>
       </div>
     </div>
@@ -60,8 +62,8 @@
         <div class="title">联系方式</div>
         <div class="title_detail">
           <p>广州纳指数据智能科技有限公司</p>
-          <p>020-38986350</p>
-          <p>广东省广州市番禺区小谷围街青蓝街28号创智大厦3栋408室</p>
+          <p>020-85829519</p>
+          <p>广州市番禺区广州大学城青蓝街28号创智大厦C栋智汇谷3栋408室</p>
         </div>
         <div class="map">
           <img src="~_img/about_map.png" alt="" />
@@ -131,27 +133,36 @@ export default {
     }
   }
   .banner {
-    width: 100%;
+    // width: 100%;
     height: 900px;
     background: url("~_img/about_banner2.png") no-repeat;
-    background-size: cover;
-    position: relative;
+    background-size: 100% 100%;
+    // position: relative;
     // top: 73px;
-    .big_title {
-      position: absolute;
-      top: 40%;
-      left: 30%;
-      color: #fff;
-      .title {
-        font-size: 50px;
-        font-weight: bold;
+    .big_title1 {
+      .big_title2 {
+        // position: absolute;
+        // top: 40%;
+        // left: 50%;
+
         color: #fff;
-        margin-bottom: 16px;
-      }
-      .sub_title {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 30px;
-        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+          margin-top: 350px;
+          font-size: 50px;
+          font-weight: bold;
+          color: #fff;
+          margin-bottom: 16px;
+        }
+        .sub_title {
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 30px;
+          font-weight: 500;
+        }
       }
     }
   }
@@ -168,17 +179,21 @@ export default {
       text-align: center;
     }
     p {
+      text-indent: 2em;
       &:nth-child(2),
       &:nth-child(3) {
-        text-align: center;
+        // text-align: center;
+      }
+      &:nth-child(4) {
+        text-indent: 0;
       }
       color: rgba(23, 26, 37, 0.6);
       font-size: 20px;
-      text-align: left;
+      // text-align: left;
     }
     .block {
       margin-top: 40px;
-      padding-bottom: 40px;
+      margin-bottom: 40px;
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -190,12 +205,15 @@ export default {
           background-size: 100% 100%;
           &:first-child {
             background: url("~_img/about_en1.png") no-repeat;
+            background-size: 100% 100%;
           }
           &:nth-child(2) {
             background: url("~_img/about_en2.png") no-repeat;
+            background-size: 100% 100%;
           }
           &:nth-child(3) {
             background: url("~_img/about_en3.png") no-repeat;
+            background-size: 100% 100%;
             margin-right: 0;
           }
           display: flex;
@@ -203,6 +221,7 @@ export default {
           justify-content: center;
           align-items: center;
           p {
+            text-indent: 0;
             color: #fff;
             font-size: 30px;
             font-weight: bold;
@@ -217,6 +236,7 @@ export default {
         }
         .block_footer {
           display: flex;
+
           div {
             margin-right: 20px;
             width: 386px;
@@ -263,9 +283,15 @@ export default {
         color: #33384c;
         display: flex;
         justify-content: center;
+        align-items: center;
 
         p {
           margin-right: 37px;
+          display: flex;
+          align-items: center;
+          &:last-child {
+            margin-right: 0;
+          }
           &:nth-child(2)::before {
             content: "";
             display: inline-block;

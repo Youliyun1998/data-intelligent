@@ -71,7 +71,7 @@ export default {
         '企业简介',
         '联系我们',
         '电话：020-85829519',
-        '地址：广东省广州市番禺区小谷围街青蓝街28号创智大厦3栋408室'
+        '地址：广州市番禺区广州大学城青蓝街28号创智大厦C栋智汇谷3栋408室'
       ]
     }
   },
@@ -102,12 +102,12 @@ export default {
 }
 
 .foot {
-  height: 430px;
+  // height: 430px;
   background: #1c2133;
   box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
 
   .footer {
-    height: 430px;
+    // height: 430px;
     .footer_content {
       display: flex;
       justify-content: space-between;
@@ -122,9 +122,12 @@ export default {
           }
           dd {
             cursor: pointer;
-            color: #aaaaaa;
+            color: #838b9c;
             font-size: 14px;
             padding-bottom: 20px;
+            &:last-child {
+              padding-bottom: 0;
+            }
             &:hover {
               color: #fff;
             }
@@ -141,9 +144,10 @@ export default {
           }
           dd {
             cursor: pointer;
-            color: #aaaaaa;
+            color: #838b9c;
             font-size: 14px;
             padding-bottom: 30px;
+
             &:nth-child(4) {
               display: flex;
               align-items: center;
@@ -151,23 +155,26 @@ export default {
                 content: "";
                 background: url("~_img/foot_phone2.png");
                 display: block;
-                width: 13px;
-                height: 16px;
-                color: #aaaaaa;
+                width: 11px;
+                height: 14px;
+                color: #838b9c;
                 background-size: 100% 100%;
+                margin-right: 10px;
               }
             }
             &:nth-child(5) {
               display: flex;
               align-items: center;
+
               &::before {
                 content: "";
                 background: url("~_img/foot_address2.png");
                 display: block;
-                width: 13px;
-                height: 16px;
-                color: #aaaaaa;
+                width: 11px;
+                height: 14px;
+                color: #838b9c;
                 background-size: 100% 100%;
+                margin-right: 10px;
               }
             }
             &:hover {
@@ -183,7 +190,8 @@ export default {
       align-items: center;
       color: #565b66;
       font-size: 14px;
-      padding-bottom: 30px;
+      padding-top: 28px;
+      padding-bottom: 32px;
       p {
         margin-right: 20px;
       }

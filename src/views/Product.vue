@@ -31,7 +31,7 @@
     <!-- 产品展示 -->
     <div class="product_show">
       <div class="product_detail wrap">
-        <div class="title">以用户为中心的全流程数据服务</div>
+        <div class="title">智慧灯杆，智慧城市的“末梢神经元”</div>
         <div class="subtitle">
           智慧灯杆具备“有网、有点、有杆”三位一体的特点，能够对照明、公安、市政、气象、环保、通信等多行业信息进行采集、发布以及传输，在有效降低智慧城市建设成本的同时，形成一张智慧感知网络，实现对城市各领域的精确化管理和城市资源的集约化利用。
         </div>
@@ -258,6 +258,7 @@ export default {
 
         .big_text {
           font-size: 50px;
+          font-weight: bold;
           color: #fff;
         }
         .big_subtitle {
