@@ -30,7 +30,12 @@
 
     <div class="tab">
       <div class="tab_content wrap">
-        <div class="tab_text" v-for="(item, index) in tabText" :key="index">
+        <div
+          class="tab_text"
+          v-for="(item, index) in tabText"
+          :key="index"
+          @click="handletabText(index)"
+        >
           {{ item }}
         </div>
       </div>
@@ -381,6 +386,14 @@ export default {
     })
   },
   methods: {
+    handletabText (index) {
+      window.scrollTo(0, 0)
+      if (index === 1) {
+        this.$router.push({ path: '/serve' })
+      } else if (index === 2) {
+        this.$router.push({ path: '/product' })
+      }
+    },
     changeJump () {
       window.scrollTo(0, 0)
       this.$router.push({ path: '/product' })

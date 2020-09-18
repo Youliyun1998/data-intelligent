@@ -9,7 +9,7 @@
     <div class="banner">
       <div class="big_title wrap">
         <div class="title">
-          深耕海关、环保、电力、旅游等行业的大数据服务，
+          深耕环保、海关、电力、旅游等行业的大数据服务，
         </div>
         <div class="title">
           精通行业知识、高粘性横向拓展业务
@@ -25,12 +25,13 @@
     <!-- <div class="box2"> -->
     <div class="content_show">
       <ExampleLeftRight
-        :title="title1"
-        :url="url1"
-        :contentData="contentData"
-        :subTitle="subTitle1"
+        :title="title3"
+        :url="url3"
+        :contentData="contentData3"
+        :subTitle="subTitle3"
       />
     </div>
+
     <!-- </div> -->
     <!-- </div> -->
 
@@ -52,12 +53,13 @@
     <!-- <div class="box2"> -->
     <div class="content_show">
       <ExampleLeftRight
-        :title="title3"
-        :url="url3"
-        :contentData="contentData3"
-        :subTitle="subTitle3"
+        :title="title1"
+        :url="url1"
+        :contentData="contentData"
+        :subTitle="subTitle1"
       />
     </div>
+
     <!-- </div> -->
     <!-- </div> -->
     <!-- <div class="section"> -->
@@ -203,28 +205,20 @@ export default {
       ],
       contentData3: [
         {
-          title: '- 建立在线监测网络',
-          content: [
-            '建立市-镇村三级监管体系，包括水、大气、土壤、固废、声音等全方位立体监测。'
-          ]
+          title: '- 精准监测',
+          content: ['国控、省站、市站、超级站、微站、走航监测。']
         },
         {
-          title: '- 生态环境数据治理',
-          content: ['建设生态环境统一数据中心，解决数据孤岛和烟囱应用的问题。']
+          title: '- 数据融合',
+          content: ['全业务、全渠道业务数据融合分析。']
         },
         {
-          title: '- 生态环境统一信息发布平台，意见反馈平台',
-          content: [
-            '实现和社会公众的沟通与互动，推动信息公开，促进全民参与监管的环境',
-            '治理新模式。'
-          ]
+          title: '- 及时预警',
+          content: ['监测站点实时告警、污染天气预报告警。']
         },
         {
-          title: '- 建设生态环境督查协调系统',
-          content: [
-            '支持督察督办任务的分拆、任务分发、任务执行计划、',
-            '任务过程反馈、任务完成情况等全过程反馈。'
-          ]
+          title: '- 协同治理',
+          content: ['精准定位、多级任务联动。']
         }
       ],
       title4: '旅游产业大数据中心',
