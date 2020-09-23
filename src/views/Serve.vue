@@ -66,8 +66,8 @@
         <!-- <div class="box3"> -->
           <div class="content_show">
             <ServeRightLeft
-              :contentData="contentData2"
-              :title="title2"
+              :contentData="contentData4"
+              :title="title4"
               :url="url2"
             />
           </div>
@@ -78,9 +78,9 @@
         <!-- <div class="box3"> -->
           <div class="content_show">
             <ServeLeftRight
-              :contentData="contentData3"
-              :title="title3"
-              :url="url3"
+              :contentData="contentData5"
+              :title="title5"
+              :url="url4"
             />
           </div>
           <!-- <Footer /> -->
@@ -132,6 +132,8 @@ export default {
       url1: require('../assets/img/serve_content1.png'),
       url2: require('../assets/img/serve_content2.png'),
       url3: require('../assets/img/serve_content3.png'),
+      url4: require('../assets/img/serve_content4.png'),
+
       title1: '数据采集，数据分析的起点',
       title2: '数据治理，更高效地将数据转化成业务价值',
       title3: '数据建模，为数据分析插上想象的翅膀',
@@ -234,6 +236,30 @@ export default {
         {
           title: '- 灵活部署和发布',
           content: ['适配非常规拼接大屏，支持加密发布，支持本地部署。']
+        }
+      ],
+      contentData5: [
+        {
+          title: '- 创新小组',
+          content: [
+            '由丰富行业经验的技术专家与用户组成创新小组，共同探讨突破方向。'
+          ]
+        },
+        {
+          title: '- 行业专注',
+          content: [
+            '技术团队专注于风控、电力、环保、旅游主营行业，精益求精。'
+          ]
+        },
+        {
+          title: '- 业务数据库',
+          content: [
+            '从数据采集、数据治理、数据分析到应用交付，环环相扣、步步推进。'
+          ]
+        },
+        {
+          title: '- 历史数据',
+          content: ['从任务开始到成果交付全流程跟踪效果，创新项目可管可控。']
         }
       ]
     }

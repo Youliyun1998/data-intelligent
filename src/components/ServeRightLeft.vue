@@ -43,8 +43,8 @@ export default {
       background: url("~_img/serve-title.png") no-repeat;
       background-size: 100% 100%;
       display: flex;
-      justify-content: center;
-      padding-left: 40px;
+      // justify-content: center;
+      padding-left: 80px;
       align-items: center;
       font-size: 30px;
       color: #171a25;

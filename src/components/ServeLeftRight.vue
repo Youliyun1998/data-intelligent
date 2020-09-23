@@ -38,7 +38,7 @@ export default {
 
   display: flex;
   .left {
-    padding-top: 50px;
+    // padding-top: 50px;
     margin-right: 50px;
     img {
       width: 558px;
