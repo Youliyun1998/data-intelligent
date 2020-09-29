@@ -129,7 +129,7 @@ export default {
     handleMouseLeave (index) {
       if (index === 2) {
         // this.activeIndex !== 2;
-        this.showChildtab = false
+        // this.showChildtab = false
       }
     },
     handleChildtab (e) {
