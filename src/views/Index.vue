@@ -125,27 +125,27 @@
           </div>
           <IndexCityGoven
             :CityGoven="CityGoven1"
-            @changeJump="changeJump"
+            @changeJump="changeJump(0)"
             v-show="currentIndex === 0"
           />
           <IndexCityGoven
             :CityGoven="CityGoven2"
-            @changeJump="changeJump"
+            @changeJump="changeJump(1)"
             v-show="currentIndex === 1"
           />
           <IndexCityGoven
             :CityGoven="CityGoven3"
-            @changeJump="changeJump"
+            @changeJump="changeJump(2)"
             v-show="currentIndex === 2"
           />
           <IndexCityGoven
             :CityGoven="CityGoven4"
-            @changeJump="changeJump"
+            @changeJump="changeJump(3)"
             v-show="currentIndex === 4"
           />
           <IndexCityGoven
             :CityGoven="CityGoven5"
-            @changeJump="changeJump"
+            @changeJump="changeJump(4)"
             v-show="currentIndex === 3"
           />
         </div>
@@ -391,12 +391,34 @@ export default {
       if (index === 1) {
         this.$router.push({ path: '/serve' })
       } else if (index === 2) {
-        this.$router.push({ path: '/product' })
+        this.$router.push({ path: '/product/SmartLampStandard' })
       }
     },
-    changeJump () {
+    changeJump (index) {
       window.scrollTo(0, 0)
-      this.$router.push({ path: '/product' })
+      switch (index) {
+        case 0:
+          this.$router.push({ path: '/product/SmartLampStandard' })
+
+          break
+        case 1:
+          this.$router.push({ path: '/product/SmartEnviroment' })
+
+          break
+        case 2:
+          this.$router.push({ path: '/product/SmartPark' })
+
+          break
+        case 3:
+          this.$router.push({ path: '/product/SmartTraval' })
+
+          break
+        case 4:
+          this.$router.push({ path: '/product/SmartWuGuan' })
+
+          break
+        default:
+      }
     },
     changeRouter () {
       window.scrollTo(0, 0)

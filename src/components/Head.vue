@@ -12,9 +12,23 @@
                 v-for="(item, index) in tabData"
                 :key="index"
                 @click="handleTab(index)"
+                @mouseover="handleMouseOver(index)"
+                @mouseleave="handleMouseLeave(index)"
                 :class="[index === activeIndex ? 'active' : '']"
               >
                 {{ item }}
+              </li>
+            </ul>
+          </div>
+          <div class="childtab" v-if="activeIndex === 2 && showChildtab">
+            <ul>
+              <li
+                v-for="(v, i) in childtab"
+                :key="i"
+                :class="[childActive == i ? 'activestyle' : '']"
+                @click="handleChildtab(i)"
+              >
+                {{ v }}
               </li>
             </ul>
           </div>
@@ -28,8 +42,11 @@
 export default {
   data () {
     return {
-      activeIndex: 0,
-      tabData: ['首页', '服务', '产品', '典型案例', '关于我们']
+      showChildtab: false,
+      activeIndex: 2,
+      childActive: 0,
+      tabData: ['首页', '服务', '产品', '典型案例', '关于我们'],
+      childtab: ['智慧灯杆', '智慧环保', '智慧园区', '智慧旅游', '云物管']
     }
   },
   mounted () {
@@ -41,12 +58,24 @@ export default {
         this.activeIndex = 1
       } else if (this.$route.path === '/product') {
         this.activeIndex = 2
+        this.childActive = 0
       } else if (this.$route.path === '/example') {
         this.activeIndex = 3
       } else if (this.$route.path === '/home') {
         this.activeIndex = 0
       } else if (this.$route.path === '/about') {
         this.activeIndex = 4
+      } else if (this.$route.path === '/product/SmartLampStandard') {
+        this.childActive = 0
+        this.showChildtab = true
+      } else if (this.$route.path === '/product/SmartEnviroment') {
+        this.childActive = 1
+      } else if (this.$route.path === '/product/SmartPark') {
+        this.childActive = 2
+      } else if (this.$route.path === '/product/SmartTraval') {
+        this.childActive = 3
+      } else if (this.$route.path === '/product/SmartWuGuan') {
+        this.childActive = 4
       }
     })
   },
@@ -58,16 +87,77 @@ export default {
         this.activeIndex = 1
       } else if (this.$route.path === '/product') {
         this.activeIndex = 2
+        this.childActive = 0
       } else if (this.$route.path === '/example') {
         this.activeIndex = 3
       } else if (this.$route.path === '/home') {
         this.activeIndex = 0
       } else if (this.$route.path === '/about') {
         this.activeIndex = 4
+      } else if (this.$route.path === '/product/SmartLampStandard') {
+        this.showChildtab = true
+        this.activeIndex = 2
+        this.childActive = 0
+      } else if (this.$route.path === '/product/SmartEnviroment') {
+        this.showChildtab = false
+        this.activeIndex = 2
+        this.childActive = 1
+      } else if (this.$route.path === '/product/SmartPark') {
+        this.showChildtab = false
+        this.activeIndex = 2
+        this.childActive = 2
+      } else if (this.$route.path === '/product/SmartTraval') {
+        this.showChildtab = false
+        this.activeIndex = 2
+        this.childActive = 3
+      } else if (this.$route.path === '/product/SmartWuGuan') {
+        this.showChildtab = false
+        this.activeIndex = 2
+        this.childActive = 4
       }
     }
   },
   methods: {
+    handleMouseOver (index) {
+      if (index === 2) {
+        this.activeIndex = index
+        this.showChildtab = true
+      }
+
+      // console.log(index, "index");
+    },
+    handleMouseLeave (index) {
+      if (index === 2) {
+        // this.activeIndex !== 2;
+        this.showChildtab = false
+      }
+    },
+    handleChildtab (e) {
+      this.childActive = e
+      switch (this.childActive) {
+        case 0:
+          this.$router.push({ path: '/product/SmartLampStandard' })
+          this.showChildtab = true
+          break
+        case 1:
+          this.$router.push({ path: '/product/SmartEnviroment' })
+          this.showChildtab = false
+          break
+        case 2:
+          this.$router.push({ path: '/product/SmartPark' })
+          this.showChildtab = false
+          break
+        case 3:
+          this.$router.push({ path: '/product/SmartTraval' })
+          this.showChildtab = false
+          break
+        case 4:
+          this.$router.push({ path: '/product/SmartWuGuan' })
+          this.showChildtab = false
+          break
+        default:
+      }
+    },
     handleTab (e) {
       this.activeIndex = e
       switch (e) {
@@ -78,7 +168,8 @@ export default {
           this.$router.push({ path: '/serve' })
           break // 可选
         case 2:
-          this.$router.push({ path: '/product' })
+          this.$router.push({ path: '/product/SmartLampStandard' })
+          this.showChildtab = true
           break
         case 3:
           this.$router.push({ path: '/example' })
@@ -129,9 +220,9 @@ export default {
       }
       .top_right {
         .top_tab {
+          position: relative;
           color: #aaaaaa;
           font-size: 14px;
-
           ul {
             display: flex;
             li {
@@ -144,8 +235,36 @@ export default {
               &.active {
                 color: #fff;
                 // width: 66px;
-
                 border-bottom: 4px solid #3e6eff;
+              }
+            }
+          }
+        }
+        .childtab {
+          width: 160px;
+          height: 212px;
+          position: absolute;
+          margin-left: 170px;
+          // background-color: rgba(28, 33, 51, 0.9);
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 212px;
+            color: rgba(170, 170, 170, 1);
+            padding: 24px;
+            padding-bottom: 0;
+            background-color: rgba(28, 33, 51, 0.9);
+
+            li {
+              cursor: pointer;
+              font-size: 14px;
+              color: rgba(170, 170, 170, 1);
+              margin-bottom: 16px;
+              &.activestyle {
+                color: white;
               }
             }
           }

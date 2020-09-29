@@ -88,6 +88,11 @@
                   </span>
                 </div>
               </li>
+            </ul>
+          </div>
+          <div class="center">
+            <img src="~_img/produdct_center.png" alt="" />
+            <ul>
               <li>
                 <div class="top">
                   <div class="text">充电桩</div>
@@ -103,9 +108,6 @@
                 </div>
               </li>
             </ul>
-          </div>
-          <div class="center">
-            <img src="~_img/produdct_center.png" alt="" />
           </div>
           <div class="right">
             <ul>
@@ -287,7 +289,8 @@ export default {
         color: #171a25;
         font-size: 30px;
         color: #171a25;
-        padding: 40px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
       .subtitle {
         text-align: center;
@@ -304,7 +307,7 @@ export default {
           ul {
             li {
               width: 352px;
-              height: 150px;
+              height: 120px;
 
               color: #33384c;
               &:first-child {
@@ -363,18 +366,6 @@ export default {
                     width: 46px;
                     height: 46px;
                     background: url("~_img/product_left5.png") no-repeat;
-                    background-size: 100% 100%;
-                  }
-                }
-              }
-              &:nth-child(6) {
-                .top {
-                  &::before {
-                    content: "";
-                    display: block;
-                    width: 46px;
-                    height: 46px;
-                    background: url("~_img/product_left6.png") no-repeat;
                     background-size: 100% 100%;
                   }
                 }
@@ -467,7 +458,7 @@ export default {
                   font-weight: bold;
                   margin-left: 16px;
                 }
-                margin-bottom: 16px;
+                margin-bottom: 10px;
               }
               .text {
                 span {
@@ -479,10 +470,62 @@ export default {
         }
         .center {
           flex: 1;
+          ul {
+            li {
+              width: 352px;
+              height: 120px;
+              color: #33384c;
+              border-radius: 4px;
+              padding: 13px 20px;
+              .top {
+                display: flex;
+                align-items: center;
+                .text {
+                  font-size: 24px;
+                  font-weight: bold;
+                  margin-left: 16px;
+                }
+                margin-bottom: 16px;
+              }
+              .text {
+                span {
+                  color: rgba(23, 26, 37, 0.6);
+                }
+              }
+              &:first-child {
+                .top {
+                  &::before {
+                    content: "";
+                    display: block;
+                    width: 46px;
+                    height: 46px;
+                    background: url("~_img/product_left6.png") no-repeat;
+                    background-size: 100% 100%;
+                  }
+                }
+              }
+              &:hover {
+                color: #59a6ba;
+                background: rgba(238, 240, 245, 0.62);
+                &:first-child {
+                  .top {
+                    &::before {
+                      content: "";
+                      display: block;
+                      width: 46px;
+                      height: 46px;
+                      background: url("~_img/product_left6_act.png") no-repeat;
+                      background-size: 100% 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
 
           img {
-            width: 100%;
-            height: 100%;
+            width: 430px;
+            height: 563px;
           }
         }
         .right {
@@ -490,7 +533,7 @@ export default {
           ul {
             li {
               width: 352px;
-              height: 150px;
+              height: 120px;
               color: #33384c;
               &:first-child {
                 .top {

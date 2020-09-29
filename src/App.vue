@@ -29,7 +29,12 @@ export default {
         this.$route.path === '/serve' ||
         this.$route.path === '/product' ||
         this.$route.path === '/about' ||
-        this.$route.path === '/example'
+        this.$route.path === '/example' ||
+        this.$route.path === '/product/SmartEnviroment' ||
+        this.$route.path === '/product/SmartPark' ||
+        this.$route.path === '/product/SmartTraval' ||
+        this.$route.path === '/product/SmartWuGuan' ||
+        this.$route.path === '/product/SmartLampStandard'
       ) {
         this.isShow = true
       } else {

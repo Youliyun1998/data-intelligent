@@ -18,7 +18,7 @@
             <dd
               v-for="(item, index) in productData"
               :key="index"
-              @click="handleProduct"
+              @click="handleProduct(index)"
             >
               {{ item }}
             </dd>
@@ -79,8 +79,31 @@ export default {
     handleServe () {
       this.$router.push({ path: '/serve' })
     },
-    handleProduct () {
-      this.$router.push({ path: '/product' })
+    handleProduct (index) {
+      switch (index) {
+        case 0:
+          this.$router.push({ path: '/product/SmartLampStandard' })
+          // this.showChildtab = false;
+          break
+        case 1:
+          this.$router.push({ path: '/product/SmartEnviroment' })
+          // this.showChildtab = false;
+          break
+        case 2:
+          this.$router.push({ path: '/product/SmartPark' })
+          // this.showChildtab = false;
+          break
+        case 3:
+          this.$router.push({ path: '/product/SmartTraval' })
+          // this.showChildtab = false;
+          break
+        case 4:
+          this.$router.push({ path: '/product/SmartWuGuan' })
+          // this.showChildtab = false;
+
+          break
+        default:
+      }
     },
     handleExample () {
       this.$router.push({ path: '/example' })
