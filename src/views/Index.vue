@@ -410,11 +410,11 @@ export default {
 
           break
         case 3:
-          this.$router.push({ path: '/product/SmartTraval' })
+          this.$router.push({ path: '/product/SmartWuGuan' })
 
           break
         case 4:
-          this.$router.push({ path: '/product/SmartWuGuan' })
+          this.$router.push({ path: '/product/SmartTraval' })
 
           break
         default:

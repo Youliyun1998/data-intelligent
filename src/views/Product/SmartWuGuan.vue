@@ -381,7 +381,8 @@ export default {
           height: 448px;
           background-size: 100% 100%;
           &:first-child {
-            background: url("~_img/product_yunwuguan/content2_icon1.png");
+            background: url("~_img/product_yunwuguan/content2_icon1.png")  no-repeat;
+            background-size: 100% 100%;
           }
           &:nth-child(2) {
             background: url("~_img/product_yunwuguan/content2_icon2.png")
