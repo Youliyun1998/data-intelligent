@@ -11,13 +11,13 @@
         <div class="left_text_l">
           <p class="big_text">智慧园区</p>
           <p class="sub_text">
-            助力产业园数字化转型, 为各
+            链接产业发展要素、深度整合物业资源、探索园区价值
           </p>
-          <p class="sub_text">
+          <!-- <p class="sub_text">
             要素建立相应的业务平台
-          </p>
+          </p> -->
 
-          <div class="line"></div>
+          <div class="line" @click="handleMore">了解更多</div>
         </div>
       </div>
     </div>
@@ -151,6 +151,14 @@ export default {
     ServeRightLeft
     // Footer
     // Head
+  },
+  methods: {
+    handleMore () {
+      window.scrollTo({
+        top: 900,
+        behavior: 'smooth'
+      })
+    }
   }
 }
 </script>
@@ -180,21 +188,32 @@ export default {
         .big_text {
           font-size: 50px;
           font-weight: bold;
-          color: #171a25;
+          color: #fff;
         }
         .sub_text {
-          font-size: 30px;
-          color: #75777d;
-          &:nth-child(2) {
-            margin-top: 16px;
-          }
+          font-size: 24px;
+          color: #fff;
+          margin-top: 16px;
+          margin-bottom: 60px;
         }
         .line {
-          margin-top: 40px;
-          width: 110px;
-          height: 10px;
-          background: #3e6eff;
-          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #171a25;
+          font-size: 24px;
+          font-weight: bold;
+          width: 225px;
+          height: 60px;
+          background: #59a6ba;
+          box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.5);
+          border-radius: 4px;
+          border-image: linear-gradient(
+              315deg,
+              rgba(61, 188, 212, 1),
+              rgba(31, 63, 128, 1)
+            )
+            1 1;
         }
       }
     }
@@ -300,8 +319,8 @@ export default {
         }
       }
       img {
-        width: 872px;
-        height: 583px;
+        width: 857px;
+        height: 644px;
       }
     }
   }

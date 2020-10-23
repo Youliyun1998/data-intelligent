@@ -41,8 +41,8 @@ export default {
     // padding-top: 50px;
     margin-right: 50px;
     img {
-      width: 558px;
-      height: 649px;
+      width: 560px;
+      height: 580px;
     }
   }
   .right {

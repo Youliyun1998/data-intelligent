@@ -2,90 +2,70 @@
   <div class="serve">
     <!-- <Head /> -->
     <!-- <full-page :options="options" ref="page"> -->
-      <!--      第一屏-->
-      <!-- <div class="section"> -->
-        <!-- <div class="box1"> -->
-          <!-- <div class="slide"> -->
-            <!-- banner -->
-            <div class="banner">
-              <div class="left_text wrap">
-                <div class="left_text_l">
-                  <p class="big_text">数据可视化</p>
-                  <p class="sub_text">
-                    数据可视化平台提供所见即所得的配置方式，
-                  </p>
-                  <p class="sub_text">帮助用户快速建立专业的数据大屏。</p>
-                  <div class="line"></div>
-                </div>
-              </div>
-            </div>
-          <!-- </div> -->
-        <!-- </div> -->
-      <!-- </div> -->
-      <!--      第二屏-->
-      <!-- <div class="section"> -->
-        <!-- <div class="box2"> -->
-          <!-- 内容呈现区 -->
-          <div class="content_show">
-            <ServeLeftRight
-              :contentData="contentData"
-              :title="title1"
-              :url="url1"
-            />
-          </div>
-        <!-- </div> -->
-      <!-- </div> -->
-      <!--      第三屏-->
-      <!-- <div class="section"> -->
-        <!-- <div class="box1"> -->
-          <!-- <div class="slide"> -->
-            <div class="content_show">
-              <ServeRightLeft
-                :contentData="contentData2"
-                :title="title2"
-                :url="url2"
-              />
-            </div>
-          <!-- </div> -->
-        <!-- </div> -->
-      <!-- </div> -->
-      <!--      第四屏-->
-      <!-- <div class="section"> -->
-        <!-- <div class="box2"> -->
-          <div class="content_show">
-            <ServeLeftRight
-              :contentData="contentData3"
-              :title="title3"
-              :url="url3"
-            />
-          </div>
-        <!-- </div> -->
-      <!-- </div> -->
-      <!-- 第五屏 -->
-      <!-- <div class="section"> -->
-        <!-- <div class="box3"> -->
-          <div class="content_show">
-            <ServeRightLeft
-              :contentData="contentData4"
-              :title="title4"
-              :url="url2"
-            />
-          </div>
-        <!-- </div> -->
-      <!-- </div> -->
-      <!-- 第六屏 -->
-      <!-- <div class="section"> -->
-        <!-- <div class="box3"> -->
-          <div class="content_show">
-            <ServeLeftRight
-              :contentData="contentData5"
-              :title="title5"
-              :url="url4"
-            />
-          </div>
-          <!-- <Footer /> -->
-        <!-- </div> -->
-      <!-- </div> -->
+    <!--      第一屏-->
+    <!-- <div class="section"> -->
+    <!-- <div class="box1"> -->
+    <!-- <div class="slide"> -->
+    <!-- banner -->
+    <div class="banner">
+      <div class="left_text wrap">
+        <div class="left_text_l">
+          <p class="big_text">咨询规划、数据服务、智能应</p>
+          <p class="big_text">
+            用开发等全流程服务
+          </p>
+          <!-- <p class="sub_text">帮助用户快速建立专业的数据大屏。</p> -->
+          <div class="line" @click="handleMore">了解更多</div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!--      第二屏-->
+    <!-- <div class="section"> -->
+    <!-- <div class="box2"> -->
+    <!-- 内容呈现区 -->
+    <div class="content_show">
+      <ServeLeftRight :contentData="contentData" :title="title1" :url="url1" />
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!--      第三屏-->
+    <!-- <div class="section"> -->
+    <!-- <div class="box1"> -->
+    <!-- <div class="slide"> -->
+    <div class="content_show">
+      <ServeRightLeft :contentData="contentData2" :title="title2" :url="url2" />
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!--      第四屏-->
+    <!-- <div class="section"> -->
+    <!-- <div class="box2"> -->
+    <div class="content_show">
+      <ServeLeftRight :contentData="contentData3" :title="title3" :url="url3" />
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- 第五屏 -->
+    <!-- <div class="section"> -->
+    <!-- <div class="box3"> -->
+    <div class="content_show">
+      <ServeRightLeft :contentData="contentData4" :title="title4" :url="url4" />
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- 第六屏 -->
+    <!-- <div class="section"> -->
+    <!-- <div class="box3"> -->
+    <div class="content_show">
+      <ServeLeftRight :contentData="contentData5" :title="title5" :url="url5" />
+    </div>
+    <!-- <Footer /> -->
+    <!-- </div> -->
+    <!-- </div> -->
     <!-- </full-page> -->
   </div>
 </template>
@@ -102,6 +82,14 @@ export default {
     ServeRightLeft
     // Footer
     // Head
+  },
+  methods: {
+    handleMore () {
+      window.scrollTo({
+        top: 870,
+        behavior: 'smooth'
+      })
+    }
   },
   data () {
     return {
@@ -133,6 +121,7 @@ export default {
       url2: require('../assets/img/serve_content2.png'),
       url3: require('../assets/img/serve_content3.png'),
       url4: require('../assets/img/serve_content4.png'),
+      url5: require('../assets/img/serve_content5.png'),
 
       title1: '数据采集，数据分析的起点',
       title2: '数据治理，更高效地将数据转化成业务价值',
@@ -247,9 +236,7 @@ export default {
         },
         {
           title: '- 行业专注',
-          content: [
-            '技术团队专注于风控、电力、环保、旅游主营行业，精益求精。'
-          ]
+          content: ['技术团队专注于风控、电力、环保、旅游主营行业，精益求精。']
         },
         {
           title: '- 业务数据库',
@@ -289,23 +276,38 @@ export default {
         top: 30%;
 
         .big_text {
-          font-size: 50px;
+          font-size: 40px;
           font-weight: bold;
-          color: #171a25;
-        }
-        .sub_text {
-          font-size: 30px;
-          color: #75777d;
+          color: #fff;
           &:nth-child(2) {
-            margin-top: 16px;
+            margin-bottom: 60px;
           }
         }
+        // .sub_text {
+        //   font-size: 30px;
+        //   color: #75777d;
+        //   &:nth-child(2) {
+        //     margin-top: 16px;
+        //   }
+        // }
         .line {
-          margin-top: 40px;
-          width: 110px;
-          height: 10px;
-          background: #3e6eff;
-          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 24px;
+          font-weight: bold;
+          color: #171A25;
+          width: 225px;
+          height: 60px;
+          background: #59a6ba;
+          box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.5);
+          border-radius: 4px;
+          border-image: linear-gradient(
+              315deg,
+              rgba(61, 188, 212, 1),
+              rgba(31, 63, 128, 1)
+            )
+            1 1;
         }
       }
     }

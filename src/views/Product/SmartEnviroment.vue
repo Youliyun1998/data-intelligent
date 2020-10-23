@@ -9,12 +9,12 @@
     <div class="banner">
       <div class="left_text wrap">
         <div class="left_text_l">
-          <p class="big_text">「 生态环境 」大数据平台</p>
+          <p class="big_text">生态环境大数据平台</p>
           <p class="sub_text">
-            实现生态环境大数据治理，助力生态文明建设
+            监测一体化、管理精细化、决策智能化
           </p>
 
-          <div class="line"></div>
+          <div class="line" @click="handleMore">了解更多</div>
         </div>
       </div>
     </div>
@@ -123,9 +123,13 @@ export default {
       ]
     }
   },
-  components: {
-    // Footer
-    // Head
+  methods: {
+    handleMore () {
+      window.scrollTo({
+        top: 850,
+        behavior: 'smooth'
+      })
+    }
   }
 }
 </script>
@@ -143,7 +147,7 @@ export default {
   .banner {
     position: relative;
     // top: 75px;
-    height: 900px;
+    height: 830px;
     background: url("~_img/productEnviroment/productEnviroment_banner.png")
       no-repeat;
     background-size: 100% 100%;
@@ -155,21 +159,40 @@ export default {
         .big_text {
           font-size: 50px;
           font-weight: bold;
-          color: #171a25;
+          color: #fff;
         }
         .sub_text {
-          font-size: 30px;
-          color: #75777d;
-          &:nth-child(2) {
-            margin-top: 16px;
-          }
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          font-size: 24px;
+          color: #fff;
+          margin-top: 16px;
+          margin-bottom: 60px;
+          // width: 660px;
+          // height: 70px;
+          // background: rgba(255, 255, 255, 0.75);
+          // border-radius: 8px;
+          // margin: 16px 0 41px 0;
         }
         .line {
-          margin-top: 40px;
-          width: 110px;
-          height: 10px;
-          background: #3e6eff;
-          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #171a25;
+          font-size: 24px;
+          font-weight: bold;
+          width: 225px;
+          height: 60px;
+          background: #59a6ba;
+          box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.5);
+          border-radius: 4px;
+          border-image: linear-gradient(
+              315deg,
+              rgba(61, 188, 212, 1),
+              rgba(31, 63, 128, 1)
+            )
+            1 1;
         }
       }
     }
@@ -270,8 +293,8 @@ export default {
         }
       }
       img {
-        width: 1187px;
-        height: 585px;
+        width: 1194px;
+        height: 663px;
       }
     }
   }
@@ -308,7 +331,7 @@ export default {
           display: flex;
           flex-direction: column;
           align-items: center;
-          color:rgba(23, 26, 37, 0.6);
+          color: rgba(23, 26, 37, 0.6);
           &:last-child {
             margin-right: 0;
           }

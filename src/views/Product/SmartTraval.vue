@@ -13,6 +13,7 @@
           <p class="sub_text">
             智慧旅游综合管理平台，助力旅游业科学发展
           </p>
+          <div class="line">了解更多</div>
         </div>
       </div>
       <!-- 悬浮电话，回到顶部 -->
@@ -51,150 +52,123 @@
         </p>
 
         <div class="block">
-          <ul>
-            <li>
-              <div class="title"><span>01</span><span>职能管控</span></div>
-              <div class="content">
-                <div class="left_content">
-                  <div class="subtitle">用户痛点</div>
-                  <div class="subcontent">预警晚，反应慢</div>
-                </div>
-                <div class="right_content">
-                  <div class="subtitle">解决方案</div>
-                  <div class="right_content">
-                    <dl>
-                      <dt>应急管理平台</dt>
-                      <dd>事件预警、处理跟踪、</dd>
-                      <dd>情况统计</dd>
-                    </dl>
-                    <dl>
-                      <dt>联合执法平台</dt>
-                      <dd>执法过程记录、催办、执</dd>
-                      <dd>法数据分析</dd>
-                    </dl>
-                    <dl>
-                      <dt>舆情分析平台</dt>
-                      <dd>舆情监测、预警、处</dd>
-                      <dd>理结果监测</dd>
-                    </dl>
+          <div class="left">
+            <div class="left_t">用户痛点</div>
+            <div class="left_c">
+              <ul>
+                <li>
+                  <div class="left_li"></div>
+                  <div class="right_li">
+                    <div class="top_title">职能管控</div>
+                    <div class="bottom_content"><span>预警慢 反应慢</span></div>
                   </div>
-                </div>
-
-                <!-- <dl>
-                  <dt>
-                    用户重点
-                  </dt>
-                  <dd>预警晚，反应慢</dd>
-                  <dt>解决方案</dt>
-                  <dd>应急管理平台</dd>
-                  <dd>联合执法平台</dd>
-                  <dd>舆情分析平台</dd>
-                </dl> -->
-              </div>
-            </li>
-            <li>
-              <div class="title"><span>02</span><span>游客体验</span></div>
-              <div class="content">
-                <div class="left_content">
-                  <div class="subtitle">用户痛点</div>
-                  <div class="subcontent">体验差 投诉难</div>
-                </div>
-                <div class="right_content">
-                  <div class="subtitle">解决方案</div>
-                  <div class="right_content">
-                    <dl>
-                      <dt>运营管理平台</dt>
-                      <dd>客流导引、线路推荐、</dd>
-                      <dd>智能导航、服务评价</dd>
-                    </dl>
-                    <dl>
-                      <dt>投诉快速响应平台</dt>
-                      <dd>多渠道投诉、扫码投诉、</dd>
-                      <dd>多部门联合响应、进度可</dd>
-                      <dd>查、结果可评价</dd>
-                    </dl>
-                    <dl>
-                      <dt>前端服务优化</dt>
-                      <dt>（APP、公众号）</dt>
-                      <dd>舆情监测、预警、处</dd>
-                      <dd>理结果监测</dd>
-                    </dl>
+                </li>
+                <li>
+                  <div class="left_li"></div>
+                  <div class="right_li">
+                    <div class="top_title">游客体验</div>
+                    <div class="bottom_content"><span>体验差 投诉难</span></div>
                   </div>
-                </div>
-
-                <!-- <dl>
-                  <dt>
-                    用户重点
-                  </dt>
-                  <dd>预警晚，反应慢</dd>
-                  <dt>解决方案</dt>
-                  <dd>应急管理平台</dd>
-                  <dd>联合执法平台</dd>
-                  <dd>舆情分析平台</dd>
-                </dl> -->
-              </div>
-            </li>
-            <li>
-              <div class="title"><span>03</span><span> 商户运营</span></div>
-              <div class="content">
-                <div class="left_content">
-                  <div class="subtitle">用户痛点</div>
-                  <div class="subcontent">收费乱 资源散</div>
-                </div>
-                <div class="right_content">
-                  <div class="subtitle">解决方案</div>
-                  <div class="right_content">
-                    <dl>
-                      <dt>市场监督平台</dt>
-                      <dd>服务监督、导游监管、</dd>
-                      <dd>价格监管</dd>
-                    </dl>
-                    <dl>
-                      <dt>运营管理平台</dt>
-                      <dd>旅游资源数字化、网格化</dd>
-                    </dl>
+                </li>
+                <li>
+                  <div class="left_li"></div>
+                  <div class="right_li">
+                    <div class="top_title">商户运营</div>
+                    <div class="bottom_content"><span>收费乱 资源散</span></div>
                   </div>
-                </div>
-
-                <!-- <dl>
-                  <dt>
-                    用户重点
-                  </dt>
-                  <dd>预警晚，反应慢</dd>
-                  <dt>解决方案</dt>
-                  <dd>应急管理平台</dd>
-                  <dd>联合执法平台</dd>
-                  <dd>舆情分析平台</dd>
-                </dl> -->
-              </div>
-            </li>
-            <li>
-              <div class="title"><span>04</span><span>营销无序</span></div>
-              <div class="content">
-                <div class="left_content">
-                  <div class="subtitle">用户痛点</div>
-                  <div class="subcontent">营销差</div>
-                </div>
-                <div class="right_content">
-                  <div class="subtitle">解决方案</div>
-                  <div class="right_content">
-                    <dl>
-                      <dt>运营管理平台</dt>
-                      <dd>营销效果数字化、可视</dd>
-                      <dd>化</dd>
-                    </dl>
+                </li>
+                <li>
+                  <div class="left_li"></div>
+                  <div class="right_li">
+                    <div class="top_title">营销无序</div>
+                    <div class="bottom_content"><span>营销差 资源散</span></div>
                   </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="right">
+            <div class="right_t">解决方案</div>
+            <div class="right_c">
+              <div class="top_c">
+                <div class="bigDiv_l">
+                  <div class="bigtitle"><span>职能全管控</span></div>
+                  <ul>
+                    <li>
+                      <div class="li_title"><span>应急管理平台</span></div>
+                      <div class="li_content">时间预警、处理跟踪、情况统计</div>
+                    </li>
+                    <li>
+                      <div class="li_title"><span>联合执法平台</span></div>
+                      <div class="li_content">
+                        执法过程记录、催办，执法数据分析
+                      </div>
+                    </li>
+                    <li>
+                      <div class="li_title"><span>舆情分析平台</span></div>
+                      <div class="li_content">舆情监测、预警，处理结果监测</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bigDiv_r">
+                  <div class="bigtitle"><span>游客体验良好</span></div>
+                  <ul>
+                    <li>
+                      <div class="li_title"><span>运营管理平台</span></div>
+                      <div class="li_content">
+                        客流引导、线路推荐、智能导航、服务评价
+                      </div>
+                    </li>
+                    <li>
+                      <div class="li_title"><span>投诉快速响应平台</span></div>
+                      <div class="li_content">
+                        多渠道投诉、扫码投诉、多部门联合响应
+                      </div>
+                    </li>
+                    <li>
+                      <div class="li_title">
+                        <span>前端服务优化（APP、公众号）</span>
+                      </div>
+                      <div class="li_content">
+                        景区介绍、精品路线、天气、电子客票、酒店、交通出行、咨询、投诉、道路救援
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </li>
-          </ul>
+              <div class="bottom_c">
+                <div class="bigDiv_l">
+                  <div class="bigtitle"><span>商户运营规范</span></div>
+                  <ul>
+                    <li>
+                      <div class="li_title"><span>市场监管平台</span></div>
+                      <div class="li_content">服务监督、导游监管、价格监管</div>
+                    </li>
+                    <li>
+                      <div class="li_title"><span>运营管理平台</span></div>
+                      <div class="li_content">
+                        旅游资源数字化、网格化
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bigDiv_r">
+                  <div class="bigtitle"><span>营销有序</span></div>
+                  <ul>
+                    <li>
+                      <div class="li_title"><span>运营管理平台</span></div>
+                      <div class="li_content">
+                        营销效果数字化、可视化
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- <div class="section"> -->
-    <!-- <div class="box3"> -->
     <!-- 联系方式 -->
     <div class="contact2">
       <div class="contact_content wrap">
@@ -217,7 +191,7 @@
             <li></li>
           </ul> -->
           <!-- <ServeRightLeft :contentData="contentData" :url="url" /> -->
-          <img src="~_img/productTraval/content2_icon.png" alt="" />
+          <!-- <img src="~_img/productTraval/content2_icon.png" alt="" /> -->
         </div>
       </div>
     </div>
@@ -238,7 +212,7 @@
             </li>
           </ul> -->
           <!-- <ServeRightLeft :contentData="contentData" :url="url" /> -->
-          <img src="~_img/productTraval/content3_icon.png" alt="" />
+          <!-- <img src="~_img/productTraval/content3_icon.png" alt="" /> -->
         </div>
       </div>
     </div>
@@ -353,26 +327,39 @@ export default {
           font-size: 50px;
           font-weight: bold;
           color: #fff;
-          margin-bottom: 16px;
         }
         .sub_text {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 30px;
-          color: #1a356f;
-          width: 660px;
-          height: 70px;
-          background: rgba(255, 255, 255, 0.75);
-          border-radius: 8px;
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          font-size: 24px;
+          color: #fff;
+          margin-top: 16px;
+          margin-bottom: 60px;
+          // width: 660px;
+          // height: 70px;
+          // background: rgba(255, 255, 255, 0.75);
+          // border-radius: 8px;
           // margin: 16px 0 41px 0;
         }
         .line {
-          margin-top: 41px;
-          width: 110px;
-          height: 10px;
-          background: #3e6eff;
-          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #171a25;
+          font-size: 24px;
+          font-weight: bold;
+          width: 225px;
+          height: 60px;
+          background: #59a6ba;
+          box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.5);
+          border-radius: 4px;
+          border-image: linear-gradient(
+              315deg,
+              rgba(61, 188, 212, 1),
+              rgba(31, 63, 128, 1)
+            )
+            1 1;
         }
       }
     }
@@ -404,143 +391,322 @@ export default {
     }
     .block {
       margin-top: 56px;
-      // margin-bottom: 40px;
-      // width: 100%;
-      // height: 900px;
-      // display: flex;
-      // flex-direction: column;
-      // // justify-content: center;
-      // align-items: center;
-      ul {
-        display: flex;
-        flex-wrap: wrap;
+      display: flex;
+      .left {
+        width: 305px;
+        height: 664px;
 
-        li {
-          // &:first-child {
-          width: 570px;
-
-          height: 318px;
-          padding: 25px 20px;
-          padding-right: 0;
-          // background-color: red;
-          // }
-          &:first-child{
-
-          background: url("~_img/productTraval/content1_bg.png") no-repeat;
-          background-size: 100% 100%;
-
-          }
-          &:nth-child(2) {
-
-          background: url("~_img/productTraval/content2_2_bg.png") no-repeat;
-          background-size: 100% 100%;
-            margin-left: 20px;
-          }
-          &:nth-child(3) {
-
-          background: url("~_img/productTraval/content3_bg.png") no-repeat;
-          background-size: 100% 100%;
-            margin-top: 20px;
-          }
-          &:nth-child(4) {
-
-          background: url("~_img/productTraval/content4_bg.png") no-repeat;
-          background-size: 100% 100%;
-            margin-left: 20px;
-            margin-top: 20px;
-          }
-
-          .title {
+        background: #f8faff;
+        border-radius: 4px;
+        border: 1px solid #e3e6ef;
+        margin-right: 20px;
+        padding: 20px;
+        .left_t {
+          padding: 0 20px 20px 20px;
+          color: #171a25;
+          font-size: 26px;
+          font-weight: bold;
+          text-align: center;
+          border-bottom: 1px solid #e3e6ef;
+        }
+        .left_c {
+          ul {
+            margin-top: 30px;
             display: flex;
-            font-size: 24px;
-            font-weight: bold;
-            border-bottom: 1px solid #ebebec;
-            span {
-              &:first-child::after {
-                content: "";
-                display: flex;
-                flex-direction: column;
-                width: 26px;
-                // height: 6px;
-                border-bottom: 6px solid #221714;
-                margin-right: 20px;
-              }
-            }
-          }
-          .content {
-            display: flex;
-            margin-top: 48px;
-            .left_content {
-              width: 150px;
-              margin-right: 20px;
-              .subtitle {
-                font-size: 20px;
-                font-weight: 400;
-                color: #171a25;
-              }
-              .subcontent {
-                margin-top: 10px;
-                display: flex;
-                align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-                &::before {
-                  content: "";
-                  display: block;
-                  width: 8px;
-                  height: 8px;
-                  margin-right: 5px;
-                  background: url("~_img/productTraval/content1_ico1.png")
-                    no-repeat;
-                  background-size: 100% 100%;
+            li {
+              height: 150px;
+              display: flex;
+              .left_li {
+                width: 57px;
+                height: 76px;
+                background: url("~_img/productTraval/icon.png") no-repeat;
+                background-size: 100% 100%;
+                margin-right: 30px;
+              }
+
+              .right_li {
+                .top_title {
+                  color: #171a25;
+                  font-size: 18px;
+                  font-weight: 600;
                 }
-                font-size: 16px;
-                color: #33384c;
-              }
-            }
-            .right_content {
-              flex: 1;
-              .subtitle {
-                font-size: 20px;
-                color: #171a25;
-              }
+                .bottom_content {
+                  margin-top: 14px;
 
-              .right_content {
-                display: flex;
-                flex-wrap: wrap;
-                margin-top: 10px;
-                dl {
-                  // width: 190px;
-                  padding-bottom: 10px;
-                  margin-right: 40px;
-
-                  dt {
+                  span {
                     display: flex;
                     align-items: center;
-
                     &::before {
                       content: "";
                       display: block;
                       width: 8px;
                       height: 8px;
-                      margin-right: 5px;
-                      background: url("~_img/productTraval/content1_icon2.png")
-                        no-repeat;
-                      background-size: 100% 100%;
+                      background: #ce6d6d;
+                      border-radius: 50%;
+                      margin-right: 10px;
                     }
-                    font-size: 16px;
-                    color: #33384c;
-                    &:nth-child(2) {
+                  }
+                }
+              }
+              &:nth-child(2) {
+                .left_li {
+                  background: url("~_img/productTraval/icon2.png") no-repeat;
+                  background-size: 100% 100%;
+                }
+              }
+              &:nth-child(3) {
+                .left_li {
+                  background: url("~_img/productTraval/icon3.png") no-repeat;
+                  background-size: 100% 100%;
+                }
+              }
+              &:nth-child(4) {
+                .left_li {
+                  background: url("~_img/productTraval/icon4.png") no-repeat;
+                  background-size: 100% 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .right {
+        width: 875px;
+        height: 664px;
+        background: #f8faff;
+        border-radius: 4px;
+        border: 1px solid #e3e6ef;
+        padding: 20px;
+        .right_t {
+          padding: 0 20px 20px 20px;
+          color: #171a25;
+          font-size: 26px;
+          font-weight: bold;
+          text-align: center;
+          border-bottom: 1px solid #e3e6ef;
+        }
+        .right_c {
+          .top_c {
+            margin-top: 30px;
+            display: flex;
+            padding: 0 60px;
+            border-bottom: 1px solid #e3e6ef;
+
+            .bigDiv_l {
+              flex: 1;
+              border-right: 1px solid #e3e6ef;
+
+              .bigtitle {
+                margin-bottom: 20px;
+                span {
+                  display: flex;
+                  align-items: center;
+                  font-weight: bold;
+                  color: #171a25;
+                  font-size: 24px;
+                  &::before {
+                    content: "";
+                    display: block;
+                    width: 22px;
+                    height: 26px;
+                    background: url("~_img/productTraval/pic1.png") no-repeat;
+                    background-size: 100% 100%;
+                    margin-right: 10px;
+                  }
+                }
+              }
+              ul {
+                li {
+                  height: 90px;
+                  padding-left: 15px;
+                  .li_title {
+                    span {
+                      color: #171a25;
+                      font-size: 18px;
+                      display: flex;
+                      align-items: center;
                       &::before {
                         content: "";
-                        display: none;
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #6dce7f;
+                        border-radius: 50%;
+                        margin-right: 10px;
                       }
                     }
                   }
-                  dd {
+                  .li_content {
+                    padding-top: 10px;
                     padding-left: 15px;
+                    color: #33384c;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+            .bigDiv_r {
+              flex: 1;
+              padding-left: 30px;
+              .bigtitle {
+                margin-bottom: 20px;
+                span {
+                  display: flex;
+                  align-items: center;
+                  font-weight: bold;
+                  color: #171a25;
+                  font-size: 24px;
+                  &::before {
+                    content: "";
+                    display: block;
+                    width: 27px;
+                    height: 24px;
+                    background: url("~_img/productTraval/pic2.png") no-repeat;
+                    background-size: 100% 100%;
+                    margin-right: 10px;
+                  }
+                }
+              }
+              ul {
+                li {
+                  height: 90px;
+                  padding-left: 15px;
+                  .li_title {
+                    span {
+                      color: #171a25;
+                      font-size: 18px;
+                      display: flex;
+                      align-items: center;
+                      &::before {
+                        content: "";
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #6dce7f;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+                  .li_content {
+                     padding-top: 10px;
+                    padding-left: 15px;
+                    color: #33384c;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+          .bottom_c {
+            display: flex;
+            padding: 0 60px;
 
-                    font-size: 12px;
-                    color: #75777d;
+            .bigDiv_l {
+              flex: 1;
+              border-right: 1px solid #e3e6ef;
+              .bigtitle {
+                margin-bottom: 30px;
+                span {
+                  padding-top: 20px;
+                  display: flex;
+                  align-items: center;
+                  font-weight: bold;
+                  color: #171a25;
+                  font-size: 24px;
+                  &::before {
+                    content: "";
+                    display: block;
+                    width: 25px;
+                    height: 26px;
+                    background: url("~_img/productTraval/pic3.png") no-repeat;
+                    background-size: 100% 100%;
+                    margin-right: 10px;
+                  }
+                }
+              }
+              ul {
+                li {
+                  height: 80px;
+                  padding-left: 20px;
+                  .li_title {
+                    span {
+                      color: #171a25;
+                      font-size: 18px;
+                      display: flex;
+                      align-items: center;
+                      &::before {
+                        content: "";
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #6dce7f;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+                  .li_content {
+                   padding-top: 10px;
+                    padding-left: 15px;
+                    color: #33384c;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+            .bigDiv_r {
+              flex: 1;
+              padding-left: 30px;
+              .bigtitle {
+                margin-bottom: 30px;
+                span {
+                  padding-top: 20px;
+                  display: flex;
+                  align-items: center;
+                  font-weight: bold;
+                  color: #171a25;
+                  font-size: 24px;
+                  &::before {
+                    content: "";
+                    display: block;
+                    width: 29px;
+                    height: 25px;
+                    background: url("~_img/productTraval/pic4.png") no-repeat;
+                    background-size: 100% 100%;
+                    margin-right: 10px;
+                  }
+                }
+              }
+              ul {
+                li {
+                  padding-left: 15px;
+                  .li_title {
+                    span {
+                      color: #171a25;
+                      font-size: 18px;
+                      display: flex;
+                      align-items: center;
+                      &::before {
+                        content: "";
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #6dce7f;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+                  .li_content {
+                    padding-top: 10px;
+                    padding-left: 15px;
+                    color: #33384c;
+                    font-size: 14px;
                   }
                 }
               }
@@ -548,83 +714,12 @@ export default {
           }
         }
       }
-      // ul {
-      //   display: flex;
-      //   flex-wrap: wrap;
-      //   li {
-      //     // flex: 1;
-      //     margin-right: 20px;
-      //     width: 386px;
-      //     height: 448px;
-      //     background-size: 100% 100%;
-      //     &:first-child {
-      //       background: url("~_img/product_yunwuguan/content2_icon1.png");
-      //     }
-      //     &:nth-child(2) {
-      //       background: url("~_img/product_yunwuguan/content2_icon2.png")
-      //         no-repeat;
-      //       background-size: 100% 100%;
-      //     }
-      //     &:nth-child(3) {
-      //       background: url("~_img/product_yunwuguan/content2_icon3.png")
-      //         no-repeat;
-      //       background-size: 100% 100%;
-      //       margin-right: 0;
-      //     }
-      //     display: flex;
-      //     flex-direction: column;
-      //     justify-content: center;
-      //     align-items: center;
-      //   }
-      //   .block_footer {
-      //     display: flex;
-
-      //     div {
-      //       margin-right: 20px;
-      //       width: 386px;
-      //       height: 130px;
-      //       background: #f6f8fb;
-      //       font-size: 18px;
-      //       color: #33384c;
-      //       display: flex;
-      //       flex-direction: column;
-      //       justify-content: center;
-      //       align-items: center;
-      //       p {
-      //         text-indent: 0;
-      //         color: #171a25;
-      //         font-size: 30px;
-      //         font-weight: bold;
-      //         margin-bottom: 30px;
-      //       }
-      //       .line {
-      //         width: 50px;
-      //         height: 6px;
-      //         background: #59a6ba;
-      //         border-radius: 3px;
-      //       }
-      //       &:last-child {
-      //         margin-right: 0;
-      //       }
-      //       span {
-      //         display: inline-block;
-      //         padding-top: 20px;
-      //         padding-right: 30px;
-      //         padding-left: 35px;
-      //       }
-      //     }
-      //   }
-      // }
-      img {
-        width: 872px;
-        height: 583px;
-      }
     }
   }
   .contact {
     height: 900px;
     // background: #fff;
-    background: url("~_img/productTraval/content3.png") no-repeat;
+    background: url("~_img/productTraval/content3_icon.png") no-repeat;
     background-size: 100% 100%;
 
     .contact_content {
@@ -770,7 +865,7 @@ export default {
   }
   .contact2 {
     height: 900px;
-    background: url("~_img/productTraval/content2_bg.png") no-repeat;
+    background: url("~_img/productTraval/content2_icon.png") no-repeat;
     background-size: 100% 100%;
     .contact_content {
       display: flex;

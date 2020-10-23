@@ -71,9 +71,9 @@ export default {
   }
   .right {
     img {
-      width: 623px;
-      height: 692px;
-      background-size: 100% 100%;
+      width: 560px;
+      height: 580px;
+      // background-size: 100% 100%;
     }
   }
 }

@@ -9,10 +9,11 @@
     <div class="banner">
       <div class="big_title1 wrap">
         <div class="big_title2">
-          <div class="title">大数据智能应用服务提供商</div>
+          <div class="title">数据服务和智能应用的高新技术企业</div>
           <div class="sub_title">
-            把数据资产变成生产资料，产生价值是我们的服务宗旨
+            致力于帮助客户实现数据探索
           </div>
+          <div class="line" @click="handleMore">了解更多</div>
         </div>
       </div>
     </div>
@@ -32,20 +33,22 @@
           广州纳指数据智能科技有限公司成立于2016年，是大数据端到端服务提供商，致力于数据服务和智能应用的高科技创新型企业。
         </p>
         <p>
-          纳指数据拥有大数据专业分析团队和系列数据智能产品，为科研单位、政府机构和大型企业用户提供咨询规划、数据采集、数据清
+          纳指数据拥有大数据专业分析团队和系列数据智能产品，为科研单位、政府机构和大型企业用户提供咨询规划、数据采集、数据清洗、数
         </p>
         <p>
-          洗、数据地图、数据质量管控、数据安全、数据共享等数据服务，数据智能产品推出智慧灯杆、智慧环保、智慧园区、智慧旅游、云物管等产品。
+          据地图、数据质量管控、数据安全、数据共享等数据服务，数据智能产品推出智慧灯杆、智慧环保、智慧园区、智慧旅游、云物管等产品。
         </p>
         <div class="block">
           <ul>
             <li v-for="(item, index) in enData" :key="index">
-              <p>{{ item }}</p>
-              <div class="line"></div>
+              <!-- <p>{{ item }}</p> -->
+              <!-- <div class="line"></div> -->
             </li>
             <div class="block_footer">
               <div v-for="(item, index) in enDataDetail" :key="index">
-                <span>{{ item }} </span>
+                <div class="text_title">{{ item.Chinesetitle }}</div>
+                <div class="text_subtitle">{{ item.Englishtitle }}</div>
+                <div class="text_content">{{ item.content }}</div>
               </div>
             </div>
           </ul>
@@ -109,15 +112,33 @@ export default {
       },
       enData: ['服务', '产品', '项目'],
       enDataDetail: [
-        ' 咨询规划、数据服务、应用开发、技术支撑等全流程服务。',
-        ' 数据中台、数据建模、智慧灯杆、智慧环保、智慧园区、智慧旅游、云物管等。',
-        '  科研、政府和企业的数据治理、数据挖掘与分析，智能应用开发等项目规划和实施'
+        {
+          Chinesetitle: '服务',
+          Englishtitle: 'Service',
+          content: '咨询规划、数据服务、应用开发、技术支撑等全流程服务。'
+        },
+        {
+          Chinesetitle: '产品',
+          Englishtitle: 'Product',
+          content:
+            '数据中台、数据建模、智慧灯杆、智慧环保、智慧园区、智慧旅游、云物管等。'
+        },
+        {
+          Chinesetitle: '项目',
+          Englishtitle: 'Project',
+          content:
+            '科研、政府和企业的数据治理、数据挖掘与分析，智能应用开发等项目规划和实施'
+        }
       ]
     }
   },
-  components: {
-    // Footer
-    // Head
+  methods: {
+    handleMore () {
+      window.scrollTo({
+        top: 870,
+        behavior: 'smooth'
+      })
+    }
   }
 }
 </script>
@@ -134,11 +155,10 @@ export default {
   }
   .banner {
     // width: 100%;
-    height: 900px;
+    height: 830px;
     background: url("~_img/about_banner2.png") no-repeat;
     background-size: 100% 100%;
-    // position: relative;
-    // top: 73px;
+
     .big_title1 {
       .big_title2 {
         // position: absolute;
@@ -148,8 +168,8 @@ export default {
         color: #fff;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        // justify-content: center;
+        // align-items: center;
 
         .title {
           margin-top: 350px;
@@ -160,8 +180,27 @@ export default {
         }
         .sub_title {
           color: rgba(255, 255, 255, 0.7);
-          font-size: 30px;
-          font-weight: 500;
+          font-size: 24px;
+          margin-bottom: 60px;
+        }
+        .line {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 24px;
+          font-weight: bold;
+          color: #171a25;
+          width: 225px;
+          height: 60px;
+          background: #59a6ba;
+          box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.5);
+          border-radius: 4px;
+          border-image: linear-gradient(
+              315deg,
+              rgba(61, 188, 212, 1),
+              rgba(31, 63, 128, 1)
+            )
+            1 1;
         }
       }
     }
@@ -179,13 +218,12 @@ export default {
       text-align: center;
     }
     p {
-      text-indent: 2em;
-      &:nth-child(2),
-      &:nth-child(3) {
-        // text-align: center;
+      // text-indent: 2em;
+      &:nth-child(2) {
+        padding-bottom: 20px;
       }
       &:nth-child(4) {
-        text-indent: 0;
+        // text-indent: 0;
       }
       color: rgba(23, 26, 37, 0.6);
       font-size: 20px;
@@ -201,7 +239,7 @@ export default {
           // flex: 1;
           margin-right: 20px;
           width: 386px;
-          height: 448px;
+          height: 296px;
           background-size: 100% 100%;
           &:first-child {
             background: url("~_img/about_en1.png") no-repeat;
@@ -238,23 +276,38 @@ export default {
           display: flex;
 
           div {
+            flex: 1;
             margin-right: 20px;
-            width: 386px;
-            height: 130px;
+            // height: 577px;
+
             background: #f6f8fb;
-            font-size: 18px;
-            color: #33384c;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 0 20px;
+
+            // padding-left: 35px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
             &:last-child {
               margin-right: 0;
             }
-            span {
-              display: inline-block;
-              padding-top: 20px;
-              padding-right: 30px;
-              padding-left: 35px;
+            .text_title {
+              padding-top: 50px;
+
+              font-size: 30px;
+              color: #171a25;
+              font-weight: bold;
+            }
+            .text_subtitle {
+              color: #171a25;
+              opacity: 30%;
+              font-size: 24px;
+            }
+            .text_content {
+              padding-top: 40px;
+              font-size: 20px;
+              color: #33384c;
+
+              padding-bottom: 32px;
             }
           }
         }

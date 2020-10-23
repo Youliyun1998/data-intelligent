@@ -3,9 +3,12 @@
     <div class="banner">
       <div class="left_text wrap">
         <div class="left_text_l">
-          <p class="big_text">数据智能</p>
-          <p class="sub_text">整体解决方案提供商</p>
-          <div class="line"></div>
+          <p class="big_text">数据服务与智能应用提供商</p>
+          <p class="sub_text">
+            把数据资产变成生产资料，探索数据价值是我们的服务宗旨
+          </p>
+          <p class="sub_text">服务宗旨</p>
+          <div class="line" @click="handleMore">了解更多</div>
         </div>
       </div>
       <!-- 悬浮电话，回到顶部 -->
@@ -210,10 +213,10 @@ export default {
           baseImg: require('../assets/img/data_program_bg3.png')
         },
         {
-          baseImg: require('../assets/img/data_program_bg5.png')
+          baseImg: require('../assets/img/data_program_bg4.png')
         },
         {
-          baseImg: require('../assets/img/data_program_bg4.png')
+          baseImg: require('../assets/img/data_program_bg5.png')
         }
       ],
       CityGoven1: {
@@ -386,6 +389,12 @@ export default {
     })
   },
   methods: {
+    handleMore () {
+      window.scrollTo({
+        top: 870,
+        behavior: 'smooth'
+      })
+    },
     handletabText (index) {
       window.scrollTo(0, 0)
       if (index === 1) {
@@ -574,7 +583,7 @@ export default {
 .banner {
   position: relative;
   // top: 75px;
-  height: 717px;
+  height: 730px;
   background: url("~_img/banner.png") no-repeat;
   background-size: 100% 100%;
   .img {
@@ -594,24 +603,40 @@ export default {
         font-size: 50px;
         font-weight: bold;
         color: #fff;
+        margin-bottom: 23px;
       }
       .sub_text {
-        font-size: 30px;
-        color: rgba(255, 255, 255, 0.6);
-        margin: 16px 0 41px 0;
+        font-size: 24px;
+        color: #a4a7af;
+        &:nth-child(3) {
+          margin-bottom: 60px;
+        }
       }
       .line {
-        width: 110px;
-        height: 10px;
-        background: #3e6eff;
-        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #171a25;
+        font-size: 24px;
+        font-weight: bold;
+        width: 225px;
+        height: 60px;
+        background: #59a6ba;
+        box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        border-image: linear-gradient(
+            315deg,
+            rgba(61, 188, 212, 1),
+            rgba(31, 63, 128, 1)
+          )
+          1 1;
       }
     }
   }
 }
 .tab {
   border-top: 1px solid #393e49;
-  background-color: #20263d;
+  background-color: #0a1126;
   .tab_content {
     display: flex;
     justify-content: center;
@@ -619,7 +644,7 @@ export default {
     .tab_text {
       flex: 1;
       height: 120px;
-      background: #20263d;
+      background: #0a1126;
       border-radius: 4px 4px 0px 0px;
       border-left: 1px solid #393e49;
       &:last-child {

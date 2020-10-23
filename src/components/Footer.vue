@@ -28,7 +28,7 @@
             <dd
               v-for="(item, index) in exampleData"
               :key="index"
-              @click="handleExample"
+              @click="handleExample(index)"
             >
               {{ item }}
             </dd>
@@ -105,8 +105,20 @@ export default {
         default:
       }
     },
-    handleExample () {
-      this.$router.push({ path: '/example' })
+    handleExample (index) {
+      switch (index) {
+        case 0:
+          this.$router.push({ path: '/example/customs' })
+          break
+        case 1:
+          this.$router.push({ path: '/example/railway' })
+          break
+        case 2:
+          this.$router.push({ path: '/example/enviroment' })
+          break
+        case 3:
+          this.$router.push({ path: '/example/traval' })
+      }
     },
     handleAbout (e) {
       if (e === 0 || e === 1) {
@@ -126,7 +138,7 @@ export default {
 
 .foot {
   // height: 430px;
-  background: #1c2133;
+  background: #0a1126;
   box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
 
   .footer {

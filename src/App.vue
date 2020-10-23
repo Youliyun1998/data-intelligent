@@ -34,7 +34,11 @@ export default {
         this.$route.path === '/product/SmartPark' ||
         this.$route.path === '/product/SmartTraval' ||
         this.$route.path === '/product/SmartWuGuan' ||
-        this.$route.path === '/product/SmartLampStandard'
+        this.$route.path === '/product/SmartLampStandard' ||
+        this.$route.path === '/example/enviroment' ||
+        this.$route.path === '/example/railway' ||
+        this.$route.path === '/example/customs' ||
+        this.$route.path === '/example/traval'
       ) {
         this.isShow = true
       } else {

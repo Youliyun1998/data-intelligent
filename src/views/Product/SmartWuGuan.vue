@@ -11,15 +11,15 @@
         <div class="left_text_l">
           <p class="big_text">云物管</p>
           <p class="sub_text">
-            智能门禁、停车管理系统通过智能硬件的铺设
+            互联网+ 物业管理云平台，助力物业智能化转型
           </p>
-          <p class="sub_text">
+          <!-- <p class="sub_text">
             以及搭建，实现对商业综合体内人员以及车辆
           </p>
           <p class="sub_text">
             进出实时管控
-          </p>
-          <div class="line"></div>
+          </p> -->
+          <div class="line">了解更多</div>
         </div>
       </div>
       <!-- 悬浮电话，回到顶部 -->
@@ -177,12 +177,28 @@
           </p>
         </div>
         <div class="content">
-          <ul>
-            <li v-for="(v, i) in smartGovenData" :key="i">
-              <div class="img"></div>
-              <div class="text">{{ v }}</div>
+          <div class="left_box">
+            <div class="text">智能商户管理</div>
+          </div>
+          <div class="right_box">
+            <div class="top">
+              <div class="text">智能缴费管理</div>
+            </div>
+            <div class="bottom">
+              <div class="text">智能运营中心</div>
+            </div>
+          </div>
+          <!-- <ul>
+            <li>
+              <div class="text">智能商户管理</div>
             </li>
-          </ul>
+            <li>
+              <div class="text">智能缴费管理</div>
+            </li>
+            <li>
+              <div class="text">智能运营中心</div>
+            </li>
+          </ul> -->
         </div>
       </div>
     </div>
@@ -321,19 +337,39 @@ export default {
           font-size: 50px;
           font-weight: bold;
           color: #fff;
-          margin-bottom: 16px;
         }
         .sub_text {
-          font-size: 30px;
-          color: rgba(255, 255, 255, 0.6);
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          font-size: 24px;
+          color: #fff;
+          margin-top: 16px;
+          margin-bottom: 60px;
+          // width: 660px;
+          // height: 70px;
+          // background: rgba(255, 255, 255, 0.75);
+          // border-radius: 8px;
           // margin: 16px 0 41px 0;
         }
         .line {
-          margin-top: 41px;
-          width: 110px;
-          height: 10px;
-          background: #3e6eff;
-          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #171a25;
+          font-size: 24px;
+          font-weight: bold;
+          width: 225px;
+          height: 60px;
+          background: #59a6ba;
+          box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.5);
+          border-radius: 4px;
+          border-image: linear-gradient(
+              315deg,
+              rgba(61, 188, 212, 1),
+              rgba(31, 63, 128, 1)
+            )
+            1 1;
         }
       }
     }
@@ -381,7 +417,8 @@ export default {
           height: 448px;
           background-size: 100% 100%;
           &:first-child {
-            background: url("~_img/product_yunwuguan/content2_icon1.png")  no-repeat;
+            background: url("~_img/product_yunwuguan/content2_icon1.png")
+              no-repeat;
             background-size: 100% 100%;
           }
           &:nth-child(2) {
@@ -490,13 +527,15 @@ export default {
         .left_box {
           margin-right: 30px;
           font-size: 20px;
-          color: #59a6ba;
+          // padding: 0 20px;
+          // color: #59a6ba;
           // padding: 0 63px;
           .leftbox_title {
             width: 580px;
             height: 60px;
             background: #f6f8fb;
-            border: 1px dashed #59a6ba;
+
+            border: 1px solid #e3e6ef;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -504,11 +543,12 @@ export default {
             font-weight: bold;
           }
           .leftbox_content {
-            margin-top: 24px;
+            // margin-top: 24px;
             width: 580px;
             height: 585px;
             background: #f6f8fb;
-            border: 1px dashed #59a6ba;
+            border: 1px solid #e3e6ef;
+            border-top: none;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -568,12 +608,12 @@ export default {
         }
         .right_box {
           font-size: 20px;
-          color: #59a6ba;
+          // color: #59a6ba;
           .rightbox_title {
             width: 580px;
             height: 60px;
             background: #f6f8fb;
-            border: 1px dashed #59a6ba;
+            border: 1px solid #e3e6ef;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -581,11 +621,12 @@ export default {
             font-weight: bold;
           }
           .rightbox_content {
-            margin-top: 24px;
+            // margin-top: 24px;
             width: 580px;
             height: 585px;
             background: #f6f8fb;
-            border: 1px dashed #59a6ba;
+            border: 1px solid #e3e6ef;
+            border-top: none;
             .top {
               display: flex;
               justify-content: center;
@@ -602,9 +643,21 @@ export default {
                   font-size: 24px;
                   color: #33384c;
                   font-weight: bold;
+                  display: flex;
+                  align-items: center;
+                  &::before {
+                    content: "";
+                    display: block;
+                    width: 14px;
+                    height: 14px;
+                    background: #59a6ba;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                  }
                 }
                 .subtitle {
                   margin-top: 16px;
+                  margin-left: 20px;
                   font-size: 16px;
                   color: #75777d;
                 }
@@ -615,9 +668,21 @@ export default {
                   font-weight: bold;
                   font-size: 24px;
                   color: #33384c;
+                  display: flex;
+                  align-items: center;
+                  &::before {
+                    content: "";
+                    display: block;
+                    width: 14px;
+                    height: 14px;
+                    background: #59a6ba;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                  }
                 }
                 .subtitle {
                   margin-top: 16px;
+                  margin-left: 20px;
                   font-size: 16px;
                   color: #75777d;
                 }
@@ -705,7 +770,7 @@ export default {
                 background-size: 100%;
               }
             }
-            .text{
+            .text {
               margin-top: 24px;
             }
           }
@@ -713,7 +778,7 @@ export default {
       }
     }
   }
-    .contact3 {
+  .contact3 {
     height: 900px;
     background: url("~_img/product_yunwuguan/content3_bg.png") no-repeat;
     background-size: 100% 100%;
@@ -922,58 +987,50 @@ export default {
       .content {
         margin-top: 63px;
         height: 700px;
-        ul {
-          // display: flex;
-          position: relative;
-          width: 100%;
-          height: 100%;
-
-          li {
+        display: flex;
+        .left_box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 485px;
+          height: 610px;
+          margin-right: 20px;
+          background: url("~_img/product_yunwuguan/content3_icon1.png")
+            no-repeat;
+          background-size: 100% 100%;
+          .text {
+            font-size: 30px;
+            color: #fff;
+          }
+        }
+        .right_box {
+          .top {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            color: #171a25;
-            font-size: 24px;
-            font-weight: bold;
-            &:first-child {
-              position: absolute;
-              left: 0;
-              top: 0;
-              .img {
-                width: 462px;
-                height: 401px;
-                background: url("~_img/product_yunwuguan/content3_icon1.png")
-                  no-repeat;
-                background-size: 100%;
-              }
+            width: 695px;
+            height: 295px;
+            background: url("~_img/product_yunwuguan/content3_icon2.png")
+              no-repeat;
+            background-size: 100% 100%;
+            margin-bottom: 20px;
+            .text {
+              font-size: 30px;
+              color: #fff;
             }
-            &:nth-child(2) {
-              position: absolute;
-              left: 370px;
-              bottom: 40px;
-
-              .img {
-                width: 462px;
-                height: 401px;
-                background: url("~_img/product_yunwuguan/content3_icon2.png")
-                  no-repeat;
-                background-size: 100%;
-              }
-            }
-            &:nth-child(3) {
-              position: absolute;
-              top: 0;
-              right: 0;
-              .img {
-                width: 462px;
-                height: 401px;
-                background: url("~_img/product_yunwuguan/content3_icon3.png")
-                  no-repeat;
-                background-size: 100%;
-              }
-            }
-            .text{
-              margin-top: 24px;
+          }
+          .bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 695px;
+            height: 295px;
+            background: url("~_img/product_yunwuguan/content3_icon3.png")
+              no-repeat;
+            background-size: 100% 100%;
+            .text {
+              font-size: 30px;
+              color: #fff;
             }
           }
         }

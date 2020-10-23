@@ -32,6 +32,18 @@
               </li>
             </ul>
           </div>
+          <div class="exampletab" v-if="activeIndex === 3 && showExampletab">
+            <ul>
+              <li
+                v-for="(v, i) in exampleTab"
+                :key="i"
+                :class="[exampleTabActive == i ? 'activestyle' : '']"
+                @click="handleExampletab(i)"
+              >
+                {{ v }}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -43,10 +55,13 @@ export default {
   data () {
     return {
       showChildtab: false,
+      showExampletab: false,
       activeIndex: 2,
       childActive: 0,
+      exampleTabActive: 0,
       tabData: ['首页', '服务', '产品', '典型案例', '关于我们'],
-      childtab: ['智慧灯杆', '智慧环保', '智慧园区', '智慧旅游', '云物管']
+      childtab: ['智慧灯杆', '智慧环保', '智慧园区', '智慧旅游', '云物管'],
+      exampleTab: ['环保', '铁路', '海关', '旅游']
     }
   },
   mounted () {
@@ -61,6 +76,20 @@ export default {
         this.childActive = 0
       } else if (this.$route.path === '/example') {
         this.activeIndex = 3
+        this.exampleTabActive = 0
+      } else if (this.$route.path === '/example/enviroment') {
+        this.activeIndex = 3
+        this.exampleTabActive = 0
+        this.showExampletab = true
+      } else if (this.$route.path === '/example/railway') {
+        this.activeIndex = 3
+        this.exampleTabActive = 1
+      } else if (this.$route.path === '/example/customs') {
+        this.activeIndex = 3
+        this.exampleTabActive = 2
+      } else if (this.$route.path === '/example/traval') {
+        this.activeIndex = 3
+        this.exampleTabActive = 3
       } else if (this.$route.path === '/home') {
         this.activeIndex = 0
       } else if (this.$route.path === '/about') {
@@ -89,7 +118,9 @@ export default {
         this.activeIndex = 2
         this.childActive = 0
       } else if (this.$route.path === '/example') {
+        this.showExampletab = true
         this.activeIndex = 3
+        this.exampleTabActive = 0
       } else if (this.$route.path === '/home') {
         this.activeIndex = 0
       } else if (this.$route.path === '/about') {
@@ -114,6 +145,19 @@ export default {
         this.showChildtab = false
         this.activeIndex = 2
         this.childActive = 4
+      } else if (this.$route.path === '/example/enviroment') {
+        this.showExampletab = true
+        this.activeIndex = 3
+        this.exampleTabActive = 0
+      } else if (this.$route.path === '/example/railway') {
+        this.activeIndex = 3
+        this.exampleTabActive = 1
+      } else if (this.$route.path === '/example/customs') {
+        this.activeIndex = 3
+        this.exampleTabActive = 2
+      } else if (this.$route.path === '/example/traval') {
+        this.activeIndex = 3
+        this.exampleTabActive = 3
       }
     }
   },
@@ -130,6 +174,28 @@ export default {
       if (index === 2) {
         // this.activeIndex !== 2;
         // this.showChildtab = false
+      }
+    },
+    handleExampletab (e) {
+      this.exampleTabActive = e
+      switch (this.exampleTabActive) {
+        case 0:
+          this.$router.push({ path: '/example/enviroment' })
+          this.showExampletab = true
+
+          break
+        case 1:
+          this.$router.push({ path: '/example/railway' })
+          this.showExampletab = false
+          break
+        case 2:
+          this.$router.push({ path: '/example/customs' })
+          this.showExampletab = false
+          break
+        case 3:
+          this.$router.push({ path: '/example/traval' })
+          this.showExampletab = false
+          break
       }
     },
     handleChildtab (e) {
@@ -172,7 +238,8 @@ export default {
           this.showChildtab = true
           break
         case 3:
-          this.$router.push({ path: '/example' })
+          this.$router.push({ path: '/example/enviroment' })
+          this.showExampletab = true
           break
         case 4:
           this.$router.push({ path: '/about' })
@@ -204,7 +271,7 @@ export default {
     top: 0;
     width: 100%;
     height: 75px;
-    background: #1c2133;
+    background: #0a1126;
     box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
     .top_content {
       width: 1200px;
@@ -235,7 +302,7 @@ export default {
               &.active {
                 color: #fff;
                 // width: 66px;
-                border-bottom: 4px solid #3e6eff;
+                border-bottom: 4px solid #59a6ba;
               }
             }
           }
@@ -245,6 +312,35 @@ export default {
           height: 212px;
           position: absolute;
           margin-left: 170px;
+          // background-color: rgba(28, 33, 51, 0.9);
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 212px;
+            color: rgba(170, 170, 170, 1);
+            padding: 24px;
+            padding-bottom: 0;
+            background-color: rgba(28, 33, 51, 0.9);
+
+            li {
+              cursor: pointer;
+              font-size: 14px;
+              color: rgba(170, 170, 170, 1);
+              margin-bottom: 16px;
+              &.activestyle {
+                color: white;
+              }
+            }
+          }
+        }
+        .exampletab {
+          width: 160px;
+          height: 212px;
+          position: absolute;
+          margin-left: 272px;
           // background-color: rgba(28, 33, 51, 0.9);
 
           ul {
