@@ -67,7 +67,7 @@ export default {
       childActive: 0,
       exampleTabActive: 0,
       tabData: ['首页', '服务', '产品', '典型案例', '关于我们'],
-      childtab: ['智慧灯杆', '智慧环保', '智慧园区', '智慧旅游', '云物管'],
+      childtab: ['智慧环保', '智慧灯杆', '智慧园区', '智慧旅游', '云物管'],
       exampleTab: ['环保', '铁路', '海关', '旅游']
     }
   },
@@ -133,13 +133,13 @@ export default {
       } else if (this.$route.path === '/about') {
         this.activeIndex = 4
       } else if (this.$route.path === '/product/SmartLampStandard') {
-        this.showChildtab = true
-        this.activeIndex = 2
-        this.childActive = 0
-      } else if (this.$route.path === '/product/SmartEnviroment') {
         this.showChildtab = false
         this.activeIndex = 2
         this.childActive = 1
+      } else if (this.$route.path === '/product/SmartEnviroment') {
+        this.showChildtab = true
+        this.activeIndex = 2
+        this.childActive = 0
       } else if (this.$route.path === '/product/SmartPark') {
         this.showChildtab = false
         this.activeIndex = 2
@@ -218,13 +218,14 @@ export default {
     handleChildtab (e) {
       this.childActive = e
       switch (this.childActive) {
-        case 0:
-          this.$router.push({ path: '/product/SmartLampStandard' })
-          this.showChildtab = true
-          break
         case 1:
-          this.$router.push({ path: '/product/SmartEnviroment' })
+          this.$router.push({ path: '/product/SmartLampStandard' })
           this.showChildtab = false
+          break
+        case 0:
+          this.$router.push({ path: '/product/SmartEnviroment' })
+
+          this.showChildtab = true
           break
         case 2:
           this.$router.push({ path: '/product/SmartPark' })
@@ -251,7 +252,7 @@ export default {
           this.$router.push({ path: '/serve' })
           break // 可选
         case 2:
-          this.$router.push({ path: '/product/SmartLampStandard' })
+          this.$router.push({ path: '/product/SmartEnviroment' })
           this.showChildtab = true
           break
         case 3:

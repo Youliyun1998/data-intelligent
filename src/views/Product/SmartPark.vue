@@ -125,19 +125,6 @@ export default {
         keyboardScrolling: false, // 是否可以使用键盘方向键导航，默认为true
         continuousVertical: false, /// 是否循环滚动，默认为false。如果设置为true，则页面会循环滚动，而不像loopTop或loopBottom那样出现跳动，注意这个属性和loopTop、loopBottom不兼容和，不要同时设置
         menu: '#menu'
-        // navigation: true,
-        // anchors: ['page1', 'page2', 'page3'],
-        // sectionsColor: [
-        //   "#41b883",
-        //   "#ff5f45",
-        //   "#0798ec",
-        //   "#fec401",
-        //   "#1bcee6",
-        //   "#ee1a59",
-        //   "#2c3e4f",
-        //   "#ba5be9",
-        //   "#b4b8ab"
-        // ]
       },
 
       enData: ['服务', '产品', '项目'],
@@ -249,7 +236,6 @@ export default {
   }
   .contact {
     height: 900px;
-
     background: url("~_img/productEnviroment/productEnviroment_bg.png")
       no-repeat;
     background-size: 100% 100%;
