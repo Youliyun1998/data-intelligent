@@ -13,7 +13,7 @@
           <div class="sub_title">
             致力于帮助客户实现数据探索
           </div>
-          <div class="line" @click="handleMore">了解更多</div>
+          <!-- <div class="line" @click="handleMore">了解更多</div> -->
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
           纳指数据拥有大数据专业分析团队和系列数据智能产品，为科研单位、政府机构和大型企业用户提供咨询规划、数据采集、数据清洗、数
         </p>
         <p>
-          据地图、数据质量管控、数据安全、数据共享等数据服务，数据智能产品推出智慧灯杆、智慧环保、智慧园区、智慧旅游、云物管等产品。
+          据地图、数据质量管控、数据安全、数据共享等数据服务，数据智能产品推出智慧环保、智慧灯杆、智慧园区、智慧旅游、云物管等系列产品。
         </p>
         <div class="block">
           <ul>
@@ -121,7 +121,7 @@ export default {
           Chinesetitle: '产品',
           Englishtitle: 'Product',
           content:
-            '数据中台、数据建模、智慧灯杆、智慧环保、智慧园区、智慧旅游、云物管等。'
+            '数据中台、数据建模、智慧环保、智慧灯杆、智慧园区、智慧旅游、云物管等。'
         },
         {
           Chinesetitle: '项目',
@@ -211,7 +211,9 @@ export default {
     background-color: #fff;
 
     .big_title {
-      padding: 40px 0;
+      // padding: 40px 0;
+      padding-top: 40px;
+      padding-bottom: 20px;
       font-size: 30px;
       font-weight: 600;
       color: #171a25;
@@ -225,7 +227,7 @@ export default {
       &:nth-child(4) {
         // text-indent: 0;
       }
-      color: rgba(23, 26, 37, 0.6);
+      color: #171a25;
       font-size: 20px;
       // text-align: left;
     }
@@ -299,7 +301,7 @@ export default {
             }
             .text_subtitle {
               color: #171a25;
-              opacity: 30%;
+              opacity: 0.3;
               font-size: 24px;
             }
             .text_content {
@@ -329,7 +331,9 @@ export default {
         color: #171a25;
         display: flex;
         justify-content: center;
-        padding: 28px 0;
+        // padding: 28px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
       .title_detail {
         font-size: 20px;

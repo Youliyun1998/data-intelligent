@@ -8,7 +8,7 @@
             建设梅州旅游的“五个一”特色建设，为梅州市发展全域
           </p>
           <p class="sub_text">旅游打下坚实基础。</p>
-          <div class="line">了解更多</div>
+          <!-- <div class="line">了解更多</div> -->
         </div>
       </div>
       <!-- 悬浮电话，回到顶部 -->
@@ -346,7 +346,7 @@ export default {
         justify-content: space-between;
         .left {
           img {
-            width: 623px;
+            width: 635px;
             height: 634px;
           }
         }

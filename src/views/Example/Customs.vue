@@ -8,7 +8,7 @@
             打造专业的海关业务大数据风险防控平台
           </p>
           <!-- <p class="sub_text">与效益的计算、预测。</p> -->
-          <div class="line">了解更多</div>
+          <!-- <div class="line">了解更多</div> -->
         </div>
       </div>
       <!-- 悬浮电话，回到顶部 -->
@@ -241,7 +241,7 @@ export default {
         justify-content: space-between;
         .left {
           img {
-            width: 623px;
+            width: 635px;
             height: 634px;
           }
         }
@@ -279,7 +279,9 @@ export default {
       text-align: center;
 
       .title {
-        padding: 40px 0;
+        // padding: 40px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
         font-weight: bold;
         font-size: 30px;
         color: #171a25;
@@ -291,7 +293,7 @@ export default {
       .content {
         display: flex;
         justify-content: center;
-        margin-top: 130px;
+        margin-top: 150px;
 
         .left_content {
           // padding-left: 30px;
@@ -310,7 +312,7 @@ export default {
                 margin-top: 10px;
                 color: #75777d;
                 font-size: 20px;
-                margin-bottom: 120px;
+                margin-bottom: 115px;
               }
               &:nth-child(3) {
                 .left_title {
@@ -327,7 +329,7 @@ export default {
           font-size: 30px;
           color: #fff;
           font-weight: bold;
-          margin-left: 20px;
+          margin-left: 28px;
           // margin-right: 80px;
 
           display: flex;
@@ -341,17 +343,22 @@ export default {
         }
         .right_content {
           // flex: 1;
-          // margin-left: 300px;
+
           ul {
+            // margin-right: 60px;
             li {
+              // padding-left: 60px;
               width: 320px;
               text-align: left;
+
               .right_title {
                 color: #33384c;
                 font-size: 24px;
                 font-weight: bold;
+                margin-left: 20px;
               }
               .right_subtitle {
+                  margin-left: 20px;
                 color: #75777d;
                 font-size: 20px;
                 margin-top: 10px;
@@ -359,12 +366,12 @@ export default {
               }
               &:nth-child(2) {
                 .right_title {
-                  margin-top: 110px;
+                  margin-top: 115px;
                 }
               }
               &:nth-child(3) {
                 .right_title {
-                  margin-top: 75px;
+                  margin-top: 80px;
                 }
               }
             }

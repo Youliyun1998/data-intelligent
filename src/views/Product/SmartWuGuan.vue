@@ -19,7 +19,7 @@
           <p class="sub_text">
             进出实时管控
           </p> -->
-          <div class="line">了解更多</div>
+          <!-- <div class="line">了解更多</div> -->
         </div>
       </div>
       <!-- 悬浮电话，回到顶部 -->
@@ -317,7 +317,7 @@ export default {
   .banner {
     position: relative;
     // top: 75px;
-    height: 900px;
+    height: 830px;
     background: url("~_img/product_yunwuguan/banner.png") no-repeat;
     background-size: 100% 100%;
     .img {
@@ -379,7 +379,9 @@ export default {
     height: 900px;
     background: #eef0f5;
     .big_title {
-      padding: 28px 0;
+      // padding: 28px 0;
+      padding-top: 40px;
+      padding-bottom: 20px;
       font-size: 30px;
       font-weight: 600;
       color: #171a25;
@@ -499,7 +501,9 @@ export default {
         color: #171a25;
         display: flex;
         justify-content: center;
-        padding: 28px 0;
+        // padding: 28px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
       .title_detail {
         font-size: 20px;
@@ -532,8 +536,8 @@ export default {
           // padding: 0 63px;
           .leftbox_title {
             width: 580px;
-            height: 60px;
-            background: #f6f8fb;
+            height: 100px;
+            background: #f8faff;
 
             border: 1px solid #e3e6ef;
             display: flex;
@@ -546,7 +550,7 @@ export default {
             // margin-top: 24px;
             width: 580px;
             height: 585px;
-            background: #f6f8fb;
+            background: #f8faff;
             border: 1px solid #e3e6ef;
             border-top: none;
             display: flex;
@@ -611,8 +615,8 @@ export default {
           // color: #59a6ba;
           .rightbox_title {
             width: 580px;
-            height: 60px;
-            background: #f6f8fb;
+            height: 100px;
+            background: #f8faff;
             border: 1px solid #e3e6ef;
             display: flex;
             justify-content: center;
@@ -624,7 +628,7 @@ export default {
             // margin-top: 24px;
             width: 580px;
             height: 585px;
-            background: #f6f8fb;
+            background: #f8faff;
             border: 1px solid #e3e6ef;
             border-top: none;
             .top {
@@ -658,7 +662,7 @@ export default {
                 .subtitle {
                   margin-top: 16px;
                   margin-left: 20px;
-                  font-size: 16px;
+                  font-size: 20px;
                   color: #75777d;
                 }
               }
@@ -683,7 +687,7 @@ export default {
                 .subtitle {
                   margin-top: 16px;
                   margin-left: 20px;
-                  font-size: 16px;
+                  font-size: 20px;
                   color: #75777d;
                 }
               }
@@ -794,7 +798,9 @@ export default {
         color: #171a25;
         display: flex;
         justify-content: center;
-        padding: 28px 0;
+        // padding: 28px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
       .title_detail {
         font-size: 20px;
@@ -1051,7 +1057,9 @@ export default {
         color: #171a25;
         display: flex;
         justify-content: center;
-        padding: 28px 0;
+        // padding: 28px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
       .title_detail {
         font-size: 20px;

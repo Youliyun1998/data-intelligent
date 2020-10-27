@@ -17,7 +17,7 @@
             要素建立相应的业务平台
           </p> -->
 
-          <div class="line" @click="handleMore">了解更多</div>
+          <!-- <div class="line" @click="handleMore">了解更多</div> -->
         </div>
       </div>
     </div>
@@ -53,6 +53,7 @@
             src="~_img/productSmartPark/productSmartPark_content1.png"
             alt=""
           />
+          <!-- <div class="img"></div> -->
         </div>
       </div>
     </div>
@@ -175,8 +176,7 @@ export default {
   }
   .banner {
     position: relative;
-    // top: 75px;
-    height: 900px;
+    height: 830px;
     background: url("~_img/productSmartPark/productSmartPark_banner.png")
       no-repeat;
     background-size: 100% 100%;
@@ -219,118 +219,40 @@ export default {
     }
   }
   .en_presume {
-    // margin-top: 75px;
     height: 900px;
     background-color: #fff;
 
     .big_title {
-      padding: 40px 0;
+      padding-top: 40px;
+      padding-bottom: 20px;
       font-size: 30px;
       font-weight: 600;
       color: #171a25;
       text-align: center;
     }
     p {
-      // text-indent: 2em;
-      // &:nth-child(2),
-      // &:nth-child(3) {
       text-align: center;
-      // }
-      // &:nth-child(4) {
-      //   text-indent: 0;
-      // }
       color: rgba(23, 26, 37, 0.6);
       font-size: 20px;
-      // text-align: left;
     }
     .block {
-      margin-top: 80px;
-
+      margin-top: 58px;
       margin-bottom: 40px;
-      width: 100%;
-      height: 900px;
       display: flex;
       flex-direction: column;
-      // justify-content: center;
       align-items: center;
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        li {
-          // flex: 1;
-          margin-right: 20px;
-          width: 386px;
-          height: 448px;
-          background-size: 100% 100%;
-          &:first-child {
-            background: url("~_img/about_en1.png") no-repeat;
-            background-size: 100% 100%;
-          }
-          &:nth-child(2) {
-            background: url("~_img/about_en2.png") no-repeat;
-            background-size: 100% 100%;
-          }
-          &:nth-child(3) {
-            background: url("~_img/about_en3.png") no-repeat;
-            background-size: 100% 100%;
-            margin-right: 0;
-          }
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          p {
-            text-indent: 0;
-            color: #fff;
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 30px;
-          }
-          .line {
-            width: 50px;
-            height: 6px;
-            background: #ffffff;
-            border-radius: 3px;
-          }
-        }
-        .block_footer {
-          display: flex;
-
-          div {
-            margin-right: 20px;
-            width: 386px;
-            height: 130px;
-            background: #f6f8fb;
-            font-size: 18px;
-            color: #33384c;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &:last-child {
-              margin-right: 0;
-            }
-            span {
-              display: inline-block;
-              padding-top: 20px;
-              padding-right: 30px;
-              padding-left: 35px;
-            }
-          }
-        }
-      }
       img {
-        width: 857px;
+        width: 875px;
         height: 644px;
       }
     }
   }
   .contact {
     height: 900px;
-    // background: #eef0f5;
+
     background: url("~_img/productEnviroment/productEnviroment_bg.png")
       no-repeat;
     background-size: 100% 100%;
-
     .contact_content {
       display: flex;
       flex-direction: column;
@@ -342,7 +264,9 @@ export default {
         color: #171a25;
         display: flex;
         justify-content: center;
-        padding: 28px 0;
+
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
       .title_detail {
         font-size: 20px;
@@ -353,7 +277,6 @@ export default {
         align-items: center;
 
         p {
-          // margin-right: 37px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -361,32 +284,11 @@ export default {
           &:last-child {
             margin-right: 0;
           }
-          // &:nth-child(2)::before {
-          //   content: "";
-          //   display: inline-block;
-          //   width: 13px;
-          //   height: 16px;
-          //   background: url("~_img/about_foot_phone.png") no-repeat;
-          //   background-size: 100% 100%;
-          //   margin-right: 10px;
-          // }
-          // &:nth-child(3)::before {
-          //   content: "";
-          //   display: inline-block;
-          //   width: 13px;
-          //   height: 16px;
-          //   background: url("~_img/about_foot_address.png") no-repeat;
-          //   background-size: 100% 100%;
-          //   margin-right: 10px;
-          // }
         }
       }
       .map {
         margin-top: 40px;
-        // width: 100%;
-        // height: 900px;
-        // display: flex;
-        // justify-content: center;
+
         /deep/.content2 {
           padding-top: 0;
           display: flex;
@@ -404,10 +306,6 @@ export default {
             }
           }
         }
-        // img {
-        //   width: 601px;
-        //   height: 601px;
-        // }
       }
     }
   }

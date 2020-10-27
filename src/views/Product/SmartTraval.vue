@@ -13,7 +13,7 @@
           <p class="sub_text">
             智慧旅游综合管理平台，助力旅游业科学发展
           </p>
-          <div class="line">了解更多</div>
+          <!-- <div class="line">了解更多</div> -->
         </div>
       </div>
       <!-- 悬浮电话，回到顶部 -->
@@ -307,7 +307,7 @@ export default {
   .banner {
     position: relative;
     // top: 75px;
-    height: 900px;
+    height: 830px;
     background: url("~_img/productTraval/banner.png") no-repeat;
     background-size: 100% 100%;
     .img {
@@ -370,7 +370,9 @@ export default {
     margin-bottom: 56px;
     background: #fff;
     .big_title {
-      padding: 40px 0;
+      // padding: 40px 0;
+      padding-top: 40px;
+      padding-bottom: 20px;
       font-size: 30px;
       font-weight: 600;
       color: #171a25;
@@ -574,7 +576,7 @@ export default {
               ul {
                 li {
                   height: 90px;
-                  padding-left: 15px;
+                  padding-left: 25px;
                   .li_title {
                     span {
                       color: #171a25;
@@ -684,7 +686,7 @@ export default {
               }
               ul {
                 li {
-                  padding-left: 15px;
+                  padding-left: 25px;
                   .li_title {
                     span {
                       color: #171a25;
@@ -733,7 +735,9 @@ export default {
         color: #171a25;
         display: flex;
         justify-content: center;
-        padding: 28px 0;
+        // padding: 28px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
       .title_detail {
         font-size: 20px;
@@ -878,7 +882,9 @@ export default {
         color: #171a25;
         display: flex;
         justify-content: center;
-        padding: 28px 0;
+        // padding: 28px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
       .title_detail {
         font-size: 20px;

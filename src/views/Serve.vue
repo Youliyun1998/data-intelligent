@@ -15,7 +15,7 @@
             用开发等全流程服务
           </p>
           <!-- <p class="sub_text">帮助用户快速建立专业的数据大屏。</p> -->
-          <div class="line" @click="handleMore">了解更多</div>
+          <!-- <div class="line" @click="handleMore">了解更多</div> -->
         </div>
       </div>
     </div>

@@ -13,14 +13,17 @@
                 :key="index"
                 @click="handleTab(index)"
                 @mouseover="handleMouseOver(index)"
-                @mouseleave="handleMouseLeave(index)"
                 :class="[index === activeIndex ? 'active' : '']"
               >
                 {{ item }}
               </li>
             </ul>
           </div>
-          <div class="childtab" v-if="activeIndex === 2 && showChildtab">
+          <div
+            class="childtab"
+            v-if="activeIndex === 2 && showChildtab"
+            @mouseleave="handleMouseLeave(activeIndex)"
+          >
             <ul>
               <li
                 v-for="(v, i) in childtab"
@@ -32,7 +35,11 @@
               </li>
             </ul>
           </div>
-          <div class="exampletab" v-if="activeIndex === 3 && showExampletab">
+          <div
+            class="exampletab"
+            v-if="activeIndex === 3 && showExampletab"
+            @mouseleave="handleMouseLeave(activeIndex)"
+          >
             <ul>
               <li
                 v-for="(v, i) in exampleTab"
@@ -80,7 +87,7 @@ export default {
       } else if (this.$route.path === '/example/enviroment') {
         this.activeIndex = 3
         this.exampleTabActive = 0
-        this.showExampletab = true
+        // this.showExampletab = true;
       } else if (this.$route.path === '/example/railway') {
         this.activeIndex = 3
         this.exampleTabActive = 1
@@ -166,16 +173,26 @@ export default {
       if (index === 2) {
         this.activeIndex = index
         this.showChildtab = true
+      } else if (index === 3) {
+        this.activeIndex = index
+        this.showExampletab = true
+      } else {
+        this.showChildtab = false
+        this.showExampletab = false
       }
 
       // console.log(index, "index");
     },
+
     handleMouseLeave (index) {
       if (index === 2) {
         // this.activeIndex !== 2;
-        // this.showChildtab = false
+        this.showChildtab = false
+      } else if (index === 3) {
+        this.showExampletab = false
       }
     },
+
     handleExampletab (e) {
       this.exampleTabActive = e
       switch (this.exampleTabActive) {

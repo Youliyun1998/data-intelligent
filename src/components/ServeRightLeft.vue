@@ -70,7 +70,11 @@ export default {
     }
   }
   .right {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     img {
+      margin-top: 20px;
       width: 560px;
       height: 580px;
       // background-size: 100% 100%;

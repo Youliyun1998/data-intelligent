@@ -8,7 +8,7 @@
             通过数据治理和创新应用，创新实现列车成本
           </p>
           <p class="sub_text">与效益的计算、预测。</p>
-          <div class="line">了解更多</div>
+          <!-- <div class="line">了解更多</div> -->
         </div>
       </div>
       <!-- 悬浮电话，回到顶部 -->
@@ -103,6 +103,8 @@
             <div class="title_t">数据规范定义</div>
             <div class="subtitle_s">口径一致、算法一致、命名唯一</div>
           </div>
+          <div class="big"></div>
+
           <div class="third_item">
             <img src="~_img/example_railway/pic3.png" alt="" />
             <div class="title_t">数据建模研发</div>
@@ -113,6 +115,7 @@
             <div class="title_t">数据连接萃取</div>
             <div class="subtitle_s">ID识别与标签画像生产</div>
           </div>
+
           <div class="five_item">
             <img src="~_img/example_railway/pic5.png" alt="" />
             <div class="title_t">运维调度</div>
@@ -278,7 +281,7 @@ export default {
         justify-content: space-between;
         .left {
           img {
-            width: 623px;
+            width: 634px;
             height: 634px;
           }
         }
@@ -314,7 +317,10 @@ export default {
       align-items: center;
 
       .title {
-        padding: 40px 0;
+        // padding: 40px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        font-weight: bold;
         font-size: 30px;
         color: #171a25;
       }
@@ -359,6 +365,16 @@ export default {
             text-align: center;
           }
         }
+        .big {
+          width: 190px;
+          height: 420px;
+          border-radius: 10px;
+          border: 2px dashed #979797;
+          position: absolute;
+          position: absolute;
+          top: 55px;
+          left: 510px;
+        }
         .third_item,
         .four_item,
         .five_item {
@@ -390,7 +406,7 @@ export default {
         }
         .five_item {
           position: absolute;
-          top: 510px;
+          top: 530px;
           left: 520px;
         }
         .six_item {
@@ -439,7 +455,7 @@ export default {
         .row4 {
           position: absolute;
           top: 250px;
-          left: 590px;
+          left: 595px;
           img {
             width: 21px;
             height: 34px;
@@ -447,8 +463,8 @@ export default {
         }
         .row5 {
           position: absolute;
-          top: 470px;
-          left: 590px;
+          top: 485px;
+          left: 595px;
           img {
             width: 21px;
             height: 34px;
@@ -484,7 +500,7 @@ export default {
         .row9 {
           position: absolute;
           top: 350px;
-          left: 80px;
+          left: 90px;
           img {
             width: 20px;
             height: 33px;

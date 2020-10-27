@@ -14,7 +14,7 @@
             监测一体化、管理精细化、决策智能化
           </p>
 
-          <div class="line" @click="handleMore">了解更多</div>
+          <!-- <div class="line" @click="handleMore">了解更多</div> -->
         </div>
       </div>
     </div>
@@ -203,7 +203,9 @@ export default {
     background-color: #fff;
 
     .big_title {
-      padding: 40px 0;
+      // padding: 40px 0;
+      padding-top: 40px;
+      padding-bottom: 20px;
       font-size: 30px;
       font-weight: 600;
       color: #171a25;
@@ -316,7 +318,9 @@ export default {
         color: #171a25;
         display: flex;
         justify-content: center;
-        padding: 28px 0;
+        // padding: 28px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
       .title_detail {
         font-size: 20px;

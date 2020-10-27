@@ -219,7 +219,7 @@ export default {
           baseImg: require('../assets/img/data_program_bg5.png')
         }
       ],
-      CityGoven1: {
+      CityGoven2: {
         title: '智慧灯杆',
         content: [
           '智慧灯杆作为构建智慧城市的重要载体，充分应用路灯',
@@ -228,7 +228,7 @@ export default {
         ],
         detail: '查看详情'
       },
-      CityGoven2: {
+      CityGoven1: {
         title: '智慧环保',
         content: [
           '基于物联网技术、云计算技术、3S技术、多网融合等多',
@@ -366,7 +366,7 @@ export default {
       tabData: ['首页', '服务', '产品', '案例', '关于我们'],
       value1: 1,
       tabText: ['数据管理成熟度评测', '数据治理与分析', '城市物联网与数字城市'],
-      programData: ['智慧灯杆', '智慧环保', '智慧园区', '智慧旅游', '云物管'],
+      programData: ['智慧环保', '智慧灯杆', '智慧园区', '智慧旅游', '云物管'],
       staImg1: require('../assets/img/data_set.png'),
       staImg2: require('../assets/img/data_govern.png'),
       staImg3: require('../assets/img/data_jianmo.png'),
@@ -390,10 +390,11 @@ export default {
   },
   methods: {
     handleMore () {
-      window.scrollTo({
-        top: 870,
-        behavior: 'smooth'
-      })
+      // window.scrollTo({
+      //   top: 870,
+      //   behavior: "smooth"
+      // });
+      this.$router.push({ path: '/about' })
     },
     handletabText (index) {
       window.scrollTo(0, 0)
@@ -406,11 +407,11 @@ export default {
     changeJump (index) {
       window.scrollTo(0, 0)
       switch (index) {
-        case 0:
+        case 1:
           this.$router.push({ path: '/product/SmartLampStandard' })
 
           break
-        case 1:
+        case 0:
           this.$router.push({ path: '/product/SmartEnviroment' })
 
           break
@@ -473,21 +474,21 @@ export default {
       let tempStr = ''
       // console.log(this.dataServeTab[0], "this.dataServeTab[0]");
       // console.log(this.dataServeTab, " this.dataServeTab[0].img");
-      this.dataServeTab[0].img = this.staImg1
-      this.dataServeTab[1].img = this.staImg2
+      this.dataServeTab[1].img = this.staImg1
+      this.dataServeTab[0].img = this.staImg2
       this.dataServeTab[2].img = this.staImg3
       this.dataServeTab[3].img = this.staImg4
 
       this.dataServeTab[4].img = this.staImg5
       // this.dataServeTab[5].img = require(`../assets/img/phone.png`);
       switch (this.activeTab) {
-        case 0:
-          tempStr = '_act'
-          this.dataServeTab[0].img = require(`../assets/img/data_set${tempStr}.png`)
-          break
         case 1:
           tempStr = '_act'
-          this.dataServeTab[1].img = require(`../assets/img/data_govern${tempStr}.png`)
+          this.dataServeTab[1].img = require(`../assets/img/data_set${tempStr}.png`)
+          break
+        case 0:
+          tempStr = '_act'
+          this.dataServeTab[0].img = require(`../assets/img/data_govern${tempStr}.png`)
           break
         case 2:
           tempStr = '_act'
@@ -777,7 +778,7 @@ export default {
           .line {
             width: 30px;
             height: 5px;
-            background: #ffdd1f;
+            background: #59a6ba;
             border-radius: 3px;
             text-align: center;
           }
@@ -839,9 +840,8 @@ export default {
   // background: url("~_img/data_program_bg.png");
   background-size: 100% 100%;
   .city_goven_content {
-    padding-top: 40px;
-
     .city_title {
+      padding-top: 40px;
       text-align: center;
       font-size: 30px;
       font-weight: bold;

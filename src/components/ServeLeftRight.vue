@@ -39,8 +39,9 @@ export default {
   display: flex;
   .left {
     // padding-top: 50px;
-    margin-right: 50px;
+    margin-right: 55px;
     img {
+      margin-top: 60px;
       width: 560px;
       height: 580px;
     }

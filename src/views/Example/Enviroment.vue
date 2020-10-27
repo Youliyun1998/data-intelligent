@@ -8,7 +8,7 @@
             围绕东莞市蓝天保卫战信息化建设展开，通过构建大气
           </p>
           <p class="sub_text">污染防治专题数据应用，助力蓝天保卫战。</p>
-          <div class="line">了解更多</div>
+          <!-- <div class="line">了解更多</div> -->
         </div>
       </div>
       <!-- 悬浮电话，回到顶部 -->
@@ -82,28 +82,33 @@
         <img src="~_img/example_enviroment/content2_pic1.png" alt="" />
         <ul>
           <li>
-            <img src="~_img/example_enviroment/content2_pic2.png" alt="" />
+            <!-- <img src="~_img/example_enviroment/content2_pic2.png" alt="" /> -->
+            <div class="img"></div>
             <div class="title">海量数据</div>
             <div class="underline"></div>
             <div class="text">过往3年数以亿计的监控数据 千万级日增数据</div>
           </li>
           <li>
-            <img src="~_img/example_enviroment/content2_pic3.png" alt="" />
+            <!-- <img src="~_img/example_enviroment/content2_pic3.png" alt="" /> -->
+            <div class="img"></div>
             <div class="title">全系统连通</div>
             <div class="underline"></div>
             <div class="text">打通所有业务系统 数据融合分析</div>
           </li>
           <li>
-            <img src="~_img/example_enviroment/content2_pic4.png" alt="" />
+            <!-- <img src="~_img/example_enviroment/content2_pic4.png" alt="" /> -->
+            <div class="img"></div>
             <div class="title">全渠道数据整合</div>
             <div class="underline"></div>
             <div class="text">预报数据、监测数据、 企业数据、模型数据</div>
           </li>
           <li>
-            <img src="~_img/example_enviroment/content2_pic5.png" alt="" />
+            <!-- <img src="~_img/example_enviroment/content2_pic5.png" alt="" /> -->
+            <div class="img"></div>
             <div class="title">业务闭环</div>
             <div class="underline"></div>
-            <div class="text">监测、预警、执法、研判</div>
+
+            <div class="text">监测、预警、执法、研判<br /><br/></div>
           </li>
         </ul>
       </div>
@@ -257,10 +262,13 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 77px 0;
+      // padding: 77px 0;
+      padding-top: 77px;
+      // padding-bottom: 72px;
       span {
         color: #171a25;
         font-size: 30px;
+        font-weight: bold;
       }
       img {
         margin-top: 72px;
@@ -272,19 +280,93 @@ export default {
         display: flex;
 
         li {
-          width: 361px;
-          height: 515px;
+          width: 287px;
+          height: 434px;
+          // flex: 1;
+          // margin-right: 20px;
           // padding: 0 30px;
-          background: url("~_img/example_enviroment/content2_icon_bg.png")
-            no-repeat;
-          background-size: 100% 100%;
+          // background: url("~_img/example_enviroment/content2_icon_bg1.png")
+          //   no-repeat;
+          // background-size: 100% 100%;
+          background-color: #fff;
+          border-radius: 6px;
+          margin-right: 20px;
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
           display: flex;
           flex-direction: column;
-          // justify-content: center;
+          justify-content: center;
           align-items: center;
-          img {
-            width: 142px;
-            height: 142px;
+          &:first-child {
+            .img {
+              width: 142px;
+              height: 142px;
+              background: url("~_img/example_enviroment/content2_pic2.png")
+                no-repeat;
+              background-size: 100% 100%;
+            }
+            &:hover {
+              .img {
+                width: 142px;
+                height: 142px;
+                background: url("~_img/example_enviroment/content2_pic2_act.png")
+                  no-repeat;
+                background-size: 100% 100%;
+              }
+            }
+          }
+          &:nth-child(2) {
+            .img {
+              width: 142px;
+              height: 142px;
+              background: url("~_img/example_enviroment/content2_pic3.png")
+                no-repeat;
+              background-size: 100% 100%;
+            }
+            &:hover {
+              .img {
+                width: 142px;
+                height: 142px;
+                background: url("~_img/example_enviroment/content2_pic3_act.png")
+                  no-repeat;
+                background-size: 100% 100%;
+              }
+            }
+          }
+          &:nth-child(3) {
+            .img {
+              width: 142px;
+              height: 142px;
+              background: url("~_img/example_enviroment/content2_pic4.png")
+                no-repeat;
+              background-size: 100% 100%;
+            }
+            &:hover {
+              .img {
+                width: 142px;
+                height: 142px;
+                background: url("~_img/example_enviroment/content2_pic4_act.png")
+                  no-repeat;
+                background-size: 100% 100%;
+              }
+            }
+          }
+          &:nth-child(4) {
+            .img {
+              width: 142px;
+              height: 142px;
+              background: url("~_img/example_enviroment/content2_pic5.png")
+                no-repeat;
+              background-size: 100% 100%;
+            }
+            &:hover {
+              .img {
+                width: 142px;
+                height: 142px;
+                background: url("~_img/example_enviroment/content2_pic5_act.png")
+                  no-repeat;
+                background-size: 100% 100%;
+              }
+            }
           }
           .title {
             margin-top: 78px;
@@ -302,9 +384,24 @@ export default {
             margin-top: 25px;
             color: #7d8492;
             font-size: 20px;
-            padding: 0 50px;
-
+            // padding-left: 40px;
+            padding: 0 30px;
             text-align: center;
+          }
+          &:hover {
+            transform: scale(1.1);
+            background: url("~_img/example_enviroment/content2_icon_bg.png")
+              no-repeat;
+            background-size: 100% 100%;
+            .title {
+              color: rgba(89, 166, 186, 1);
+            }
+            .underline {
+              background: rgba(89, 166, 186, 1);
+            }
+            .text {
+              color: rgba(89, 166, 186, 1);
+            }
           }
         }
       }
@@ -319,7 +416,10 @@ export default {
       .title {
         font-size: 30px;
         color: #000;
-        padding: 60px 0;
+        font-weight: bold;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        // padding: 60px 0;
       }
       img {
         width: 1406px;

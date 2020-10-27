@@ -18,7 +18,7 @@
               集约化利用
             </p> -->
           </div>
-          <div class="line" @click="handleMore">了解更多</div>
+          <!-- <div class="line" @click="handleMore">了解更多</div> -->
         </div>
       </div>
     </div>
@@ -185,7 +185,7 @@
             </li>
             <li>
               <img src="~_img/product_detail3.png" alt="" />
-              <div class="text"><span>视频监控</span></div>
+              <div class="text"><span>数据应用</span></div>
             </li>
           </ul>
         </div>
@@ -257,7 +257,7 @@ export default {
   .banner {
     position: relative;
     // top: 75px;
-    height: 831px;
+    height: 830px;
     background: url("~_img/product_banner1.png") no-repeat;
     background-size: 100% 100%;
 
@@ -470,7 +470,7 @@ export default {
               // }
 
               border-radius: 4px;
-              padding: 13px 20px;
+              padding: 13.5px 20px;
               .top {
                 display: flex;
                 align-items: center;
@@ -498,7 +498,8 @@ export default {
               height: 120px;
               color: #33384c;
               border-radius: 4px;
-              padding: 13px 20px;
+              padding: 30px 20px;
+              // padding-top: 30px;
               .top {
                 display: flex;
                 align-items: center;
@@ -556,7 +557,7 @@ export default {
           ul {
             li {
               width: 310px;
-              height: 120px;
+              height: 118px;
               color: #33384c;
               &:first-child {
                 .top {
@@ -717,7 +718,9 @@ export default {
         font-weight: bold;
         font-size: 30px;
         color: #171a25;
-        padding: 40px 0;
+        // padding: 40px 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
       .subtitle {
         text-align: center;
