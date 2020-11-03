@@ -60,6 +60,22 @@
     <!-- <div class="section"> -->
     <!-- <div class="box3"> -->
     <!-- 联系方式 -->
+    <div class="videoPlay">
+      <div class="video wrap">
+        <div class="title">关于我们</div>
+        <video
+          width="100%"
+          autoplay
+          controls
+          loop
+          poster="~_img/video/screen.png"
+        >
+          <source src="~_img/video/movie.mp4" type="video/mp4" />
+          您的浏览器不支持 video 标签。
+        </video>
+      </div>
+    </div>
+
     <div class="contact">
       <div class="contact_content wrap">
         <div class="title">联系方式</div>
@@ -96,19 +112,6 @@ export default {
         keyboardScrolling: false, // 是否可以使用键盘方向键导航，默认为true
         continuousVertical: false, /// 是否循环滚动，默认为false。如果设置为true，则页面会循环滚动，而不像loopTop或loopBottom那样出现跳动，注意这个属性和loopTop、loopBottom不兼容和，不要同时设置
         menu: '#menu'
-        // navigation: true,
-        // anchors: ['page1', 'page2', 'page3'],
-        // sectionsColor: [
-        //   "#41b883",
-        //   "#ff5f45",
-        //   "#0798ec",
-        //   "#fec401",
-        //   "#1bcee6",
-        //   "#ee1a59",
-        //   "#2c3e4f",
-        //   "#ba5be9",
-        //   "#b4b8ab"
-        // ]
       },
       enData: ['服务', '产品', '项目'],
       enDataDetail: [
@@ -314,6 +317,33 @@ export default {
           }
         }
       }
+    }
+  }
+  .videoPlay {
+    height: 900px;
+    background: url("~_img/example_traval/content2_bg.png") no-repeat;
+    background-size: 100% 100%;
+    .video {
+      .title {
+        margin-top: 60px;
+        margin-bottom: 54px;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgba(23, 26, 37, 1);
+      }
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // width: 1180px;
+      // height: 664px;
+      // background: #000000;
+      video {
+        box-shadow: 8px 10px 26px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+      }
+      // opacity: 0.1;
     }
   }
   .contact {
