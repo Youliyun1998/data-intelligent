@@ -18,7 +18,7 @@
             <dd
               v-for="(item, index) in productData"
               :key="index"
-              @click="handleProduct"
+              @click="handleProduct(index)"
             >
               {{ item }}
             </dd>
@@ -28,7 +28,7 @@
             <dd
               v-for="(item, index) in exampleData"
               :key="index"
-              @click="handleExample"
+              @click="handleExample(index)"
             >
               {{ item }}
             </dd>
@@ -65,13 +65,13 @@ export default {
   data () {
     return {
       serveData: ['数据采集', '数据治理', '数据建模', '数据可视化', '智能应用'],
-      productData: ['智慧灯杆', '智慧环保', '智慧园区', '智慧旅游', '云物管'],
-      exampleData: ['海关', '铁路', '环保', '旅游', '高校'],
+      productData: ['智慧环保', '智慧灯杆', '智慧园区', '智慧旅游', '云物管'],
+      exampleData: ['环保', '铁路', '海关', '旅游', '高校'],
       aboutData: [
         '企业简介',
         '联系我们',
         '电话：020-85829519',
-        '地址：广东省广州市番禺区小谷围街青蓝街28号创智大厦3栋408室'
+        '地址：广州市番禺区广州大学城青蓝街28号创智大厦C栋智汇谷3栋408室'
       ]
     }
   },
@@ -79,11 +79,46 @@ export default {
     handleServe () {
       this.$router.push({ path: '/serve' })
     },
-    handleProduct () {
-      this.$router.push({ path: '/product' })
+    handleProduct (index) {
+      switch (index) {
+        case 0:
+          this.$router.push({ path: '/product/SmartLampStandard' })
+          // this.showChildtab = false;
+          break
+        case 1:
+          this.$router.push({ path: '/product/SmartEnviroment' })
+          // this.showChildtab = false;
+          break
+        case 2:
+          this.$router.push({ path: '/product/SmartPark' })
+          // this.showChildtab = false;
+          break
+        case 3:
+          this.$router.push({ path: '/product/SmartTraval' })
+          // this.showChildtab = false;
+          break
+        case 4:
+          this.$router.push({ path: '/product/SmartWuGuan' })
+          // this.showChildtab = false;
+
+          break
+        default:
+      }
     },
-    handleExample () {
-      this.$router.push({ path: '/example' })
+    handleExample (index) {
+      switch (index) {
+        case 0:
+          this.$router.push({ path: '/example/customs' })
+          break
+        case 1:
+          this.$router.push({ path: '/example/railway' })
+          break
+        case 2:
+          this.$router.push({ path: '/example/enviroment' })
+          break
+        case 3:
+          this.$router.push({ path: '/example/traval' })
+      }
     },
     handleAbout (e) {
       if (e === 0 || e === 1) {
@@ -102,12 +137,12 @@ export default {
 }
 
 .foot {
-  height: 430px;
-  background: #1c2133;
+  // height: 430px;
+  background: #0a1126;
   box-shadow: 0px 2px 20px 0px rgba(19, 22, 30, 0.6);
 
   .footer {
-    height: 430px;
+    // height: 430px;
     .footer_content {
       display: flex;
       justify-content: space-between;
@@ -122,9 +157,12 @@ export default {
           }
           dd {
             cursor: pointer;
-            color: #aaaaaa;
+            color: #838b9c;
             font-size: 14px;
             padding-bottom: 20px;
+            &:last-child {
+              padding-bottom: 0;
+            }
             &:hover {
               color: #fff;
             }
@@ -141,9 +179,10 @@ export default {
           }
           dd {
             cursor: pointer;
-            color: #aaaaaa;
+            color: #838b9c;
             font-size: 14px;
             padding-bottom: 30px;
+
             &:nth-child(4) {
               display: flex;
               align-items: center;
@@ -151,23 +190,26 @@ export default {
                 content: "";
                 background: url("~_img/foot_phone2.png");
                 display: block;
-                width: 13px;
-                height: 16px;
-                color: #aaaaaa;
+                width: 11px;
+                height: 14px;
+                color: #838b9c;
                 background-size: 100% 100%;
+                margin-right: 10px;
               }
             }
             &:nth-child(5) {
               display: flex;
               align-items: center;
+
               &::before {
                 content: "";
                 background: url("~_img/foot_address2.png");
                 display: block;
-                width: 13px;
-                height: 16px;
-                color: #aaaaaa;
+                width: 11px;
+                height: 14px;
+                color: #838b9c;
                 background-size: 100% 100%;
+                margin-right: 10px;
               }
             }
             &:hover {
@@ -183,7 +225,8 @@ export default {
       align-items: center;
       color: #565b66;
       font-size: 14px;
-      padding-bottom: 30px;
+      padding-top: 28px;
+      padding-bottom: 32px;
       p {
         margin-right: 20px;
       }

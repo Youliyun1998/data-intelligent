@@ -22,12 +22,61 @@ const routes = [
   {
     path: '/product',
     name: 'product',
-    component: () => import('../views/Product.vue')
+    component: () => import('../views/Product/Index.vue'),
+    children: [
+      {
+        path: '/product/SmartLampStandard',
+        name: 'SmartLampStandard',
+        component: () => import('../views/Product/SmartLampStandard.vue')
+      },
+      {
+        path: '/product/SmartEnviroment',
+        name: 'SmartEnviroment',
+        component: () => import('../views/Product/SmartEnviroment.vue')
+      },
+      {
+        path: '/product/SmartPark',
+        name: 'SmartPark',
+        component: () => import('../views/Product/SmartPark.vue')
+      },
+      {
+        path: '/product/SmartTraval',
+        name: 'SmartTraval',
+        component: () => import('../views/Product/SmartTraval.vue')
+      },
+      {
+        path: '/product/SmartWuGuan',
+        name: 'SmartWuGuan',
+        component: () => import('../views/Product/SmartWuGuan.vue')
+      }
+    ]
   },
   {
     path: '/example',
     name: 'example',
-    component: () => import('../views/Example.vue')
+    component: () => import('../views/Example/Index.vue'),
+    children: [
+      {
+        path: '/example/enviroment',
+        name: 'enviroment',
+        component: () => import('../views/Example/Enviroment.vue')
+      },
+      {
+        path: '/example/railway',
+        name: 'railway',
+        component: () => import('../views/Example/Railway.vue')
+      },
+      {
+        path: '/example/customs',
+        name: 'customs',
+        component: () => import('../views/Example/Customs.vue')
+      },
+      {
+        path: '/example/traval',
+        name: 'traval',
+        component: () => import('../views/Example/Traval.vue')
+      }
+    ]
   },
   {
     path: '/about',

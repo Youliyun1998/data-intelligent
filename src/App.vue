@@ -1,16 +1,19 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <Head v-if="isShow" />
     <router-view />
+    <Footer v-if="isShow" />
   </div>
 </template>
 
 <script>
+import Footer from '_c/Footer.vue'
 import Head from '_c/Head.vue'
 export default {
   name: 'App',
   components: {
-    Head
+    Head,
+    Footer
   },
   data () {
     return {
@@ -26,7 +29,16 @@ export default {
         this.$route.path === '/serve' ||
         this.$route.path === '/product' ||
         this.$route.path === '/about' ||
-        this.$route.path === '/example'
+        this.$route.path === '/example' ||
+        this.$route.path === '/product/SmartEnviroment' ||
+        this.$route.path === '/product/SmartPark' ||
+        this.$route.path === '/product/SmartTraval' ||
+        this.$route.path === '/product/SmartWuGuan' ||
+        this.$route.path === '/product/SmartLampStandard' ||
+        this.$route.path === '/example/enviroment' ||
+        this.$route.path === '/example/railway' ||
+        this.$route.path === '/example/customs' ||
+        this.$route.path === '/example/traval'
       ) {
         this.isShow = true
       } else {
@@ -38,8 +50,17 @@ export default {
 </script>
 
 <style lang="less">
+[v-cloak] {
+  display: none !important;
+}
 #app {
-  background: #1c2133;
+  // background: #1c2133;
+  background-color: #fff;
+
+  html,
+  body {
+    height: 100vh;
+  }
   .wrap {
     width: 1200px;
     // height: 100%;

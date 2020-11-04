@@ -35,13 +35,15 @@ export default {
 <style lang="less" scoped>
 .content1 {
   padding-top: 100px;
+
   display: flex;
   .left {
-    padding-top: 50px;
-    margin-right: 50px;
+    // padding-top: 50px;
+    margin-right: 55px;
     img {
-      width: 558px;
-      height: 649px;
+      margin-top: 60px;
+      width: 560px;
+      height: 580px;
     }
   }
   .right {

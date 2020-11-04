@@ -26,6 +26,7 @@ export default {
       type: Array
     }
   },
+
   data () {
     return {}
   }
@@ -34,7 +35,7 @@ export default {
 
 <style lang="less" scoped>
 .content2 {
-  padding-top: 100px;
+  padding-top: 150px;
   display: flex;
   .left {
     .title {
@@ -43,8 +44,8 @@ export default {
       background: url("~_img/serve-title.png") no-repeat;
       background-size: 100% 100%;
       display: flex;
-      justify-content: center;
-      padding-left: 40px;
+      // justify-content: center;
+      padding-left: 80px;
       align-items: center;
       font-size: 30px;
       color: #171a25;
@@ -69,10 +70,14 @@ export default {
     }
   }
   .right {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     img {
-      width: 623px;
-      height: 692px;
-      background-size: 100% 100%;
+      margin-top: 20px;
+      width: 560px;
+      height: 580px;
+      // background-size: 100% 100%;
     }
   }
 }
